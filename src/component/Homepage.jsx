@@ -9,6 +9,7 @@ import airForce1 from '../assets/air force 1 and white and blue.avif';
 import sportShoes from '../assets/sport shoes.webp';
 import ASICS_Mens from '../assets/ASICS_Mens.avif';
 import ASICS_Mens_Nova_Blast from '../assets/ASICS_Mens_Nova_Blast.avif';
+import nikeBlueTransparent from '../assets/nike-blue-transparent.png';
 
 const products = [
     {
@@ -86,9 +87,9 @@ const Homepage = () => (
                 <div className="col-lg-6 text-center">
                     <div className="hero-img-wrapper">
                         <img
-                            src={airMaxOne}
+                            src={nikeBlueTransparent}
                             alt="Nike Hero"
-                            className="hero-img"
+                            className="img-fluid w-75 h-auto"
                         />
                     </div>
                 </div>

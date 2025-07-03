@@ -7,6 +7,8 @@ import nikeAirBlue from '../assets/nike air blue.webp';
 import airForce1 from '../assets/air force 1 and white and blue.avif';
 import sportShoes from '../assets/sport shoes.webp';
 import ASICS_Mens_Nova_Blast from '../assets/ASICS_Mens_Nova_Blast.avif';
+import jordanLowGrey from '../assets/jordan-low-grey.png';
+import airMaxPurple from '../assets/air-max-purple.png';
 
 const products = [
     {
@@ -49,6 +51,20 @@ const products = [
         name: 'ASICS Mens Nova Blast 4 Cool Grey/Blue Expanse Running Shoes',
         color: 'Grey',
         price: '$11,199',
+        category: "Men's Shoes",
+    },
+    {
+        img: jordanLowGrey,
+        name: 'Air Jordan 1 Low OG',
+        color: 'Black/Grey/White',
+        price: '$18,500',
+        category: "Men's Shoes",
+    },
+    {
+        img: airMaxPurple,
+        name: 'Nike Air Max Plus',
+        color: 'White/Purple/Black',
+        price: '$17,200',
         category: "Men's Shoes",
     },
 ];
