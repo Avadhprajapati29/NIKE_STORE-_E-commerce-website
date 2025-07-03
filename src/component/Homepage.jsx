@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
+import './Homepage.css';
 
 import airMaxOne from '../assets/air max one.jpeg';
 import airMaxLtd from '../assets/air max ltd.webp';
@@ -59,7 +60,7 @@ const Homepage = () => (
         <Navbar />
 
         {/* Hero Section */}
-        <section className="container py-5">
+        <section className="container custom-container py-5">
             <div className="row align-items-center">
                 <div className="col-lg-6 mb-5 mb-lg-0">
                     <span
@@ -83,27 +84,39 @@ const Homepage = () => (
                     </button>
                 </div>
                 <div className="col-lg-6 text-center">
-                    <img
-                        src={airMaxOne}
-                        alt="Nike Hero"
-                        className="img-fluid rounded-4 shadow-lg"
-                        style={{ maxHeight: 350, objectFit: 'cover' }}
-                    />
+                    <div className="hero-img-wrapper">
+                        <img
+                            src={airMaxOne}
+                            alt="Nike Hero"
+                            className="hero-img"
+                        />
+                    </div>
                 </div>
             </div>
         </section>
 
         {/* Product Cards Grid - 3 cards per row, full image show */}
-        <section className="container pb-5">
+        <section className="container custom-container pb-5">
             <h2 className="fw-bold mb-4 text-center text-uppercase">Featured Products</h2>
-            <div className="row g-4 justify-content-center">
+            <div className="image row g-4 justify-content-center">
                 {products.map((product, idx) => (
                     <div className="col-12 col-md-4" key={idx}>
                         <div className="card h-100 border-0 shadow rounded-4 bg-white">
-                            <div style={{ width: '100%', height: 300, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f8f9fa', borderRadius: '16px 16px 0 0' }}>
+                            <div
+                                style={{
+                                    width: '100%',
+                                    height: 300,
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    background: '#f8f9fa',
+                                    borderRadius: '16px 16px 0 0',
+                                    overflow: 'hidden' // Ensures image stays within rounded corners
+                                }}
+                            >
                                 <img
                                     src={product.img}
-                                    className="card-img-top"
+                                    className="card-img-top product-img-hover"
                                     alt={product.name}
                                     style={{
                                         maxWidth: '100%',
@@ -129,7 +142,7 @@ const Homepage = () => (
         </section>
 
         {/* About/Promo Section */}
-        <section className="container pb-5">
+        <section className="container custom-container pb-5">
             <div className="row align-items-center bg-white rounded-4 shadow-sm p-4">
                 <div className="col-md-8">
                     <h3 className="fw-bold mb-2">Why Shop at Nike Online Store?</h3>
