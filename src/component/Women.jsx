@@ -1,14 +1,13 @@
 import React from 'react';
 import Navbar from './Navbar';
 
-// Import your images
-import women1 from '../assets/women1.png';
-import women2 from '../assets/women2.png';
-import women3 from '../assets/women3.png';
-import women4 from '../assets/women4.png';
-import women5 from '../assets/women5.png';
-import women6 from '../assets/women6.png';
-import women7 from '../assets/women7.png';
+import women1 from '../assets/women_shoes/women1.png';
+import women2 from '../assets/women_shoes/women2.png';
+import women3 from '../assets/women_shoes/women3.png';
+import women4 from '../assets/women_shoes/women4.png';
+import women5 from '../assets/women_shoes/women5.png';
+import women6 from '../assets/women_shoes/women6.png';
+import women7 from '../assets/women_shoes/women7.png';
 
 const products = [
   {
@@ -67,7 +66,7 @@ const Women = () => (
         {products.map((product, idx) => (
           <div className="col-md-4 col-lg-3 mb-4" key={idx}>
             <div className="card h-100 shadow-sm border-0">
-              <img src={product.img} alt={product.name} className="card-img-top p-3" style={{ height: 220, objectFit: 'contain' }} />
+              <img src={product.img} alt={product.name} className="card-img-top p-3" style={{ height: 320, objectFit: 'contain' }} />
               <div className="card-body">
                 <h5 className="card-title fw-semibold">{product.name}</h5>
                 <p className="card-text mb-1 text-secondary">{product.color}</p>
