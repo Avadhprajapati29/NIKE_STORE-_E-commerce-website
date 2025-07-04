@@ -7,7 +7,6 @@ import airMaxLtd from '../assets/air max ltd.webp';
 import nikeAirBlue from '../assets/nike air blue.webp';
 import airForce1 from '../assets/air force 1 and white and blue.avif';
 import sportShoes from '../assets/sport shoes.webp';
-import ASICS_Mens from '../assets/ASICS_Mens.avif';
 import ASICS_Mens_Nova_Blast from '../assets/ASICS_Mens_Nova_Blast.avif';
 import nikeBlueTransparent from '../assets/nike-blue-transparent.png';
 
