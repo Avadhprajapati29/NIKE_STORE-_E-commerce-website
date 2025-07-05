@@ -1,59 +1,55 @@
 import React from 'react';
 import Navbar from './Navbar';
-import './Homepage.css';
 
-import airMaxOne from '../assets/air max one.jpeg';
-import airMaxLtd from '../assets/air max ltd.webp';
-import nikeAirBlue from '../assets/nike air blue.webp';
-import airForce1 from '../assets/air force 1 and white and blue.avif';
-import sportShoes from '../assets/sport shoes.webp';
-import ASICS_Mens_Nova_Blast from '../assets/ASICS_Mens_Nova_Blast.avif';
-import nikeBlueTransparent from '../assets/nike-blue-transparent.png';
+import men1 from '../assets/Men_shoes/men1.png';
+import men4 from '../assets/Men_shoes/men4.png';
+import men7 from '../assets/Men_shoes/men7.png';
+import women1 from '../assets/Women_shoes/women1.png';
+import women4 from '../assets/Women_shoes/women4.png';
+import women7 from '../assets/Women_shoes/women7.png';
+import nikebluetransparent from '../assets/nike-blue-transparent.png';
 
 const products = [
     {
-        img: airMaxOne,
-        name: 'Nike Air Max 1',
-        color: 'Blue',
-        price: '$14,000',
-        category: "Men's Shoes",
+        img: men4,
+        name: 'Nike Premier III',
+        color: 'Metallic Silver/Black',
+        price: '$13,500',
     },
     {
-        img: airMaxLtd,
-        name: 'Nike Max LTD 3',
-        color: 'White and Black',
+        img: women1,
+        name: 'Nike Zoom Vomero 5',
+        color: 'White/Pink/Silver',
+        price: '$13,000',
+    },
+    {
+        img: men1,
+        name: 'Nike Air Zoom Structure 25',
+        color: 'Blue/White',
+        price: '$15,500',
+    },
+    {
+        img: men7,
+        name: 'Nike Air Max Plus',
+        color: 'White/Purple/Black',
+        price: '$17,200',
+    },
+    {
+        img: women4,
+        name: 'Nike Air Zoom Pegasus 40',
+        color: 'Pink/Maroon/Green',
+        price: '$15,000',
+    },
+    {
+        img: women7,
+        name: 'Air Jordan 1 Mid',
+        color: 'Triple White',
         price: '$16,000',
-        category: "Men's Shoes",
-    },
-    {
-        img: nikeAirBlue,
-        name: 'Nike Air Blue',
-        color: 'Blue',
-        price: '$19,000',
-        category: "Men's Shoes",
-    },
-    {
-        img: airForce1,
-        name: 'Nike Air Force 1',
-        color: 'White and Blue',
-        price: '$20,000',
-        category: "Men's Shoes",
-    },
-    {
-        img: sportShoes,
-        name: 'Nike Air Sport Shoes LTD',
-        color: 'Black Matte',
-        price: '$14,000',
-        category: "Men's Shoes",
-    },
-    {
-        img: ASICS_Mens_Nova_Blast,
-        name: 'ASICS Mens Nova Blast 4 Cool Grey/Blue Expanse Running Shoes',
-        color: 'Grey',
-        price: '$11,199',
-        category: "Men's Shoes",
     },
 ];
+
+// Hero image URL (replace with your preferred image)
+const heroImg = "https://oaidalleapiprodscus.blob.core.windows.net/private/org-3v0n1b6Qy4KkKkQw9vQw9vQw/user-3v0n1b6Qy4KkKkQw9vQw9vQw/img-3v0n1b6Qy4KkKkQw9vQw9vQw_1.png";
 
 const Homepage = () => (
     <div className="min-vh-100 bg-light" style={{ fontFamily: "'Inter', sans-serif" }}>
@@ -86,54 +82,28 @@ const Homepage = () => (
                 <div className="col-lg-6 text-center">
                     <div className="hero-img-wrapper">
                         <img
-                            src={nikeBlueTransparent}
-                            alt="Nike Hero"
+                            src={nikebluetransparent}
+                            alt="nike-blue-transparent"
                             className="img-fluid w-75 h-auto"
+                            style={{ maxHeight: 320, objectFit: 'contain', borderRadius: 24 }}
                         />
                     </div>
                 </div>
             </div>
         </section>
 
-        {/* Product Cards Grid - 3 cards per row, full image show */}
+        {/* Product Cards Grid */}
         <section className="container custom-container pb-5">
             <h2 className="fw-bold mb-4 text-center text-uppercase">Featured Products</h2>
-            <div className="image row g-4 justify-content-center">
+            <div className="row">
                 {products.map((product, idx) => (
-                    <div className="col-12 col-md-4" key={idx}>
-                        <div className="card h-100 border-0 shadow rounded-4 bg-white">
-                            <div
-                                style={{
-                                    width: '100%',
-                                    height: 300,
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    background: '#f8f9fa',
-                                    borderRadius: '16px 16px 0 0',
-                                    overflow: 'hidden' // Ensures image stays within rounded corners
-                                }}
-                            >
-                                <img
-                                    src={product.img}
-                                    className="card-img-top product-img-hover"
-                                    alt={product.name}
-                                    style={{
-                                        maxWidth: '100%',
-                                        maxHeight: '100%',
-                                        objectFit: 'contain',
-                                        borderRadius: '16px 16px 0 0'
-                                    }}
-                                />
-                            </div>
-                            <div className="card-body d-flex flex-column">
-                                <h5 className="card-title fw-bold">{product.name}</h5>
-                                <div className="mb-2 text-muted small">{product.category}</div>
-                                <div className="fw-semibold fs-5 text-primary mb-1">{product.price}</div>
-                                <div className="text-secondary mb-2">Color: {product.color}</div>
-                                <button className="btn btn-outline-primary btn-sm rounded-pill mt-auto">
-                                    View Details
-                                </button>
+                    <div className="col-md-3 col-lg-3 mb-4" key={idx}>
+                        <div className="card h-100 shadow-sm border-0">
+                            <img src={product.img} alt={product.name} className="card-img-top p-3" style={{ height: 320, objectFit: 'contain' }} />
+                            <div className="card-body">
+                                <h5 className="card-title fw-semibold">{product.name}</h5>
+                                <p className="card-text mb-1 text-secondary">{product.color}</p>
+                                <p className="card-text fw-bold text-primary">{product.price}</p>
                             </div>
                         </div>
                     </div>
