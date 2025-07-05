@@ -5,7 +5,7 @@ import nikebluetransparent from '../assets/nike-blue-transparent.png';
 import men1 from '../assets/Men_shoes/men1.png';
 import men4 from '../assets/Men_shoes/men4.png';
 import men7 from '../assets/Men_shoes/men7.png';
-import women1 from '../assets/Women_shoes/women1.png';
+import wls1 from '../assets/women_shoes/lifestyle/wls1.png';
 import women4 from '../assets/Women_shoes/women4.png';
 import women7 from '../assets/Women_shoes/women7.png';
 
@@ -17,7 +17,7 @@ const products = [
         price: '$13,500',
     },
     {
-        img: women1,
+        img: wls1,
         name: 'Nike Zoom Vomero 5',
         color: 'White/Pink/Silver',
         price: '$13,000',

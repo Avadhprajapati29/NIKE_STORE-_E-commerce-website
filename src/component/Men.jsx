@@ -30,7 +30,6 @@ import gym3 from '../assets/Men_shoes/Training & Gym/M-NIKE-PROMINA.png';
 
 const categories = [
     { label: 'All', value: 'all' },
-    { label: 'Nike Shoes', value: 'nike' },
     { label: 'Jordan', value: 'jordan' },
     { label: 'Lifestyle', value: 'lifestyle' },
     { label: 'Running', value: 'running' },
@@ -38,14 +37,7 @@ const categories = [
 ];
 
 const products = [
-    // Nike & Jordan
-    {
-        img: men1,
-        name: 'Nike Air Zoom Structure 25',
-        color: 'Blue/White',
-        price: '$15,500',
-        category: 'nike',
-    },
+    // Jordan
     {
         img: Jordan1,
         name: 'Jordan 1 Low G',
@@ -61,39 +53,11 @@ const products = [
         category: 'jordan',
     },
     {
-        img: men4,
-        name: 'Nike Premier III',
-        color: 'Metallic Silver/Black',
-        price: '$13,500',
-        category: 'nike',
-    },
-    {
         img: Jordan3,
         name: 'Air Jordan 1 High OG UNC',
         color: 'University Blue/White/Navy',
         price: '$22,000',
         category: 'jordan',
-    },
-    {
-        img: men6,
-        name: 'Nike Premier III FG',
-        color: 'Silver/Black/Volt',
-        price: '$13,500',
-        category: 'nike',
-    },
-    {
-        img: men7,
-        name: 'Nike Air Max Plus',
-        color: 'White/Purple/Black',
-        price: '$17,200',
-        category: 'nike',
-    },
-    {
-        img: men8,
-        name: 'Nike Air Max black',
-        color: 'Silver/Black',
-        price: '$19,200',
-        category: 'nike',
     },
     // Lifestyle
     {
@@ -174,6 +138,42 @@ const products = [
         color: 'White/Yellow',
         price: '$13,200',
         category: 'training',
+    },
+    // Other (previously Nike Shoes, now only in All)
+    {
+        img: men1,
+        name: 'Nike Air Zoom Structure 25',
+        color: 'Blue/White',
+        price: '$15,500',
+        category: 'all',
+    },
+    {
+        img: men4,
+        name: 'Nike Premier III',
+        color: 'Metallic Silver/Black',
+        price: '$13,500',
+        category: 'all',
+    },
+    {
+        img: men6,
+        name: 'Nike Premier III FG',
+        color: 'Silver/Black/Volt',
+        price: '$13,500',
+        category: 'all',
+    },
+    {
+        img: men7,
+        name: 'Nike Air Max Plus',
+        color: 'White/Purple/Black',
+        price: '$17,200',
+        category: 'all',
+    },
+    {
+        img: men8,
+        name: 'Nike Air Max black',
+        color: 'Silver/Black',
+        price: '$19,200',
+        category: 'all',
     },
 ];
 
