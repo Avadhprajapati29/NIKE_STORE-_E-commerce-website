@@ -11,22 +11,34 @@ import men6 from '../assets/men_shoes/men6.png';
 import men7 from '../assets/men_shoes/men7.png';
 import men8 from '../assets/Men_shoes/men8.png';
 
-// New lifestyle images (update the paths as needed)
+// Lifestyle images
 import ls1 from '../assets/Men_shoes/lifestyle/ls1.png';
 import ls2 from '../assets/Men_shoes/lifestyle/ls2.png';
 import ls3 from '../assets/Men_shoes/lifestyle/ls3.png';
 import ls4 from '../assets/Men_shoes/lifestyle/ls4.png';
 import ls5 from '../assets/Men_shoes/lifestyle/ls5.png';
 
+// Running images
+import running1 from '../assets/Men_shoes/Running/AIR-ZOOM-PEGASUS-41.png';
+import running2 from '../assets/Men_shoes/Running/NIKE-AIR-MAX-PLUS.png';
+import running3 from '../assets/Men_shoes/Running/ZOOMX-VAPORFLY-NEXT-4.png';
+
+// Training & Gym images
+import gym1 from '../assets/Men_shoes/Training & Gym/LEBRON-TR-1.png';
+import gym2 from '../assets/Men_shoes/Training & Gym/M-NIKE-MC-TRAINER-3.png';
+import gym3 from '../assets/Men_shoes/Training & Gym/M-NIKE-PROMINA.png';
+
 const categories = [
     { label: 'All', value: 'all' },
     { label: 'Nike Shoes', value: 'nike' },
     { label: 'Jordan', value: 'jordan' },
-    { label: 'Lifestyle', value: 'lifestyle' }, // Added Lifestyle
+    { label: 'Lifestyle', value: 'lifestyle' },
+    { label: 'Running', value: 'running' },
+    { label: 'Training & Gym', value: 'training' },
 ];
 
 const products = [
-    // ...existing products...
+    // Nike & Jordan
     {
         img: men1,
         name: 'Nike Air Zoom Structure 25',
@@ -83,7 +95,7 @@ const products = [
         price: '$19,200',
         category: 'nike',
     },
-    // Lifestyle products (using your uploaded images)
+    // Lifestyle
     {
         img: ls1,
         name: 'Nike Air Max Excee',
@@ -119,6 +131,50 @@ const products = [
         price: '$17,500',
         category: 'lifestyle',
     },
+    // Running
+    {
+        img: running1,
+        name: 'Nike Air Zoom Pegasus 41',
+        color: 'White/Grey',
+        price: '$13,000',
+        category: 'running',
+    },
+    {
+        img: running2,
+        name: 'Nike Air Max Plus',
+        color: 'White/Black',
+        price: '$17,200',
+        category: 'running',
+    },
+    {
+        img: running3,
+        name: 'Nike ZoomX Vaporfly Next% 4',
+        color: 'Black/Yellow',
+        price: '$21,000',
+        category: 'running',
+    },
+    // Training & Gym
+    {
+        img: gym1,
+        name: 'LeBron TR 1',
+        color: 'White/Black',
+        price: '$14,500',
+        category: 'training',
+    },
+    {
+        img: gym2,
+        name: 'Nike MC Trainer 3',
+        color: 'White/Black',
+        price: '$12,800',
+        category: 'training',
+    },
+    {
+        img: gym3,
+        name: 'Nike Promina',
+        color: 'White/Yellow',
+        price: '$13,200',
+        category: 'training',
+    },
 ];
 
 const Men = () => {
@@ -138,7 +194,7 @@ const Men = () => {
                     Explore the latest Nike shoes and apparel for men. Comfort, performance, and style—just for you.
                 </p>
                 {/* Category Selection */}
-                <div className="mb-4 d-flex gap-3">
+                <div className="mb-4 d-flex gap-3 flex-wrap">
                     {categories.map((cat) => (
                         <button
                             key={cat.value}
