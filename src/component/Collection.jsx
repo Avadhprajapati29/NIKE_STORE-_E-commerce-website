@@ -1,40 +1,46 @@
 import React from 'react';
 import Navbar from './Navbar';
+import c1 from '../assets/collections_shoes/c1.png';
+import c2 from '../assets/collections_shoes/c2.png';
+import c3 from '../assets/collections_shoes/c3.png';
+import c4 from '../assets/collections_shoes/c4.png';
+import c5 from '../assets/collections_shoes/c5.png';
+import c6 from '../assets/collections_shoes/c6.png';
 
 const collections = [
   {
     name: 'Nike Dunk Low',
-    img: 'https://images.unsplash.com/photo-1717438030097-7e9e8123ae59?auto=format&fit=crop&w=768&q=80',
+    img: c1,
     desc: 'Classic style with modern comfort. The Nike Dunk Low is a timeless icon for every sneakerhead.',
     price: '$14,500',
   },
   {
     name: 'Nike Zoom Vomero 5',
-    img: 'https://images.unsplash.com/photo-1717438029977-2e9e8123ae59?auto=format&fit=crop&w=768&q=80',
+    img: c2,
     desc: 'Experience plush cushioning and bold colorways with the Nike Zoom Vomero 5.',
     price: '$13,000',
   },
   {
     name: 'Nike Air Zoom Pegasus 40',
-    img: 'https://images.unsplash.com/photo-1717438030123-3e9e8123ae59?auto=format&fit=crop&w=768&q=80',
+    img: c3,
     desc: 'The Pegasus 40 delivers responsive support for runners and everyday wear.',
     price: '$15,000',
   },
   {
     name: 'Jordan 1 Low G',
-    img: 'https://images.unsplash.com/photo-1717438030155-4e9e8123ae59?auto=format&fit=crop&w=768&q=80',
+    img: c4,
     desc: 'A golf-inspired take on the classic Jordan 1 Low. Sleek, versatile, and ready for any occasion.',
     price: '$16,000',
   },
   {
     name: 'Nike Air Zoom Structure 25',
-    img: 'https://oaidalleapiprodscus.blob.core.windows.net/private/org-3v0n1b6Qy4KkKkQw9vQw9vQw/user-3v0n1b6Qy4KkKkQw9vQw9vQw/img-3v0n1b6Qy4KkKkQw9vQw9vQw_5.png',
+    img: c5,
     desc: 'Engineered for stability and comfort, perfect for daily runs.',
     price: '$15,500',
   },
   {
     name: 'Nike Air Max Plus',
-    img: 'https://oaidalleapiprodscus.blob.core.windows.net/private/org-3v0n1b6Qy4KkKkQw9vQw9vQw/user-3v0n1b6Qy4KkKkQw9vQw9vQw_3.png',
+    img: c6,
     desc: 'Bold design and legendary Air cushioning for all-day comfort.',
     price: '$17,200',
   },
