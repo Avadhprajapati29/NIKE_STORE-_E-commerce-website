@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
 
-// Existing imports
+// Existing imports for product images
 import men1 from '../assets/men_shoes/men1.png';
 import Jordan1 from '../assets/men_shoes/Jordan/Jordan1.png';
 import Jordan2 from '../assets/men_shoes/Jordan/Jordan2.png';
@@ -179,15 +179,20 @@ const products = [
 
 const Men = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
+    const [cart, setCart] = useState([]); // State for cart items
 
     const filteredProducts =
         selectedCategory === 'all'
             ? products
             : products.filter((p) => p.category === selectedCategory);
 
+    const handleAddToCart = (product) => {
+        setCart((prevCart) => [...prevCart, product]); // Add product to cart
+    };
+
     return (
         <div className="min-vh-100 bg-light" style={{ fontFamily: "'Inter', sans-serif" }}>
-            <Navbar />
+            <Navbar cartCount={cart.length} /> {/* Pass cart count to Navbar */}
             <div className="container py-5">
                 <h1 className="display-4 fw-bold mb-4 text-primary">Men's Collection</h1>
                 <p className="lead text-secondary">
@@ -220,6 +225,12 @@ const Men = () => {
                                     <h5 className="card-title fw-semibold">{product.name}</h5>
                                     <p className="card-text mb-1 text-secondary">{product.color}</p>
                                     <p className="card-text fw-bold text-primary">{product.price}</p>
+                                    <button
+                                        className="btn btn-primary"
+                                        onClick={() => handleAddToCart(product)} // Add to cart button
+                                    >
+                                        Add to Cart
+                                    </button>
                                 </div>
                             </div>
                         </div>
