@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
 
-
 // Example imports for women's products (update these paths and names)
 import women2 from '../assets/women_shoes/women2.png';
 import women3 from '../assets/women_shoes/women3.png';
@@ -121,11 +120,17 @@ const products = [
 
 const Women = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [cart, setCart] = useState([]);
 
   const filteredProducts =
     selectedCategory === 'all'
       ? products
       : products.filter((p) => p.category === selectedCategory);
+
+  const addToCart = (product) => {
+    setCart((prevCart) => [...prevCart, product]);
+    alert(`${product.name} has been added to your cart!`);
+  };
 
   return (
     <div className="min-vh-100 bg-light" style={{ fontFamily: "'Inter', sans-serif" }}>
@@ -162,6 +167,12 @@ const Women = () => {
                   <h5 className="card-title fw-semibold">{product.name}</h5>
                   <p className="card-text mb-1 text-secondary">{product.color}</p>
                   <p className="card-text fw-bold text-primary">{product.price}</p>
+                  <button
+                    className="btn btn-primary"
+                    onClick={() => addToCart(product)}
+                  >
+                    Add to Cart
+                  </button>
                 </div>
               </div>
             </div>
