@@ -188,6 +188,7 @@ const Men = () => {
 
     const handleAddToCart = (product) => {
         setCart((prevCart) => [...prevCart, product]); // Add product to cart
+        alert(`${product.name} has been added to your cart!`); // Alert message
     };
 
     return (
