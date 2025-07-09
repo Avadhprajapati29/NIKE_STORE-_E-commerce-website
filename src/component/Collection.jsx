@@ -87,7 +87,7 @@ const Collections = () => (
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title fw-bold">{item.name}</h5>
                 <p className="card-text text-secondary mb-2">{item.desc}</p>
-                <div className="fw-semibold fs-5 text-primary mb-2">{item.price}</div>
+                <div className="fw-semibold fs-5 text-black mb-2">{item.price}</div>
                 <button className="btn btn-outline-primary btn-sm rounded-pill mt-auto">
                   View Details
                 </button>
