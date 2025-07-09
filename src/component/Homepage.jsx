@@ -14,36 +14,42 @@ const products = [
         img: men4,
         name: 'Nike Premier III',
         color: 'Metallic Silver/Black',
+        Gender: 'Womens Shoes',
         price: '$13,500',
     },
     {
         img: wls1,
         name: 'Nike Zoom Vomero 5',
         color: 'White/Pink/Silver',
+        Gender: 'Womens Shoes',
         price: '$13,000',
     },
     {
         img: men1,
         name: 'Nike Air Zoom Structure 25',
         color: 'Blue/White',
+        Gender: 'Mens Shoes',
         price: '$15,500',
     },
     {
         img: men7,
         name: 'Nike Air Max Plus',
         color: 'White/Purple/Black',
+        Gender: 'Mens Shoes',
         price: '$17,200',
     },
     {
         img: women4,
         name: 'Nike Air Zoom Pegasus 40',
         color: 'Pink/Maroon/Green',
+        Gender: 'Womens Shoes',
         price: '$15,000',
     },
     {
         img: women7,
         name: 'Air Jordan 1 Mid',
         color: 'Triple White',
+        Gender: 'Womens Shoes',
         price: '$16,000',
     },
 ];
@@ -103,6 +109,7 @@ const Homepage = () => (
                             <div className="card-body">
                                 <h5 className="card-title fw-semibold">{product.name}</h5>
                                 <p className="card-text mb-1 text-secondary">{product.color}</p>
+                                <p className="card-text mb-1 text-secondary">{product.Gender}</p>
                                 <p className="card-text fw-bold text-primary">{product.price}</p>
                             </div>
                         </div>
