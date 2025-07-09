@@ -110,7 +110,7 @@ const Homepage = () => (
                                 <h5 className="card-title fw-semibold">{product.name}</h5>
                                 <p className="card-text mb-1 text-secondary">{product.color}</p>
                                 <p className="card-text mb-1 text-secondary">{product.Gender}</p>
-                                <p className="card-text fw-bold text-primary">{product.price}</p>
+                                <p className="card-text fw-bold text-Black">{product.price}</p>
                             </div>
                         </div>
                     </div>
