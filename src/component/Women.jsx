@@ -166,7 +166,7 @@ const Women = () => {
                 <div className="card-body">
                   <h5 className="card-title fw-semibold">{product.name}</h5>
                   <p className="card-text mb-1 text-secondary">{product.color}</p>
-                  <p className="card-text fw-bold text-primary">{product.price}</p>
+                  <p className="card-text fw-bold text-black">{product.price}</p>
                   <button
                     className="btn btn-primary"
                     onClick={() => addToCart(product)}
