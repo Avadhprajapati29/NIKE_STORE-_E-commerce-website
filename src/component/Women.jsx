@@ -1,24 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
-
-// Example imports for women's products (update these paths and names)
-import women2 from '../assets/women_shoes/women2.png';
-import women3 from '../assets/women_shoes/women3.png';
-import women4 from '../assets/women_shoes/women4.png';
-import women5 from '../assets/women_shoes/women5.png';
-import women6 from '../assets/women_shoes/women6.png';
-import women7 from '../assets/women_shoes/women7.png';
-import women8 from '../assets/women_shoes/women8.png';
-
-// Lifestyle images
-import wls1 from '../assets/women_shoes/lifestyle/wls1.png';
-import wls2 from '../assets/women_shoes/lifestyle/wls2.png';
-
-// Running images
-import wrunning1 from '../assets/women_shoes/Running/wrunning1.png';
-
-// Training & Gym images
-import wgym1 from '../assets/women_shoes/Training & Gym/wgym1.png';
 
 const categories = [
   { label: 'All', value: 'all' },
@@ -27,105 +8,29 @@ const categories = [
   { label: 'Training & Gym', value: 'training' },
 ];
 
-const products = [
-  // Lifestyle
-  {
-    img: wls1,
-    name: 'Nike Air Max Verona',
-    color: 'White/Pink',
-    price: '$13,000',
-    category: 'lifestyle',
-  },
-  {
-    img: wls2,
-    name: 'Nike Court Vision Alta',
-    color: 'White/Gold',
-    price: '$12,500',
-    category: 'lifestyle',
-  },
-  // Running
-  {
-    img: wrunning1,
-    name: 'Nike Air Zoom Pegasus 40',
-    color: 'Black/White',
-    price: '$14,000',
-    category: 'running',
-  },
-  // Training & Gym
-  {
-    img: wgym1,
-    name: 'Nike Free Metcon 5',
-    color: 'Grey/Blue',
-    price: '$13,800',
-    category: 'training',
-  },
-  // Other (shown only in All)
-  {
-    img: wls1,
-    name: 'Nike Air Max 270',
-    color: 'White/Coral',
-    price: '$15,000',
-    category: 'all',
-  },
-  {
-    img: women2,
-    name: 'Nike Revolution 6',
-    color: 'Black/Pink',
-    price: '$10,500',
-    category: 'all',
-  },
-  {
-    img: women3,
-    name: 'Nike Downshifter 12',
-    color: 'Grey/White',
-    price: '$9,800',
-    category: 'all',
-  },
-  {
-    img: women4,
-    name: 'Nike Air Force 1 Shadow',
-    color: 'White/Blue',
-    price: '$16,200',
-    category: 'all',
-  },
-  {
-    img: women5,
-    name: 'Nike Blazer Low Platform',
-    color: 'White/Beige',
-    price: '$13,900',
-    category: 'all',
-  },
-  {
-    img: women6,
-    name: 'Nike Air Max SC',
-    color: 'White/Red',
-    price: '$12,700',
-    category: 'all',
-  },
-  {
-    img: women7,
-    name: 'Nike Court Legacy Lift',
-    color: 'White/Green',
-    price: '$11,600',
-    category: 'all',
-  },
-  {
-    img: women8,
-    name: 'Nike Air Max INTRLK Lite',
-    color: 'White/Black',
-    price: '$14,400',
-    category: 'all',
-  },
-];
-
 const Women = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [cart, setCart] = useState([]);
+  const [allWomenProducts, setAllWomenProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
-  const filteredProducts =
-    selectedCategory === 'all'
-      ? products
-      : products.filter((p) => p.category === selectedCategory);
+  useEffect(() => {
+    fetch('/products.json')
+      .then(response => response.json())
+      .then(data => {
+        setAllWomenProducts(data.womenProducts);
+        setFilteredProducts(data.womenProducts); // Initially show all women's products
+      })
+      .catch(error => console.error('Error fetching women products:', error));
+  }, []);
+
+  useEffect(() => {
+    if (selectedCategory === 'all') {
+      setFilteredProducts(allWomenProducts);
+    } else {
+      setFilteredProducts(allWomenProducts.filter((p) => p.category === selectedCategory));
+    }
+  }, [selectedCategory, allWomenProducts]);
 
   const addToCart = (product) => {
     setCart((prevCart) => [...prevCart, product]);
@@ -134,7 +39,7 @@ const Women = () => {
 
   return (
     <div className="min-vh-100 bg-light" style={{ fontFamily: "'Inter', sans-serif" }}>
-      <Navbar />
+      <Navbar cartCount={cart.length} />
       <div className="container py-5">
         <h1 className="display-4 fw-bold mb-4 text-primary">Women's Collection</h1>
         <p className="lead text-secondary">
@@ -154,8 +59,8 @@ const Women = () => {
         </div>
         {/* Product Grid */}
         <div className="row">
-          {filteredProducts.map((product, idx) => (
-            <div className="col-md-4 col-lg-3 mb-4" key={idx}>
+          {filteredProducts.map((product) => (
+            <div className="col-md-4 col-lg-3 mb-4" key={product.id}>
               <div className="card h-100 shadow-sm border-0">
                 <img
                   src={product.img}

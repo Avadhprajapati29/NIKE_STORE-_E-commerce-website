@@ -1,61 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 
 import nikebluetransparent from '../assets/nike-blue-transparent.png';
-import men1 from '../assets/Men_shoes/men1.png';
-import men4 from '../assets/Men_shoes/men4.png';
-import men7 from '../assets/Men_shoes/men7.png';
-import wls1 from '../assets/women_shoes/lifestyle/wls1.png';
-import women4 from '../assets/Women_shoes/women4.png';
-import women7 from '../assets/Women_shoes/women7.png';
-
-const products = [
-    {
-        img: men4,
-        name: 'Nike Premier III',
-        color: 'Metallic Silver/Black',
-        Gender: 'Womens Shoes',
-        price: '$13,500',
-    },
-    {
-        img: wls1,
-        name: 'Nike Zoom Vomero 5',
-        color: 'White/Pink/Silver',
-        Gender: 'Womens Shoes',
-        price: '$13,000',
-    },
-    {
-        img: men1,
-        name: 'Nike Air Zoom Structure 25',
-        color: 'Blue/White',
-        Gender: 'Mens Shoes',
-        price: '$15,500',
-    },
-    {
-        img: men7,
-        name: 'Nike Air Max Plus',
-        color: 'White/Purple/Black',
-        Gender: 'Mens Shoes',
-        price: '$17,200',
-    },
-    {
-        img: women4,
-        name: 'Nike Air Zoom Pegasus 40',
-        color: 'Pink/Maroon/Green',
-        Gender: 'Womens Shoes',
-        price: '$15,000',
-    },
-    {
-        img: women7,
-        name: 'Air Jordan 1 Mid',
-        color: 'Triple White',
-        Gender: 'Womens Shoes',
-        price: '$16,000',
-    },
-];
 
 const Homepage = () => {
     const [cart, setCart] = useState([]);
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        // In a real application, you would fetch from a server endpoint like /api/products
+        // For this example, we're directly importing the JSON file.
+        fetch('/products.json')
+            .then(response => response.json())
+            .then(data => setProducts(data.homepageProducts))
+            .catch(error => console.error('Error fetching homepage products:', error));
+    }, []);
 
     const handleAddToCart = (product) => {
         setCart((prev) => [...prev, product]);
@@ -107,8 +66,8 @@ const Homepage = () => {
             <section className="container custom-container pb-5">
                 <h2 className="fw-bold mb-4 text-center text-uppercase">Featured Products</h2>
                 <div className="row">
-                    {products.map((product, idx) => (
-                        <div className="col-md-3 col-lg-3 mb-4" key={idx}>
+                    {products.map((product) => (
+                        <div className="col-md-3 col-lg-3 mb-4" key={product.id}>
                             <div className="card h-100 shadow-sm border-0">
                                 <img
                                     src={product.img}
@@ -119,7 +78,7 @@ const Homepage = () => {
                                 <div className="card-body">
                                     <h5 className="card-title fw-semibold">{product.name}</h5>
                                     <p className="card-text mb-1 text-secondary">{product.color}</p>
-                                    <p className="card-text mb-1 text-secondary">{product.Gender}</p>
+                                    <p className="card-text mb-1 text-secondary">{product.gender}</p>
                                     <p className="card-text fw-bold text-black">{product.price}</p>
                                     <button
                                         className="btn btn-primary w-100"
