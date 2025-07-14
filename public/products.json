@@ -381,7 +381,7 @@
         },
         {
             "id": "c6",
-            "img": "../src/assets/collections_shoes/c6.png",
+            "img": "../assets/collections_shoes/c6.png",
             "name": "Nike Air Max Plus",
             "desc": "Bold design and legendary Air cushioning for all-day comfort.",
             "price": "$17,200",
