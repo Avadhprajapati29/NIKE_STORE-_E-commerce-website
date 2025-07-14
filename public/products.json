@@ -373,7 +373,7 @@
         },
         {
             "id": "c5",
-            "img": "../assets/collections_shoes/c5.png",
+            "img": "../src/assets/collections_shoes/c5.png",
             "name": "Nike Air Zoom Structure 25",
             "desc": "Engineered for stability and comfort, perfect for daily runs.",
             "price": "$15,500",
