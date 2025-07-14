@@ -349,7 +349,7 @@
         },
         {
             "id": "c2",
-            "img": "../assets/collections_shoes/c2.png",
+            "img": "../src/assets/collections_shoes/c2.png",
             "name": "Nike Zoom Vomero 5",
             "desc": "Experience plush cushioning and bold colorways with the Nike Zoom Vomero 5.",
             "price": "$13,000",
