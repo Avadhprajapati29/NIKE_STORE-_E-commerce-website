@@ -46,6 +46,7 @@ const ProductDetail = ({ cart, setCart }) => {
                         <h5 className="text-secondary">{product.color}</h5>
                         <p className="fw-bold text-black">{product.price}</p>
                         <p className="text-secondary">{product.gender}</p>
+                        <p className="text-muted">{product.desc || "No description available."}</p>
                         <button className="btn btn-primary" onClick={handleAddToCart}>
                             Add to Cart
                         </button>
@@ -56,6 +57,15 @@ const ProductDetail = ({ cart, setCart }) => {
                             Back to Women's Collection
                         </Link>
                     </div>
+                </div>
+                <div className="mt-4">
+                    <h5 className="fw-bold">Product Details</h5>
+                    <ul className="list-unstyled">
+                        <li><strong>Category:</strong> {product.category}</li>
+                        <li><strong>Gender:</strong> {product.gender}</li>
+                        <li><strong>Color:</strong> {product.color}</li>
+                        <li><strong>Price:</strong> {product.price}</li>
+                    </ul>
                 </div>
             </div>
         </div>
