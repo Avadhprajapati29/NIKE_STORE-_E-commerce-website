@@ -10,7 +10,10 @@ const ProductDetail = ({ cart, setCart }) => {
         fetch('/products.json')
             .then(response => response.json())
             .then(data => {
-                const foundProduct = data.menProducts.find(p => p.id === productId);
+                // Check in both womenProducts and collectionProducts
+                const foundProduct = data.womenProducts.find(p => p.id === productId) ||
+                    data.menProducts.find(p => p.id === productId) ||
+                    data.collectionProducts.find(p => p.id === productId);
                 setProduct(foundProduct);
             })
             .catch(error => console.error('Error fetching product details:', error));
@@ -45,8 +48,8 @@ const ProductDetail = ({ cart, setCart }) => {
                         <button className="btn btn-primary" onClick={handleAddToCart}>
                             Add to Cart
                         </button>
-                        <Link to="/men" className="btn btn-outline-secondary ms-2">
-                            Back to Collection
+                        <Link to="/women" className="btn btn-outline-secondary ms-2">
+                            Back to Women's Collection
                         </Link>
                     </div>
                 </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 
 const Collections = () => {
@@ -53,9 +54,9 @@ const Collections = () => {
                   <h5 className="card-title fw-bold">{item.name}</h5>
                   <p className="card-text text-secondary mb-2">{item.desc}</p>
                   <div className="fw-semibold fs-5 text-black mb-2">{item.price}</div>
-                  <button className="btn btn-outline-primary btn-sm rounded-pill mt-auto">
+                  <Link to={`/product/${item.id}`} className="btn btn-outline-primary btn-sm rounded-pill mt-auto">
                     View Details
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
