@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 
 const categories = [
@@ -73,8 +74,11 @@ const Men = () => {
                                     <h5 className="card-title fw-semibold">{product.name}</h5>
                                     <p className="card-text mb-1 text-secondary">{product.color}</p>
                                     <p className="card-text fw-bold text-black">{product.price}</p>
+                                    <Link to={`/product/${product.id}`} className="btn btn-primary w-100">
+                                        View Details
+                                    </Link>
                                     <button
-                                        className="btn btn-primary"
+                                        className="btn btn-primary mt-2 w-100"
                                         onClick={() => handleAddToCart(product)}
                                     >
                                         Add to Cart
