@@ -13,9 +13,9 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path="/" element={<Homepage cart={cart} setCart={setCart} />} />
         <Route path="/men" element={<Men cart={cart} setCart={setCart} />} />
-        <Route path="/women" element={<Women />} />
+        <Route path="/women" element={<Women cart={cart} setCart={setCart} />} />
         <Route path="/collection" element={<Collection />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/product/:productId" element={<ProductDetail cart={cart} setCart={setCart} />} />

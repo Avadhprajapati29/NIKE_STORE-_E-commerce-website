@@ -10,7 +10,7 @@ const ProductDetail = ({ cart, setCart }) => {
         fetch('/products.json')
             .then(response => response.json())
             .then(data => {
-                // Check in both womenProducts and collectionProducts
+                // Check in both womenProducts, menProducts, and collectionProducts
                 const foundProduct = data.womenProducts.find(p => p.id === productId) ||
                     data.menProducts.find(p => p.id === productId) ||
                     data.collectionProducts.find(p => p.id === productId);
@@ -45,9 +45,13 @@ const ProductDetail = ({ cart, setCart }) => {
                     <div className="col-md-6">
                         <h5 className="text-secondary">{product.color}</h5>
                         <p className="fw-bold text-black">{product.price}</p>
+                        <p className="text-secondary">{product.gender}</p>
                         <button className="btn btn-primary" onClick={handleAddToCart}>
                             Add to Cart
                         </button>
+                        <Link to="/" className="btn btn-outline-secondary ms-2">
+                            Back to Homepage
+                        </Link>
                         <Link to="/women" className="btn btn-outline-secondary ms-2">
                             Back to Women's Collection
                         </Link>

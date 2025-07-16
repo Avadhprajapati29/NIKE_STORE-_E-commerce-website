@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import nikebluetransparent from '../assets/nike-blue-transparent.png';
 
@@ -84,6 +85,9 @@ const Homepage = () => {
                                     >
                                         Add to Cart
                                     </button>
+                                    <Link to={`/product/${product.id}`} className="btn btn-outline-secondary w-100 mt-2">
+                                        View Details
+                                    </Link>
                                 </div>
                             </div>
                         </div>
