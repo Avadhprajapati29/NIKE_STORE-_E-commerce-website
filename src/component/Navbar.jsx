@@ -44,12 +44,12 @@ const Navbar = ({ cartCount = 0 }) => (
 
                 {/* Right-side icons */}
                 <div className="d-flex align-items-center gap-3 ms-lg-3 mt-3 mt-lg-0">
-                    <a href="#" className="nav-link p-0">
+                    <a href="#" className="nav-link p-0" aria-label="Search">
                         <i className="ri-search-line fs-4"></i>
                     </a>
 
                     <div className="position-relative">
-                        <a href="#" className="nav-link p-0">
+                        <a href="#" className="nav-link p-0" aria-label="Shopping Cart">
                             <i className="ri-shopping-cart-2-line fs-4"></i>
                             {cartCount > 0 && (
                                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -59,7 +59,7 @@ const Navbar = ({ cartCount = 0 }) => (
                         </a>
                     </div>
 
-                    <a href="#" className="nav-link p-0">
+                    <a href="#" className="nav-link p-0" aria-label="User  Profile">
                         <i className="ri-user-line fs-4"></i>
                     </a>
                 </div>
