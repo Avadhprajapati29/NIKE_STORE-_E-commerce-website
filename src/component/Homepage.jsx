@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
-
 import nikebluetransparent from '../assets/nike-blue-transparent.png';
 
 const Homepage = () => {
@@ -8,8 +7,7 @@ const Homepage = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        // In a real application, you would fetch from a server endpoint like /api/products
-        // For this example, we're directly importing the JSON file.
+        // Fetch products from a JSON file
         fetch('/products.json')
             .then(response => response.json())
             .then(data => setProducts(data.homepageProducts))
@@ -39,7 +37,7 @@ const Homepage = () => {
                         >
                             Limited Edition
                         </span>
-                        <h1 className="display-2 fw-bold mb-4 lh-1 text-dark">
+                        <h1 className="display-4 fw-bold mb-4 lh-1 text-dark">
                             NIKE <span className="text-primary">ONLINE</span> SHOES STORE
                         </h1>
                         <p className="lead text-secondary mb-4">
@@ -67,7 +65,7 @@ const Homepage = () => {
                 <h2 className="fw-bold mb-4 text-center text-uppercase">Featured Products</h2>
                 <div className="row">
                     {products.map((product) => (
-                        <div className="col-md-3 col-lg-3 mb-4" key={product.id}>
+                        <div className="col-6 col-md-4 col-lg-3 mb-4" key={product.id}>
                             <div className="card h-100 shadow-sm border-0">
                                 <img
                                     src={product.img}
