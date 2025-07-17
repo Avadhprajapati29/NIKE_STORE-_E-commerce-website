@@ -10,7 +10,6 @@ const ProductDetail = ({ cart, setCart }) => {
         fetch('/products.json')
             .then(response => response.json())
             .then(data => {
-                // Check in both womenProducts, menProducts, and collectionProducts
                 const foundProduct = data.womenProducts.find(p => p.id === productId) ||
                     data.menProducts.find(p => p.id === productId) ||
                     data.collectionProducts.find(p => p.id === productId);
@@ -25,7 +24,7 @@ const ProductDetail = ({ cart, setCart }) => {
     };
 
     if (!product) {
-        return <div>Loading...</div>;
+        return <div style={{ textAlign: 'center', fontSize: '1.5rem', marginTop: '50px' }}>Loading...</div>;
     }
 
     return (
@@ -38,8 +37,13 @@ const ProductDetail = ({ cart, setCart }) => {
                         <img
                             src={product.img}
                             alt={product.name}
-                            className="img-fluid"
-                            style={{ objectFit: 'contain', maxHeight: 400 }}
+                            style={{
+                                objectFit: 'contain',
+                                maxHeight: '400px',
+                                border: '1px solid #ddd',
+                                borderRadius: '5px',
+                                width: '100%' // Ensure the image is responsive
+                            }}
                         />
                     </div>
                     <div className="col-md-6">
@@ -47,15 +51,25 @@ const ProductDetail = ({ cart, setCart }) => {
                         <p className="fw-bold text-black">{product.price}</p>
                         <p className="text-secondary">{product.gender}</p>
                         <p className="text-muted">{product.desc || "No description available."}</p>
-                        <button className="btn btn-primary" onClick={handleAddToCart}>
+                        <button
+                            className="btn btn-primary"
+                            onClick={handleAddToCart}
+                            style={{
+                                transition: 'background-color 0.3s, color 0.3s'
+                            }}
+                            onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#0056b3'}
+                            onMouseOut={(e) => e.currentTarget.style.backgroundColor = ''}
+                        >
                             Add to Cart
                         </button>
-                        <Link to="/" className="btn btn-outline-secondary ms-2">
-                            Back to Homepage
-                        </Link>
-                        <Link to="/women" className="btn btn-outline-secondary ms-2">
-                            Back to Women's Collection
-                        </Link>
+                        <div className="mt-3">
+                            <Link to="/" className="btn btn-outline-secondary me-2">
+                                Back to Homepage
+                            </Link>
+                            <Link to="/women" className="btn btn-outline-secondary">
+                                Back to Women's Collection
+                            </Link>
+                        </div>
                     </div>
                 </div>
                 <div className="mt-4">
@@ -65,6 +79,9 @@ const ProductDetail = ({ cart, setCart }) => {
                         <li><strong>Gender:</strong> {product.gender}</li>
                         <li><strong>Color:</strong> {product.color}</li>
                         <li><strong>Price:</strong> {product.price}</li>
+                        <li><strong>Material:</strong> {product.material || "Not specified"}</li>
+                        <li><strong>Size:</strong> {product.size}</li>
+                        <li><strong>SKU:</strong> {product.sku || "Not available"}</li>
                     </ul>
                 </div>
             </div>

@@ -7,7 +7,8 @@
             "color": "Metallic Silver/Black",
             "gender": "Womens Shoes",
             "price": "$13,500",
-            "category": "featured"
+            "category": "featured",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "hp2",
@@ -16,7 +17,8 @@
             "color": "White/Pink/Silver",
             "gender": "Womens Shoes",
             "price": "$13,000",
-            "category": "featured"
+            "category": "featured",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "hp3",
@@ -25,7 +27,8 @@
             "color": "Blue/White",
             "gender": "Mens Shoes",
             "price": "$15,500",
-            "category": "featured"
+            "category": "featured",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "hp4",
@@ -34,7 +37,8 @@
             "color": "White/Purple/Black",
             "gender": "Mens Shoes",
             "price": "$17,200",
-            "category": "featured"
+            "category": "featured",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "hp5",
@@ -43,7 +47,8 @@
             "color": "Pink/Maroon/Green",
             "gender": "Womens Shoes",
             "price": "$15,000",
-            "category": "featured"
+            "category": "featured",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "hp6",
@@ -52,7 +57,8 @@
             "color": "Triple White",
             "gender": "Womens Shoes",
             "price": "$16,000",
-            "category": "featured"
+            "category": "featured",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         }
     ],
     "menProducts": [
@@ -63,7 +69,8 @@
             "color": "White/Gum",
             "price": "$16,000",
             "category": "jordan",
-            "gender": "men"
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "m2",
@@ -72,7 +79,8 @@
             "color": "Black/Grey/White",
             "price": "$18,500",
             "category": "jordan",
-            "gender": "men"
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "m3",
@@ -81,7 +89,8 @@
             "color": "University Blue/White/Navy",
             "price": "$22,000",
             "category": "jordan",
-            "gender": "men"
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "m4",
@@ -90,7 +99,8 @@
             "color": "White/Black",
             "price": "$14,000",
             "category": "lifestyle",
-            "gender": "men"
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "m5",
@@ -99,7 +109,8 @@
             "color": "White/Black",
             "price": "$15,500",
             "category": "lifestyle",
-            "gender": "men"
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "m6",
@@ -108,7 +119,8 @@
             "color": "Olive/Yellow",
             "price": "$18,000",
             "category": "lifestyle",
-            "gender": "men"
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "m7",
@@ -117,7 +129,8 @@
             "color": "Yellow",
             "price": "$16,800",
             "category": "lifestyle",
-            "gender": "men"
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "m8",
@@ -126,7 +139,8 @@
             "color": "Grey/Orange/Black",
             "price": "$17,500",
             "category": "lifestyle",
-            "gender": "men"
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "m9",
@@ -135,7 +149,8 @@
             "color": "White/Grey",
             "price": "$13,000",
             "category": "running",
-            "gender": "men"
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "m10",
@@ -144,7 +159,8 @@
             "color": "White/Black",
             "price": "$17,200",
             "category": "running",
-            "gender": "men"
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "m11",
@@ -153,7 +169,8 @@
             "color": "Black/Yellow",
             "price": "$21,000",
             "category": "running",
-            "gender": "men"
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "m12",
@@ -162,7 +179,8 @@
             "color": "White/Black",
             "price": "$14,500",
             "category": "training",
-            "gender": "men"
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "m13",
@@ -171,7 +189,8 @@
             "color": "White/Black",
             "price": "$12,800",
             "category": "training",
-            "gender": "men"
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "m14",
@@ -180,7 +199,8 @@
             "color": "White/Yellow",
             "price": "$13,200",
             "category": "training",
-            "gender": "men"
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "m15",
@@ -189,7 +209,8 @@
             "color": "Blue/White",
             "price": "$15,500",
             "category": "all",
-            "gender": "men"
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "m16",
@@ -198,7 +219,8 @@
             "color": "Metallic Silver/Black",
             "price": "$13,500",
             "category": "all",
-            "gender": "men"
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "m17",
@@ -207,7 +229,8 @@
             "color": "Silver/Black/Volt",
             "price": "$13,500",
             "category": "all",
-            "gender": "men"
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "m18",
@@ -216,7 +239,8 @@
             "color": "White/Purple/Black",
             "price": "$17,200",
             "category": "all",
-            "gender": "men"
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "m19",
@@ -225,7 +249,8 @@
             "color": "Silver/Black",
             "price": "$19,200",
             "category": "all",
-            "gender": "men"
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         }
     ],
     "womenProducts": [
@@ -236,7 +261,8 @@
             "color": "White/Pink",
             "price": "$13,000",
             "category": "lifestyle",
-            "gender": "women"
+            "gender": "women",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "w2",
@@ -245,7 +271,8 @@
             "color": "White/Gold",
             "price": "$12,500",
             "category": "lifestyle",
-            "gender": "women"
+            "gender": "women",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "w3",
@@ -254,7 +281,8 @@
             "color": "Black/White",
             "price": "$14,000",
             "category": "running",
-            "gender": "women"
+            "gender": "women",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "w4",
@@ -263,7 +291,8 @@
             "color": "Grey/Blue",
             "price": "$13,800",
             "category": "training",
-            "gender": "women"
+            "gender": "women",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "w5",
@@ -272,7 +301,8 @@
             "color": "White/Coral",
             "price": "$15,000",
             "category": "all",
-            "gender": "women"
+            "gender": "women",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "w6",
@@ -281,7 +311,8 @@
             "color": "Black/Pink",
             "price": "$10,500",
             "category": "all",
-            "gender": "women"
+            "gender": "women",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "w7",
@@ -290,7 +321,8 @@
             "color": "Grey/White",
             "price": "$9,800",
             "category": "all",
-            "gender": "women"
+            "gender": "women",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "w8",
@@ -299,7 +331,8 @@
             "color": "White/Blue",
             "price": "$16,200",
             "category": "all",
-            "gender": "women"
+            "gender": "women",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "w9",
@@ -308,7 +341,8 @@
             "color": "White/Beige",
             "price": "$13,900",
             "category": "all",
-            "gender": "women"
+            "gender": "women",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "w10",
@@ -317,7 +351,8 @@
             "color": "White/Red",
             "price": "$12,700",
             "category": "all",
-            "gender": "women"
+            "gender": "women",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "w11",
@@ -326,7 +361,8 @@
             "color": "White/Green",
             "price": "$11,600",
             "category": "all",
-            "gender": "women"
+            "gender": "women",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "w12",
@@ -335,7 +371,8 @@
             "color": "White/Black",
             "price": "$14,400",
             "category": "all",
-            "gender": "women"
+            "gender": "women",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         }
     ],
     "collectionProducts": [
@@ -343,17 +380,21 @@
             "id": "c1",
             "img": "../src/assets/collections_shoes/c1.png",
             "name": "Nike Dunk Low",
+            "color": "White/Anthracite/Light Armoury Blue",
             "desc": "Classic style with modern comfort. The Nike Dunk Low is a timeless icon for every sneakerhead.",
             "price": "$14,500",
-            "category": "collection"
+            "category": "collection",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "c2",
             "img": "../src/assets/collections_shoes/c2.png",
             "name": "Nike Zoom Vomero 5",
+            "color": "Metallic Pewter/Parachute Beige/White/Medium Ash",
             "desc": "Experience plush cushioning and bold colorways with the Nike Zoom Vomero 5.",
             "price": "$13,000",
-            "category": "collection"
+            "category": "collection",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "c3",
@@ -361,7 +402,8 @@
             "name": "Nike Air Zoom Pegasus 40",
             "desc": "The Pegasus 40 delivers responsive support for runners and everyday wear.",
             "price": "$15,000",
-            "category": "collection"
+            "category": "collection",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "c4",
@@ -369,7 +411,8 @@
             "name": "Jordan 1 Low G",
             "desc": "A golf-inspired take on the classic Jordan 1 Low. Sleek, versatile, and ready for any occasion.",
             "price": "$16,000",
-            "category": "collection"
+            "category": "collection",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "c5",
@@ -377,7 +420,8 @@
             "name": "Nike Air Zoom Structure 25",
             "desc": "Engineered for stability and comfort, perfect for daily runs.",
             "price": "$15,500",
-            "category": "collection"
+            "category": "collection",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         },
         {
             "id": "c6",
@@ -385,7 +429,8 @@
             "name": "Nike Air Max Plus",
             "desc": "Bold design and legendary Air cushioning for all-day comfort.",
             "price": "$17,200",
-            "category": "collection"
+            "category": "collection",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         }
     ]
 }
