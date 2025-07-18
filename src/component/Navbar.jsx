@@ -49,7 +49,7 @@ const Navbar = ({ cartCount = 0 }) => (
                     </a>
 
                     <div className="position-relative">
-                        <a href="#" className="nav-link p-0" aria-label="Shopping Cart">
+                        <a href="/cart" className="nav-link p-0" aria-label="Shopping Cart">
                             <i className="ri-shopping-cart-2-line fs-4"></i>
                             {cartCount > 0 && (
                                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">

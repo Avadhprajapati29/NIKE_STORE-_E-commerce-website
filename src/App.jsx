@@ -6,6 +6,7 @@ import Women from './component/Women';
 import Collection from './component/Collection';
 import Contact from './component/Contact';
 import ProductDetail from './component/ProductDetail';
+import Cart from './component/Cart'; // Assuming Cart is in the same directory as other components
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/women" element={<Women cart={cart} setCart={setCart} />} />
         <Route path="/collection" element={<Collection />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
         <Route path="/product/:productId" element={<ProductDetail cart={cart} setCart={setCart} />} />
       </Routes>
     </Router>

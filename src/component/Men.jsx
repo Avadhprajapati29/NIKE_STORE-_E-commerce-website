@@ -17,6 +17,12 @@ const Men = () => {
     const [filteredProducts, setFilteredProducts] = useState([]);
 
     useEffect(() => {
+        // Load cart from localStorage
+        const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
+        setCart(savedCart);
+    }, []);
+
+    useEffect(() => {
         fetch('/products.json')
             .then(response => response.json())
             .then(data => {
@@ -35,7 +41,9 @@ const Men = () => {
     }, [selectedCategory, allMenProducts]);
 
     const handleAddToCart = (product) => {
-        setCart((prevCart) => [...prevCart, product]);
+        const updatedCart = [...cart, product];
+        setCart(updatedCart);
+        localStorage.setItem('cart', JSON.stringify(updatedCart)); // Save to localStorage
         alert(`${product.name} has been added to your cart!`);
     };
 
