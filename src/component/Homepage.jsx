@@ -1,18 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
-import nikebluetransparent from '../assets/nike-blue-transparent.png';
+import nikeImage1 from '../assets/nike-image1.jpg';
+import nikeImage2 from '../assets/nike-image2.jpg';
+import nikeImage3 from '../assets/nike-image3.jpg';
+import nikeImage4 from '../assets/nike-image4.jpg';
+
+const images = [nikeImage1, nikeImage2, nikeImage3, nikeImage4]; // Array of images
 
 const Homepage = () => {
     const [cart, setCart] = useState([]);
     const [products, setProducts] = useState([]);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
-        // Fetch products from a JSON file
         fetch('/products.json')
             .then(response => response.json())
             .then(data => setProducts(data.homepageProducts))
             .catch(error => console.error('Error fetching homepage products:', error));
+
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 1500); // Change image every 1 second
+
+        return () => clearInterval(interval); // Cleanup on unmount
     }, []);
 
     const handleAddToCart = (product) => {
@@ -24,7 +35,7 @@ const Homepage = () => {
         <div className="min-vh-100 bg-light" style={{ fontFamily: "'Inter', sans-serif" }}>
             <Navbar cartCount={cart.length} />
 
-            {/* Hero Section */}
+            {/* Hero Section with Image Slider */}
             <section className="container custom-container py-5">
                 <div className="row align-items-center">
                     <div className="col-lg-6 mb-5 mb-lg-0">
@@ -51,8 +62,8 @@ const Homepage = () => {
                     <div className="col-lg-6 text-center">
                         <div className="hero-img-wrapper">
                             <img
-                                src={nikebluetransparent}
-                                alt="nike-blue-transparent"
+                                src={images[currentIndex]}
+                                alt={`Slide ${currentIndex + 1}`}
                                 className="img-fluid w-75 h-auto"
                                 style={{ maxHeight: 320, objectFit: 'contain', borderRadius: 24 }}
                             />
