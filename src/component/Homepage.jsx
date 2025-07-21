@@ -35,22 +35,22 @@ const Homepage = () => {
         <div className="min-vh-100 bg-light" style={{ fontFamily: "'Garamond', serif" }}>
             <Navbar cartCount={cart.length} />
 
-            {/* Hero Section with Antique Styles */}
-            <section className="container custom-container py-5 bg-beige text-dark rounded-3 shadow-sm hero-section">
+            {/* Hero Section */}
+            <section className="container custom-container py-5 bg-beige text-dark rounded-3">
                 <div className="row align-items-center">
                     <div className="col-lg-6 mb-5 mb-lg-0 text-center text-lg-start">
                         <h1 className="display-5 fw-bold mb-4" style={{ fontStyle: 'italic' }}>
                             Discover Timeless <span className="text-danger">Nike</span> Elegance
                         </h1>
                         <p className="lead mb-4 fs-5">
-                            Experience the superior craftsmanship and classic styles of our exclusive Nike collection.
+                            Experience superior craftsmanship and classic styles of our exclusive Nike collection.
                         </p>
                         <button className="btn btn-dark btn-lg rounded-pill px-5 shadow">
                             Shop Now
                         </button>
                     </div>
                     <div className="col-lg-6 text-center">
-                        <div className="hero-img-wrapper border border-warning rounded-2 overflow-hidden">
+                        <div className="hero-img-wrapper overflow-hidden">
                             <img
                                 src={images[currentIndex]}
                                 alt={`Slide ${currentIndex + 1}`}
@@ -68,7 +68,7 @@ const Homepage = () => {
                 <div className="row">
                     {products.map((product) => (
                         <div className="col-6 col-md-4 col-lg-3 mb-4" key={product.id}>
-                            <div className="card h-100 shadow-sm border-0" style={{ border: '1px solid #d5b19c' }}>
+                            <div className="card h-100 shadow-sm border-0">
                                 <img
                                     src={product.img}
                                     alt={product.name}
