@@ -6,7 +6,7 @@ import nikeImage2 from '../assets/nike-image2.jpg';
 import nikeImage3 from '../assets/nike-image3.jpg';
 import nikeImage4 from '../assets/nike-image4.jpg';
 
-const images = [nikeImage1, nikeImage2, nikeImage3, nikeImage4]; // Array of images
+const images = [nikeImage1, nikeImage2, nikeImage3, nikeImage4];
 
 const Homepage = () => {
     const [cart, setCart] = useState([]);
@@ -21,9 +21,9 @@ const Homepage = () => {
 
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 1500); // Change image every 1 second
+        }, 2000); // Carousel interval
 
-        return () => clearInterval(interval); // Cleanup on unmount
+        return () => clearInterval(interval);
     }, []);
 
     const handleAddToCart = (product) => {
@@ -32,40 +32,30 @@ const Homepage = () => {
     };
 
     return (
-        <div className="min-vh-100 bg-light" style={{ fontFamily: "'Inter', sans-serif" }}>
+        <div className="min-vh-100 bg-light" style={{ fontFamily: "'Garamond', serif" }}>
             <Navbar cartCount={cart.length} />
 
-            {/* Hero Section with Image Slider */}
-            <section className="container custom-container py-5">
+            {/* Hero Section with Antique Styles */}
+            <section className="container custom-container py-5 bg-beige text-dark rounded-3 shadow-sm hero-section">
                 <div className="row align-items-center">
-                    <div className="col-lg-6 mb-5 mb-lg-0">
-                        <span
-                            className="badge px-4 py-2 mb-3 fs-6 fw-semibold text-uppercase"
-                            style={{
-                                background: 'linear-gradient(90deg, #0d6efd 60%, #6ea8fe 100%)',
-                                color: '#fff',
-                                letterSpacing: '2px',
-                            }}
-                        >
-                            Limited Edition
-                        </span>
-                        <h1 className="display-4 fw-bold mb-4 lh-1 text-dark">
-                            NIKE <span className="text-primary">ONLINE</span> SHOES STORE
+                    <div className="col-lg-6 mb-5 mb-lg-0 text-center text-lg-start">
+                        <h1 className="display-5 fw-bold mb-4" style={{ fontStyle: 'italic' }}>
+                            Discover Timeless <span className="text-danger">Nike</span> Elegance
                         </h1>
-                        <p className="lead text-secondary mb-4">
-                            Discover the latest Nike shoes online. Shop exclusive collections, limited editions, and the best in comfort and style. Just do it.
+                        <p className="lead mb-4 fs-5">
+                            Experience the superior craftsmanship and classic styles of our exclusive Nike collection.
                         </p>
-                        <button className="btn btn-primary btn-lg rounded-pill px-5 fw-semibold shadow">
+                        <button className="btn btn-dark btn-lg rounded-pill px-5 shadow">
                             Shop Now
                         </button>
                     </div>
                     <div className="col-lg-6 text-center">
-                        <div className="hero-img-wrapper">
+                        <div className="hero-img-wrapper border border-warning rounded-2 overflow-hidden">
                             <img
                                 src={images[currentIndex]}
                                 alt={`Slide ${currentIndex + 1}`}
-                                className="img-fluid w-75 h-auto"
-                                style={{ maxHeight: 320, objectFit: 'contain', borderRadius: 24 }}
+                                className="img-fluid rounded-3"
+                                style={{ maxHeight: 400, objectFit: 'cover' }}
                             />
                         </div>
                     </div>
@@ -78,7 +68,7 @@ const Homepage = () => {
                 <div className="row">
                     {products.map((product) => (
                         <div className="col-6 col-md-4 col-lg-3 mb-4" key={product.id}>
-                            <div className="card h-100 shadow-sm border-0">
+                            <div className="card h-100 shadow-sm border-0" style={{ border: '1px solid #d5b19c' }}>
                                 <img
                                     src={product.img}
                                     alt={product.name}
@@ -91,7 +81,7 @@ const Homepage = () => {
                                     <p className="card-text mb-1 text-secondary">{product.gender}</p>
                                     <p className="card-text fw-bold text-black">{product.price}</p>
                                     <button
-                                        className="btn btn-primary w-100"
+                                        className="btn btn-dark w-100"
                                         onClick={() => handleAddToCart(product)}
                                     >
                                         Add to Cart
@@ -108,15 +98,15 @@ const Homepage = () => {
 
             {/* About/Promo Section */}
             <section className="container custom-container pb-5">
-                <div className="row align-items-center bg-white rounded-4 shadow-sm p-4">
+                <div className="row align-items-center bg-light rounded-4 shadow-sm p-4">
                     <div className="col-md-8">
                         <h3 className="fw-bold mb-2">Why Shop at Nike Online Store?</h3>
                         <p className="mb-0 text-secondary">
-                            Enjoy the best selection of Nike shoes, fast delivery, and exclusive online offers. Stand out with the latest designs and unbeatable comfort.
+                            Enjoy the best collection of Nike footwear, with swift delivery and exclusive online offers. Stand out with the latest designs and unparalleled comfort.
                         </p>
                     </div>
                     <div className="col-md-4 text-md-end text-center mt-3 mt-md-0">
-                        <a href="#" className="btn btn-primary rounded-pill px-4">
+                        <a href="#" className="btn btn-dark rounded-pill px-4">
                             Learn More
                         </a>
                     </div>
