@@ -39,7 +39,7 @@ const Women = () => {
   };
 
   return (
-    <div className="min-vh-100 bg-light" style={{ fontFamily: "'Inter', sans-serif" }}>
+    <div className="min-vh-100 bg-light" style={{ fontFamily: "'Garamond', serif" }}>
       <Navbar cartCount={cart.length} />
       <div className="container py-5">
         <h1 className="display-4 fw-bold mb-4 text-primary">Women's Collection</h1>

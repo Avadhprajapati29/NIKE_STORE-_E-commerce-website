@@ -13,7 +13,7 @@ const Collections = () => {
   }, []);
 
   return (
-    <div className="min-vh-100 bg-light" style={{ fontFamily: "'Inter', sans-serif" }}>
+    <div className="min-vh-100 bg-light" style={{ fontFamily: "'Garamond', serif" }}>
       <Navbar />
       <section className="container custom-container py-5">
         <div className="text-center mb-5">
