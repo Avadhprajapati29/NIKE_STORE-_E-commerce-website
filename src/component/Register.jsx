@@ -53,6 +53,7 @@ const Register = () => {
                     </div>
                     <button type="submit">Sign Up</button>
                 </form>
+                <button onClick={() => navigate('/')} className="home-btn">Return Home</button>
             </div>
         </div>
     );
