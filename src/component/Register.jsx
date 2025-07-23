@@ -5,13 +5,12 @@ const Register = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate(); // Use useNavigate instead of useHistory
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle registration logic here
         alert('Registered successfully!');
-        navigate('/login'); // Redirect to login page after registration
+        navigate('/login');
     };
 
     return (
