@@ -8,6 +8,7 @@ import Contact from './component/Contact';
 import ProductDetail from './component/ProductDetail';
 import Cart from './component/Cart';
 import Login from './component/Login';
+import Register from './component/Register';
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
         <Route path="/product/:productId" element={<ProductDetail cart={cart} setCart={setCart} />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/Register" element={<Register />} />
       </Routes>
     </Router>
   );

@@ -13,6 +13,10 @@ const Login = () => {
         navigate('/'); // Redirect to homepage after login
     };
 
+    const handleRegisterClick = () => {
+        navigate('/register'); // Redirect to register page
+    };
+
     return (
         <div className="container py-5" style={{ fontFamily: "'Garamond', serif" }}>
             <h1 className="display-4 fw-bold mb-4">Login</h1>
@@ -41,6 +45,9 @@ const Login = () => {
                 </div>
                 <button type="submit" className="btn btn-dark">Login</button>
             </form>
+            <div className="mt-3">
+                <button onClick={handleRegisterClick} className="btn btn-link">Register</button>
+            </div>
         </div>
     );
 };

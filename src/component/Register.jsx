@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const history = useHistory();
+    const navigate = useNavigate(); // Use useNavigate instead of useHistory
 
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle registration logic here
         alert('Registered successfully!');
-        history.push('/login'); // Redirect to login page after registration
+        navigate('/login'); // Redirect to login page after registration
     };
 
     return (
