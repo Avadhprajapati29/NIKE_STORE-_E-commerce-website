@@ -6,13 +6,16 @@ import Women from './component/Women';
 import Collection from './component/Collection';
 import Contact from './component/Contact';
 import ProductDetail from './component/ProductDetail';
-import Cart from './component/Cart'; // Assuming Cart is in the same directory as other components
+import Cart from './component/Cart';
+import Login from './component/Login';
+
 
 const App = () => {
   const [cart, setCart] = useState([]);
 
   return (
     <Router>
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Homepage cart={cart} setCart={setCart} />} />
         <Route path="/men" element={<Men cart={cart} setCart={setCart} />} />
@@ -21,6 +24,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
         <Route path="/product/:productId" element={<ProductDetail cart={cart} setCart={setCart} />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );

@@ -49,19 +49,20 @@ const Navbar = ({ cartCount = 0 }) => (
                     </a>
 
                     <div className="position-relative">
-                        <a href="/cart" className="nav-link p-0" aria-label="Shopping Cart">
+                        <Link to="/cart" className="nav-link p-0" aria-label="Shopping Cart">
                             <i className="ri-shopping-cart-2-line fs-4"></i>
                             {cartCount > 0 && (
                                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                     {cartCount}
                                 </span>
                             )}
-                        </a>
+                        </Link>
                     </div>
 
-                    <a href="#" className="nav-link p-0" aria-label="User  Profile">
+                    {/* Change this anchor tag to Link for User Profile */}
+                    <Link to="/login" className="nav-link p-0" aria-label="User Profile">
                         <i className="ri-user-line fs-4"></i>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
