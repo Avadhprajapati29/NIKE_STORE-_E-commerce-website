@@ -4,11 +4,11 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate(); // Use useNavigate instead of useHistory
+    const [isHovered, setIsHovered] = useState(false); // State to track hover
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle login logic here
         alert('Logged in successfully!');
         navigate('/'); // Redirect to homepage after login
     };
@@ -18,35 +18,54 @@ const Login = () => {
     };
 
     return (
-        <div className="container py-5" style={{ fontFamily: "'Garamond', serif" }}>
-            <h1 className="display-4 fw-bold mb-4">Login</h1>
-            <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                    <label htmlFor="email" className="form-label">Email address</label>
-                    <input
-                        type="email"
-                        className="form-control"
-                        id="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
+        <div className="container d-flex justify-content-center align-items-center vh-100" style={{ fontFamily: "'Garamond', serif" }}>
+            <div className="card shadow-lg" style={{ width: '400px', borderRadius: '15px', border: '1px solid #e0e0e0' }}>
+                <div className="card-body">
+                    <h1 className="card-title text-center mb-4" style={{ color: '#333' }}>Login</h1>
+                    <form onSubmit={handleSubmit}>
+                        <div className="mb-3">
+                            <label htmlFor="email" className="form-label">Email address</label>
+                            <input
+                                type="email"
+                                className="form-control"
+                                id="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                                style={{ borderRadius: '10px' }}
+                            />
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="password" className="form-label">Password</label>
+                            <input
+                                type="password"
+                                className="form-control"
+                                id="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                                style={{ borderRadius: '10px' }}
+                            />
+                        </div>
+                        <button
+                            type="submit"
+                            className="btn btn-primary w-100"
+                            style={{
+                                borderRadius: '10px',
+                                backgroundColor: isHovered ? '#0056b3' : '#007bff', // Change color on hover
+                                border: 'none',
+                                transition: 'background-color 0.3s ease' // Transition effect
+                            }}
+                            onMouseEnter={() => setIsHovered(true)} // Set hover state to true
+                            onMouseLeave={() => setIsHovered(false)} // Set hover state to false
+                        >
+                            Login
+                        </button>
+                    </form>
+                    <div className="mt-3 text-center">
+                        <button onClick={handleRegisterClick} className="btn btn-link" style={{ color: '#007bff', textDecoration: 'underline' }}>Register</button>
+                    </div>
                 </div>
-                <div className="mb-3">
-                    <label htmlFor="password" className="form-label">Password</label>
-                    <input
-                        type="password"
-                        className="form-control"
-                        id="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
-                </div>
-                <button type="submit" className="btn btn-dark">Login</button>
-            </form>
-            <div className="mt-3">
-                <button onClick={handleRegisterClick} className="btn btn-link">Register</button>
             </div>
         </div>
     );
