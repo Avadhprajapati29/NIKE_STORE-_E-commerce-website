@@ -27,6 +27,7 @@ const App = () => {
         <Route path="/product/:productId" element={<ProductDetail cart={cart} setCart={setCart} />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
+
       </Routes>
     </Router>
   );
