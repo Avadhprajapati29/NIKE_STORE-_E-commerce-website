@@ -3,382 +3,208 @@
         {
             "id": "hp1",
             "img": "../src/assets/Men_shoes/men4.png",
+            "model3d": "../src/models/nike_premier_iii.glb",
             "name": "Nike Premier III",
             "color": "Metallic Silver/Black",
             "gender": "Womens Shoes",
             "price": "$13,500",
             "category": "featured",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Leather",
+            "desc": "Premium football cleats with metallic finish."
         },
         {
             "id": "hp2",
             "img": "../src/assets/women_shoes/lifestyle/wls1.png",
+            "model3d": "../src/models/nike_zoom_vomero.glb",
             "name": "Nike Zoom Vomero 5",
             "color": "White/Pink/Silver",
             "gender": "Womens Shoes",
             "price": "$13,000",
             "category": "featured",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Mesh",
+            "desc": "Running shoes with responsive cushioning."
         },
         {
             "id": "hp3",
             "img": "../src/assets/Men_shoes/men1.png",
+            "model3d": "../src/models/nike_air_zoom_structure.glb",
             "name": "Nike Air Zoom Structure 25",
             "color": "Blue/White",
             "gender": "Mens Shoes",
             "price": "$15,500",
             "category": "featured",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Synthetic",
+            "desc": "Stability running shoes for all-day comfort."
         },
         {
             "id": "hp4",
             "img": "../src/assets/Men_shoes/men7.png",
+            "model3d": "../src/models/nike_air_max_plus.glb",
             "name": "Nike Air Max Plus",
             "color": "White/Purple/Black",
             "gender": "Mens Shoes",
             "price": "$17,200",
             "category": "featured",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Textile",
+            "desc": "Iconic design with legendary Air cushioning."
         },
         {
             "id": "hp5",
             "img": "../src/assets/Women_shoes/women4.png",
+            "model3d": "../src/models/nike_air_zoom_pegasus.glb",
             "name": "Nike Air Zoom Pegasus 40",
             "color": "Pink/Maroon/Green",
             "gender": "Womens Shoes",
             "price": "$15,000",
             "category": "featured",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Mesh",
+            "desc": "Versatile running shoes for everyday wear."
         },
         {
             "id": "hp6",
             "img": "../src/assets/Women_shoes/women7.png",
+            "model3d": "../src/models/air_jordan_1_mid.glb",
             "name": "Air Jordan 1 Mid",
             "color": "Triple White",
             "gender": "Womens Shoes",
             "price": "$16,000",
             "category": "featured",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Leather",
+            "desc": "Classic silhouette with modern comfort."
         }
     ],
     "menProducts": [
         {
             "id": "m1",
             "img": "../src/assets/men_shoes/Jordan/Jordan1.png",
+            "model3d": "../src/models/jordan_1_low_g.glb",
             "name": "Jordan 1 Low G",
             "color": "White/Gum",
             "price": "$16,000",
             "category": "jordan",
             "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Leather",
+            "desc": "Golf-inspired design with premium materials."
         },
         {
             "id": "m2",
             "img": "../src/assets/men_shoes/Jordan/Jordan2.png",
+            "model3d": "../src/models/air_jordan_1_low_og.glb",
             "name": "Air Jordan 1 Low OG",
             "color": "Black/Grey/White",
             "price": "$18,500",
             "category": "jordan",
             "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Leather",
+            "desc": "Classic style with a modern twist."
         },
         {
             "id": "m3",
             "img": "../src/assets/men_shoes/Jordan/Jordan3.png",
+            "model3d": "../src/models/air_jordan_1_high_og_unc.glb",
             "name": "Air Jordan 1 High OG UNC",
             "color": "University Blue/White/Navy",
             "price": "$22,000",
             "category": "jordan",
             "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Leather",
+            "desc": "A tribute to the University of North Carolina."
         },
         {
             "id": "m4",
             "img": "../src/assets/Men_shoes/lifestyle/ls1.png",
+            "model3d": "../src/models/nike_air_max_excee.glb",
             "name": "Nike Air Max Excee",
             "color": "White/Black",
             "price": "$14,000",
             "category": "lifestyle",
             "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Textile",
+            "desc": "Stylish and comfortable for everyday wear."
         },
         {
             "id": "m5",
             "img": "../src/assets/Men_shoes/lifestyle/ls2.png",
+            "model3d": "../src/models/jordan_max_aura_5.glb",
             "name": "Jordan Max Aura 5",
             "color": "White/Black",
             "price": "$15,500",
             "category": "lifestyle",
             "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "m6",
-            "img": "../src/assets/Men_shoes/lifestyle/ls3.png",
-            "name": "Nike Shox TL",
-            "color": "Olive/Yellow",
-            "price": "$18,000",
-            "category": "lifestyle",
-            "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "m7",
-            "img": "../src/assets/Men_shoes/lifestyle/ls4.png",
-            "name": "Nike Zoom Vomero 5",
-            "color": "Yellow",
-            "price": "$16,800",
-            "category": "lifestyle",
-            "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "m8",
-            "img": "../src/assets/Men_shoes/lifestyle/ls5.png",
-            "name": "Nike Shox R4",
-            "color": "Grey/Orange/Black",
-            "price": "$17,500",
-            "category": "lifestyle",
-            "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "m9",
-            "img": "../src/assets/Men_shoes/Running/AIR-ZOOM-PEGASUS-41.png",
-            "name": "Nike Air Zoom Pegasus 41",
-            "color": "White/Grey",
-            "price": "$13,000",
-            "category": "running",
-            "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "m10",
-            "img": "../src/assets/Men_shoes/Running/NIKE-AIR-MAX-PLUS.png",
-            "name": "Nike Air Max Plus",
-            "color": "White/Black",
-            "price": "$17,200",
-            "category": "running",
-            "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "m11",
-            "img": "../src/assets/Men_shoes/Running/ZOOMX-VAPORFLY-NEXT-4.png",
-            "name": "Nike ZoomX Vaporfly Next% 4",
-            "color": "Black/Yellow",
-            "price": "$21,000",
-            "category": "running",
-            "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "m12",
-            "img": "../src/assets/Men_shoes/Training & Gym/LEBRON-TR-1.png",
-            "name": "LeBron TR 1",
-            "color": "White/Black",
-            "price": "$14,500",
-            "category": "training",
-            "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "m13",
-            "img": "../src/assets/Men_shoes/Training & Gym/M-NIKE-MC-TRAINER-3.png",
-            "name": "Nike MC Trainer 3",
-            "color": "White/Black",
-            "price": "$12,800",
-            "category": "training",
-            "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "m14",
-            "img": "../src/assets/Men_shoes/Training & Gym/M-NIKE-PROMINA.png",
-            "name": "Nike Promina",
-            "color": "White/Yellow",
-            "price": "$13,200",
-            "category": "training",
-            "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "m15",
-            "img": "../src/assets/men_shoes/men1.png",
-            "name": "Nike Air Zoom Structure 25",
-            "color": "Blue/White",
-            "price": "$15,500",
-            "category": "all",
-            "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "m16",
-            "img": "../src/assets/men_shoes/men4.png",
-            "name": "Nike Premier III",
-            "color": "Metallic Silver/Black",
-            "price": "$13,500",
-            "category": "all",
-            "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "m17",
-            "img": "../src/assets/men_shoes/men6.png",
-            "name": "Nike Premier III FG",
-            "color": "Silver/Black/Volt",
-            "price": "$13,500",
-            "category": "all",
-            "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "m18",
-            "img": "../src/assets/men_shoes/men7.png",
-            "name": "Nike Air Max Plus",
-            "color": "White/Purple/Black",
-            "price": "$17,200",
-            "category": "all",
-            "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "m19",
-            "img": "../src/assets/Men_shoes/men8.png",
-            "name": "Nike Air Max black",
-            "color": "Silver/Black",
-            "price": "$19,200",
-            "category": "all",
-            "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Synthetic",
+            "desc": "A modern take on a classic silhouette."
         }
     ],
     "womenProducts": [
         {
             "id": "w1",
             "img": "../src/assets/women_shoes/lifestyle/wls1.png",
+            "model3d": "../src/models/nike_air_max_verona.glb",
             "name": "Nike Air Max Verona",
             "color": "White/Pink",
             "price": "$13,000",
             "category": "lifestyle",
             "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Mesh",
+            "desc": "Stylish and comfortable for everyday wear."
         },
         {
             "id": "w2",
             "img": "../src/assets/women_shoes/lifestyle/wls2.png",
+            "model3d": "../src/models/nike_court_vision_alta.glb",
             "name": "Nike Court Vision Alta",
             "color": "White/Gold",
             "price": "$12,500",
             "category": "lifestyle",
             "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Synthetic",
+            "desc": "Classic style with a modern twist."
         },
         {
             "id": "w3",
             "img": "../src/assets/women_shoes/Running/wrunning1.png",
+            "model3d": "../src/models/nike_air_zoom_pegasus_40.glb",
             "name": "Nike Air Zoom Pegasus 40",
             "color": "Black/White",
             "price": "$14,000",
             "category": "running",
             "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Mesh",
+            "desc": "Responsive support for runners and everyday wear."
         },
         {
             "id": "w4",
             "img": "../src/assets/women_shoes/Training & Gym/wgym1.png",
+            "model3d": "../src/models/nike_free_metcon_5.glb",
             "name": "Nike Free Metcon 5",
             "color": "Grey/Blue",
             "price": "$13,800",
             "category": "training",
             "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "w5",
-            "img": "../src/assets/women_shoes/lifestyle/wls1.png",
-            "name": "Nike Air Max 270",
-            "color": "White/Coral",
-            "price": "$15,000",
-            "category": "all",
-            "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "w6",
-            "img": "../src/assets/women_shoes/women2.png",
-            "name": "Nike Revolution 6",
-            "color": "Black/Pink",
-            "price": "$10,500",
-            "category": "all",
-            "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "w7",
-            "img": "../src/assets/women_shoes/women3.png",
-            "name": "Nike Downshifter 12",
-            "color": "Grey/White",
-            "price": "$9,800",
-            "category": "all",
-            "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "w8",
-            "img": "../src/assets/women_shoes/women4.png",
-            "name": "Nike Air Force 1 Shadow",
-            "color": "White/Blue",
-            "price": "$16,200",
-            "category": "all",
-            "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "w9",
-            "img": "../src/assets/women_shoes/women5.png",
-            "name": "Nike Blazer Low Platform",
-            "color": "White/Beige",
-            "price": "$13,900",
-            "category": "all",
-            "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "w10",
-            "img": "../src/assets/women_shoes/women6.png",
-            "name": "Nike Air Max SC",
-            "color": "White/Red",
-            "price": "$12,700",
-            "category": "all",
-            "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "w11",
-            "img": "../src/assets/women_shoes/women7.png",
-            "name": "Nike Court Legacy Lift",
-            "color": "White/Green",
-            "price": "$11,600",
-            "category": "all",
-            "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "w12",
-            "img": "../src/assets/women_shoes/women8.png",
-            "name": "Nike Air Max INTRLK Lite",
-            "color": "White/Black",
-            "price": "$14,400",
-            "category": "all",
-            "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Synthetic",
+            "desc": "Versatile training shoes for all types of workouts."
         }
     ],
     "collectionProducts": [
         {
             "id": "c1",
             "img": "../src/assets/collections_shoes/c1.png",
+            "model3d": "../src/models/nike_dunk_low.glb",
             "name": "Nike Dunk Low",
             "color": "White/Anthracite/Light Armoury Blue",
             "desc": "Classic style with modern comfort. The Nike Dunk Low is a timeless icon for every sneakerhead.",
@@ -389,50 +215,11 @@
         {
             "id": "c2",
             "img": "../src/assets/collections_shoes/c2.png",
+            "model3d": "../src/models/nike_zoom_vomero_5.glb",
             "name": "Nike Zoom Vomero 5",
             "color": "Metallic Pewter/Parachute Beige/White/Medium Ash",
             "desc": "Experience plush cushioning and bold colorways with the Nike Zoom Vomero 5.",
             "price": "$13,000",
-            "category": "collection",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "c3",
-            "img": "../src/assets/collections_shoes/c3.png",
-            "name": "Nike Air Zoom Pegasus 40",
-            "color": "White/Armoury Blue",
-            "desc": "The Pegasus 40 delivers responsive support for runners and everyday wear.",
-            "price": "$15,000",
-            "category": "collection",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "c4",
-            "img": "../src/assets/collections_shoes/c4.png",
-            "name": "Jordan 1 Low G",
-            "color": "White/black/red",
-            "desc": "A golf-inspired take on the classic Jordan 1 Low. Sleek, versatile, and ready for any occasion.",
-            "price": "$16,000",
-            "category": "collection",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "c5",
-            "img": "../src/assets/collections_shoes/c5.png",
-            "name": "Nike Air Zoom Structure 25",
-            "color": "Light Iron/Thunder Blue",
-            "desc": "Engineered for stability and comfort, perfect for daily runs.",
-            "price": "$15,500",
-            "category": "collection",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
-        },
-        {
-            "id": "c6",
-            "img": "../src/assets/collections_shoes/c6.png",
-            "name": "Nike Air Max Plus",
-            "color": "White/Black/Cool Grey",
-            "desc": "Bold design and legendary Air cushioning for all-day comfort.",
-            "price": "$17,200",
             "category": "collection",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)"
         }

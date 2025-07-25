@@ -12,7 +12,7 @@ const Homepage = () => {
     const [cart, setCart] = useState([]);
     const [products, setProducts] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
-
+    
     useEffect(() => {
         fetch('/products.json')
             .then(response => response.json())
