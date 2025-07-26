@@ -67,6 +67,9 @@ const ProductDetail = ({ cart, setCart }) => {
                                         <Link to="/" className="btn btn-outline-secondary rounded-pill px-4">
                                             ← Home
                                         </Link>
+                                        <Link to="/men" className="btn btn-outline-secondary rounded-pill px-4">
+                                            men’s Collection
+                                        </Link>
                                         <Link to="/women" className="btn btn-outline-secondary rounded-pill px-4">
                                             Women’s Collection
                                         </Link>

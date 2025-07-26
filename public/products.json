@@ -144,6 +144,57 @@
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Synthetic",
             "desc": "A modern take on a classic silhouette."
+        },
+        {
+            "id": "m6",
+            "img": "../src/assets/Men_shoes/lifestyle/ls3.png",
+            "model3d": "../src/models/jordan_max_aura_5.glb",
+            "name": "Nike shox TL",
+            "color": "Black/orenge",
+            "price": "$15,995",
+            "category": "lifestyle",
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Synthetic",
+            "desc": "A modern take on a classic silhouette."
+        },
+        {
+            "id": "m7",
+            "img": "../src/assets/Men_shoes/lifestyle/ls4.png",
+            "model3d": "../src/models/jordan_max_aura_5.glb",
+            "name": "nike Zoom Vomero Roam",
+            "color": "Lightning/Saturn Gold/Flat Gold/Lightning",
+            "price": "$16,995",
+            "category": "lifestyle",
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Synthetic",
+            "desc": "A modern take on a classic silhouette."
+        },
+        {
+            "id": "m8",
+            "img": "../src/assets/Men_shoes/lifestyle/ls5.png",
+            "model3d": "../src/models/jordan_max_aura_5.glb",
+            "name": "Nike Air Max Dn8",
+            "color": "Sequoia/Bright Citron/Black",
+            "price": "$17 495",
+            "category": "lifestyle",
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Synthetic",
+            "desc": "A modern take on a classic silhouette."
+        },
+        {
+            "id": "m9",
+            "img": "../src/assets/Men_shoes/Running/wrunning1.png",
+            "name": "Nike Pegasus 41",
+            "color": "White/Barely Green/Bright Crimson/Metallic Silver",
+            "price": "$11 895",
+            "category": "running",
+            "gender": "men",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Synthetic",
+            "desc": "A modern take on a classic silhouette."
         }
     ],
     "womenProducts": [
