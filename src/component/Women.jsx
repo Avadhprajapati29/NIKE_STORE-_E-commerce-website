@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 
 const categories = [
   { label: 'All', value: 'all' },
+  { label: 'Jordan', value: 'jordan' },
   { label: 'Lifestyle', value: 'lifestyle' },
   { label: 'Running', value: 'running' },
   { label: 'Training & Gym', value: 'training' },

@@ -260,19 +260,32 @@
     "womenProducts": [
         {
             "id": "w1",
-            "img": "../src/assets/women_shoes/lifestyle/wls1.png",
-            "model3d": "../src/models/nike_air_max_verona.glb",
-            "name": "Nike Air Max Verona",
-            "color": "White/Pink",
-            "price": "$13,000",
-            "category": "lifestyle",
+            "img": "../src/assets/women_shoes/Jordan/j1.png",
+            "model3d": "../src/models/nike_free_metcon_5.glb",
+            "name": "Nike Dunk Low SE",
+            "color": "Particle Pink/Coconut Milk/Sail/Midnight Navy",
+            "price": "$10,795",
+            "category": "jordan",
             "gender": "women",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
-            "material": "Mesh",
-            "desc": "Stylish and comfortable for everyday wear."
+            "material": "Synthetic",
+            "desc": "Versatile training shoes for all types of workouts. Nike Dunk Low SE"
         },
         {
             "id": "w2",
+            "img": "../src/assets/women_shoes/Jordan/j2.png",
+            "model3d": "../src/models/nike_free_metcon_5.glb",
+            "name": "Nike Air Force 1 '07 Next Nature",
+            "color": "White/White/Washed Coral",
+            "price": "$9695",
+            "category": "jordan",
+            "gender": "women",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Synthetic",
+            "desc": "Versatile training shoes for all types of workouts. Nike Dunk Low SE"
+        },
+        {
+            "id": "w3",
             "img": "../src/assets/women_shoes/lifestyle/wls2.png",
             "model3d": "../src/models/nike_court_vision_alta.glb",
             "name": "Nike Court Vision Alta",
@@ -285,7 +298,20 @@
             "desc": "Classic style with a modern twist."
         },
         {
-            "id": "w3",
+            "id": "w4",
+            "img": "../src/assets/women_shoes/Jordan/j3.png",
+            "model3d": "../src/models/nike_free_metcon_5.glb",
+            "name": "Air Jordan 1 Mid",
+            "color": "White/White/White",
+            "price": "$10,795",
+            "category": "jordan",
+            "gender": "women",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Synthetic",
+            "desc": "Versatile training shoes for all types of workouts. Nike Dunk Low SE"
+        },
+        {
+            "id": "w5",
             "img": "../src/assets/women_shoes/Running/wrunning1.png",
             "model3d": "../src/models/nike_air_zoom_pegasus_40.glb",
             "name": "Nike Air Zoom Pegasus 40",
@@ -298,7 +324,7 @@
             "desc": "Responsive support for runners and everyday wear."
         },
         {
-            "id": "w4",
+            "id": "w6",
             "img": "../src/assets/women_shoes/Training & Gym/wgym1.png",
             "model3d": "../src/models/nike_free_metcon_5.glb",
             "name": "Nike Free Metcon 5",
@@ -309,6 +335,58 @@
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Synthetic",
             "desc": "Versatile training shoes for all types of workouts."
+        },
+        {
+            "id": "w7",
+            "img": "../src/assets/women_shoes/Jordan/j4.png",
+            "model3d": "../src/models/nike_free_metcon_5.glb",
+            "name": "Nike Field General",
+            "color": " Platinum Violet/Gum Dark Brown/Sail",
+            "price": "$8695",
+            "category": "jordan",
+            "gender": "women",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Synthetic",
+            "desc": "Versatile training shoes for all types of workouts. Nike Dunk Low SE"
+        },
+        {
+            "id": "w8",
+            "img": "../src/assets/women_shoes/Training & Gym/wgym2.png",
+            "model3d": "../src/models/nike_free_metcon_5.glb",
+            "name": "Nike Free Metcon 6",
+            "color": "White/Playful Pink",
+            "price": "$10,795",
+            "category": "training",
+            "gender": "women",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Synthetic",
+            "desc": "Versatile training shoes for all types of workouts. "
+        },
+        {
+            "id": "w9",
+            "img": "../src/assets/women_shoes/Training & Gym/wgym3.png",
+            "model3d": "../src/models/nike_air_max_verona.glb",
+            "name": "Nike Zoom Bella 6",
+            "color": "Black/Anthracite/White",
+            "price": "$7117",
+            "category": "training",
+            "gender": "women",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Mesh",
+            "desc": "Stylish and comfortable for everyday wear."
+        },
+        {
+            "id": "w21",
+            "img": "../src/assets/women_shoes/lifestyle/wls1.png",
+            "model3d": "../src/models/nike_air_max_verona.glb",
+            "name": "Nike Air Max Verona",
+            "color": "White/Pink",
+            "price": "$13,000",
+            "category": "lifestyle",
+            "gender": "women",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Mesh",
+            "desc": "Stylish and comfortable for everyday wear."
         }
     ],
     "collectionProducts": [
