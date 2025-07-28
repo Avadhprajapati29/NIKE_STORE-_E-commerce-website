@@ -20,7 +20,7 @@ const Cart = () => {
     };
 
     const calculateTotal = (cartItems) => {
-        const subtotal = cartItems.reduce((acc, item) => acc + item.price, 0);
+        const subtotal = cartItems.reduce((acc, item) => acc + Number(item.price), 0); // Ensure price is a number
         const deliveryCharges = 1250; // Example static delivery charges
         setTotal(subtotal + deliveryCharges);
     };
@@ -50,7 +50,7 @@ const Cart = () => {
                                             <h5 className="fw-semibold">{product.name}</h5>
                                             <p className="mb-1 text-secondary">Shoes</p>
                                             <p className="text-muted">Pure Platinum/Wolf Grey/Cool Grey/Sail</p>
-                                            <p className="fw-bold">MRP: $ {product.price.toLocaleString()}</p>
+                                            <p className="fw-bold">MRP: ₹ {Number(product.price).toLocaleString()}</p> {/* Ensure price is a number */}
                                         </div>
                                     </div>
                                     <button
@@ -67,16 +67,16 @@ const Cart = () => {
                             <div className="bg-white p-3 shadow-sm rounded">
                                 <div className="d-flex justify-content-between">
                                     <span>Subtotal:</span>
-                                    <span>$ {cart.reduce((acc, item) => acc + item.price, 0).toLocaleString()}</span>
+                                    <span>₹ {cart.reduce((acc, item) => acc + Number(item.price), 0).toLocaleString()}</span> {/* Ensure price is a number */}
                                 </div>
                                 <div className="d-flex justify-content-between">
                                     <span>Estimated Delivery & Handling:</span>
-                                    <span>$ 1,250.00</span>
+                                    <span>₹ 1,250.00</span>
                                 </div>
                                 <hr />
                                 <div className="d-flex justify-content-between fw-bold">
                                     <span>Total:</span>
-                                    <span>$ {total.toLocaleString()}</span>
+                                    <span>₹ {total.toLocaleString()}</span>
                                 </div>
                                 <button className="btn btn-dark w-100 mt-3">Guest Checkout</button>
                                 <button className="btn btn-dark w-100 mt-2">Member Checkout</button>
