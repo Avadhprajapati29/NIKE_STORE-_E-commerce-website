@@ -20,9 +20,12 @@ const Cart = () => {
     };
 
     const calculateTotal = (cartItems) => {
-        const subtotal = cartItems.reduce((acc, item) => acc + Number(item.price), 0);
-        const deliveryCharges = 1250; 
-        setTotal(subtotal + deliveryCharges);
+        const subtotal = cartItems.reduce((acc, item) => {
+            const price = Number(item.price); // Ensure price is a number
+            return acc + (isNaN(price) ? 0 : price); // Handle NaN case
+        }, 0);
+        const deliveryCharges = 1250; // Example static delivery charges
+        setTotal(subtotal + deliveryCharges); // Set total as subtotal + delivery charges
     };
 
     return (
@@ -67,7 +70,10 @@ const Cart = () => {
                             <div className="bg-white p-3 shadow-sm rounded">
                                 <div className="d-flex justify-content-between">
                                     <span>Subtotal:</span>
-                                    <span>₹ {cart.reduce((acc, item) => acc + Number(item.price), 0).toLocaleString()}</span> {/* Ensure price is a number */}
+                                    <span>₹ {cart.reduce((acc, item) => {
+                                        const price = Number(item.price);
+                                        return acc + (isNaN(price) ? 0 : price);
+                                    }, 0).toLocaleString()}</span>
                                 </div>
                                 <div className="d-flex justify-content-between">
                                     <span>Estimated Delivery & Handling:</span>
