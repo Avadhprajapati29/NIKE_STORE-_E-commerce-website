@@ -20,8 +20,8 @@ const Cart = () => {
     };
 
     const calculateTotal = (cartItems) => {
-        const subtotal = cartItems.reduce((acc, item) => acc + Number(item.price), 0); // Ensure price is a number
-        const deliveryCharges = 1250; // Example static delivery charges
+        const subtotal = cartItems.reduce((acc, item) => acc + Number(item.price), 0);
+        const deliveryCharges = 1250; 
         setTotal(subtotal + deliveryCharges);
     };
 
