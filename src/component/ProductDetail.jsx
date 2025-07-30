@@ -5,42 +5,27 @@ import Navbar from './Navbar';
 const ProductDetail = ({ cart, setCart }) => {
     const { productId } = useParams();
     const [product, setProduct] = useState(null);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const fetchProduct = async () => {
-            try {
-                const response = await fetch('/products.json');
-                const data = await response.json();
+        fetch('/products.json')
+            .then(res => res.json())
+            .then(data => {
                 const foundProduct =
-                    data.homepageProducts.find(p => p.id === productId) ||
                     data.womenProducts.find(p => p.id === productId) ||
                     data.menProducts.find(p => p.id === productId) ||
                     data.collectionProducts.find(p => p.id === productId);
                 setProduct(foundProduct);
-            } catch (err) {
-                console.error('Error loading product:', err);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchProduct();
+            })
+            .catch(err => console.error('Error loading product:', err));
     }, [productId]);
 
     const handleAddToCart = () => {
-        if (product) {
-            setCart(prev => [...prev, product]);
-            alert(`${product.name} has been added to your cart!`);
-        }
+        setCart(prev => [...prev, product]);
+        alert(`${product.name} has been added to your cart!`);
     };
 
-    if (loading) {
-        return <div className="text-center mt-5 fs-4">Loading product details...</div>;
-    }
-
     if (!product) {
-        return <div className="text-center mt-5 fs-4">Product not found.</div>;
+        return <div className="text-center mt-5 fs-4">Loading product details...</div>;
     }
 
     return (
@@ -52,6 +37,7 @@ const ProductDetail = ({ cart, setCart }) => {
                     <div className="col-md-10">
                         <div className="card shadow-sm border-0 rounded-4">
                             <div className="row g-0">
+                                {/* Image Section */}
                                 <div className="col-md-6 d-flex align-items-center p-4 bg-white rounded-start">
                                     <img
                                         src={product.img}
@@ -61,6 +47,7 @@ const ProductDetail = ({ cart, setCart }) => {
                                     />
                                 </div>
 
+                                {/* Details Section */}
                                 <div className="col-md-6 p-4">
                                     <h3 className="fw-bold text-dark mb-2">{product.name}</h3>
                                     <p className="text-muted mb-2">{product.color}</p>
@@ -81,7 +68,7 @@ const ProductDetail = ({ cart, setCart }) => {
                                             ← Home
                                         </Link>
                                         <Link to="/men" className="btn btn-outline-secondary rounded-pill px-4">
-                                            Men’s Collection
+                                            men’s Collection
                                         </Link>
                                         <Link to="/women" className="btn btn-outline-secondary rounded-pill px-4">
                                             Women’s Collection
