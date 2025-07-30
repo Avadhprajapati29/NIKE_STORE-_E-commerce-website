@@ -5,27 +5,42 @@ import Navbar from './Navbar';
 const ProductDetail = ({ cart, setCart }) => {
     const { productId } = useParams();
     const [product, setProduct] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('/products.json')
-            .then(res => res.json())
-            .then(data => {
+        const fetchProduct = async () => {
+            try {
+                const response = await fetch('/products.json');
+                const data = await response.json();
                 const foundProduct =
+                    data.homepageProducts.find(p => p.id === productId) ||
                     data.womenProducts.find(p => p.id === productId) ||
                     data.menProducts.find(p => p.id === productId) ||
                     data.collectionProducts.find(p => p.id === productId);
                 setProduct(foundProduct);
-            })
-            .catch(err => console.error('Error loading product:', err));
+            } catch (err) {
+                console.error('Error loading product:', err);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchProduct();
     }, [productId]);
 
     const handleAddToCart = () => {
-        setCart(prev => [...prev, product]);
-        alert(`${product.name} has been added to your cart!`);
+        if (product) {
+            setCart(prev => [...prev, product]);
+            alert(`${product.name} has been added to your cart!`);
+        }
     };
 
-    if (!product) {
+    if (loading) {
         return <div className="text-center mt-5 fs-4">Loading product details...</div>;
+    }
+
+    if (!product) {
+        return <div className="text-center mt-5 fs-4">Product not found.</div>;
     }
 
     return (
@@ -68,7 +83,7 @@ const ProductDetail = ({ cart, setCart }) => {
                                             ← Home
                                         </Link>
                                         <Link to="/men" className="btn btn-outline-secondary rounded-pill px-4">
-                                            men’s Collection
+                                            Men’s Collection
                                         </Link>
                                         <Link to="/women" className="btn btn-outline-secondary rounded-pill px-4">
                                             Women’s Collection
