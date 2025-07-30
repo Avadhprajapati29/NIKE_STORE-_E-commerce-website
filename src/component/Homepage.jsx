@@ -12,7 +12,7 @@ const Homepage = () => {
     const [cart, setCart] = useState([]);
     const [products, setProducts] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
-    
+
     useEffect(() => {
         fetch('/products.json')
             .then(response => response.json())
@@ -45,7 +45,7 @@ const Homepage = () => {
                         <p className="lead mb-4 fs-5">
                             Experience superior craftsmanship and classic styles of our exclusive Nike collection.
                         </p>
-                        <button className="btn btn-dark btn-lg rounded-pill px-5 shadow">
+                        <button className="btn btn-dark btn-lg rounded-pill px-5 shadow" >
                             Shop Now
                         </button>
                     </div>

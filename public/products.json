@@ -54,7 +54,7 @@
         },
         {
             "id": "hp5",
-            "img": "../src/assets/Women_shoes/women4.png",
+            "img": "../src/assets/women_shoes/Running/wrunning1.png",
             "model3d": "../src/models/nike_air_zoom_pegasus.glb",
             "name": "Nike Air Zoom Pegasus 40",
             "color": "Pink/Maroon/Green",
@@ -67,7 +67,7 @@
         },
         {
             "id": "hp6",
-            "img": "../src/assets/Women_shoes/women7.png",
+            "img": "../src/assets/women_shoes/Jordan/j3.png",
             "model3d": "../src/models/air_jordan_1_mid.glb",
             "name": "Air Jordan 1 Mid",
             "color": "Triple White",

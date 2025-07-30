@@ -52,7 +52,6 @@ const ProductDetail = ({ cart, setCart }) => {
                     <div className="col-md-10">
                         <div className="card shadow-sm border-0 rounded-4">
                             <div className="row g-0">
-                                {/* Image Section */}
                                 <div className="col-md-6 d-flex align-items-center p-4 bg-white rounded-start">
                                     <img
                                         src={product.img}
@@ -62,7 +61,6 @@ const ProductDetail = ({ cart, setCart }) => {
                                     />
                                 </div>
 
-                                {/* Details Section */}
                                 <div className="col-md-6 p-4">
                                     <h3 className="fw-bold text-dark mb-2">{product.name}</h3>
                                     <p className="text-muted mb-2">{product.color}</p>
