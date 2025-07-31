@@ -11,6 +11,7 @@ const ProductDetail = ({ cart, setCart }) => {
             .then(res => res.json())
             .then(data => {
                 const foundProduct =
+                    data.homepageProducts.find(p => p.id === productId) ||
                     data.womenProducts.find(p => p.id === productId) ||
                     data.menProducts.find(p => p.id === productId) ||
                     data.collectionProducts.find(p => p.id === productId);
@@ -29,13 +30,13 @@ const ProductDetail = ({ cart, setCart }) => {
     }
 
     return (
-        <div style={{ backgroundColor: '#f9f9f9', minHeight: '100vh' }}>
+        <div style={{ backgroundColor: '#f0f4f8', minHeight: '100vh' }}>
             <Navbar cartCount={cart.length} />
 
             <div className="container mt-5 mb-5">
                 <div className="row justify-content-center">
                     <div className="col-md-10">
-                        <div className="card shadow-sm border-0 rounded-4">
+                        <div className="card shadow-lg border-0 rounded-4">
                             <div className="row g-0">
                                 {/* Image Section */}
                                 <div className="col-md-6 d-flex align-items-center p-4 bg-white rounded-start">
@@ -79,7 +80,7 @@ const ProductDetail = ({ cart, setCart }) => {
                         </div>
 
                         {/* Extra Details Section */}
-                        <div className="card mt-4 border-0 shadow-sm rounded-4">
+                        <div className="card mt-4 border-0 shadow-lg rounded-4">
                             <div className="card-body">
                                 <h5 className="fw-semibold mb-3">Product Specifications</h5>
                                 <div className="row">

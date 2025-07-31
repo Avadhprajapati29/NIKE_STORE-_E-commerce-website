@@ -80,15 +80,15 @@ const Homepage = () => {
                                     <p className="card-text mb-1 text-secondary">{product.color}</p>
                                     <p className="card-text mb-1 text-secondary">{product.gender}</p>
                                     <p className="card-text fw-bold text-black">{product.price}</p>
+                                    <Link to={`/product/${product.id}`} className="btn btn-outline-secondary w-100 mt-2">
+                                        View Details
+                                    </Link>
                                     <button
-                                        className="btn btn-dark w-100"
+                                        className="btn btn-dark w-100 mt-2"
                                         onClick={() => handleAddToCart(product)}
                                     >
                                         Add to Cart
                                     </button>
-                                    <Link to={`/product/${product.id}`} className="btn btn-outline-secondary w-100 mt-2">
-                                        View Details
-                                    </Link>
                                 </div>
                             </div>
                         </div>
