@@ -45,9 +45,9 @@ const Homepage = () => {
                         <p className="lead mb-4 fs-5">
                             Experience superior craftsmanship and classic styles of our exclusive Nike collection.
                         </p>
-                        <button className="btn btn-dark btn-lg rounded-pill px-5 shadow" >
+                        <Link to="/men" className="btn btn-dark btn-lg rounded-pill px-5 shadow">
                             Shop Now
-                        </button>
+                        </Link>
                     </div>
                     <div className="col-lg-6 text-center">
                         <div className="hero-img-wrapper overflow-hidden">
