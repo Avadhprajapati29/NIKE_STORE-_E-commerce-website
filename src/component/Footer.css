@@ -1,11 +1,95 @@
-footer {
-    background-color: #343a40; /* Dark background */
+.footer {
+    background-color: #1a1a1a;
+    /* Dark background */
+    color: #f8f9fa;
+    /* Light text color */
+    padding: 40px 0;
+    /* Increased padding for better spacing */
 }
 
-footer a {
-    text-decoration: none; /* Remove underline from links */
+.footer-box {
+    background-color: #2c2c2c;
+    /* Slightly lighter background for the box */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Padding inside the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Shadow effect */
 }
 
-footer a:hover {
-    text-decoration: underline; /* Underline on hover */
+.footer-logo {
+    max-width: 150px;
+    /* Limit logo size */
+    margin-bottom: 20px;
+    /* Space below logo */
+}
+
+.footer-title {
+    font-size: 1.25rem;
+    /* Larger font size for titles */
+    margin-bottom: 20px;
+    /* Space below titles */
+    font-weight: bold;
+    /* Bold titles */
+}
+
+.footer-links {
+    padding: 0;
+    /* Remove default padding */
+}
+
+.footer-link {
+    color: #f8f9fa;
+    /* Light color for links */
+    text-decoration: none;
+    /* Remove underline */
+    transition: color 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+.footer-link:hover {
+    color: #ffcc00;
+    /* Change color on hover */
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+.social-links {
+    display: flex;
+    /* Use flexbox for social links */
+    justify-content: center;
+    /* Center the links */
+    gap: 20px;
+    /* Space between links */
+}
+
+.footer-social-link {
+    color: #f8f9fa;
+    /* Light color for social links */
+    text-decoration: none;
+    /* Remove underline */
+    font-size: 1.1rem;
+    /* Slightly larger font size */
+    transition: color 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+.footer-social-link:hover {
+    color: #ffcc00;
+    /* Change color on hover */
+}
+
+.footer-contact {
+    margin: 0;
+    /* Remove default margin */
+    font-size: 0.9rem;
+    /* Smaller font size for contact info */
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    /* Space above copyright text */
+    font-size: 0.9rem;
+    /* Smaller font size for copyright */
 }
