@@ -5,6 +5,7 @@ import nikeImage1 from '../assets/nike-image1.jpg';
 import nikeImage2 from '../assets/nike-image2.jpg';
 import nikeImage3 from '../assets/nike-image3.jpg';
 import nikeImage4 from '../assets/nike-image4.jpg';
+import Footer from './Footer';
 
 const images = [nikeImage1, nikeImage2, nikeImage3, nikeImage4];
 
@@ -112,6 +113,8 @@ const Homepage = () => {
                     </div>
                 </div>
             </section>
+            {/* Footer Section */}
+            <Footer />
         </div>
     );
 };
