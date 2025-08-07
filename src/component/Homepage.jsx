@@ -13,20 +13,12 @@ const Homepage = () => {
     const [cart, setCart] = useState([]);
     const [products, setProducts] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isLoading, setIsLoading] = useState(true); // Add loading state
 
     useEffect(() => {
-        setIsLoading(true); // Set loading to true before fetching
         fetch('/products.json')
             .then(response => response.json())
-            .then(data => {
-                setProducts(data.homepageProducts);
-                setIsLoading(false); // Set loading to false after data is fetched
-            })
-            .catch(error => {
-                console.error('Error fetching homepage products:', error);
-                setIsLoading(false); // Set loading to false even if there's an error
-            });
+            .then(data => setProducts(data.homepageProducts))
+            .catch(error => console.error('Error fetching homepage products:', error));
 
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -74,44 +66,35 @@ const Homepage = () => {
             {/* Product Cards Grid */}
             <section className="container custom-container pb-5">
                 <h2 className="fw-bold mb-4 text-center text-uppercase">Featured Products</h2>
-                {isLoading ? ( // Conditional rendering for loading state
-                    <div className="text-center py-5">
-                        <div className="spinner-border text-primary" role="status">
-                            <span className="visually-hidden">Loading...</span>
-                        </div>
-                        <p className="mt-3 text-muted">Loading featured products...</p>
-                    </div>
-                ) : (
-                    <div className="row">
-                        {products.map((product) => (
-                            <div className="col-6 col-md-4 col-lg-3 mb-4" key={product.id}>
-                                <div className="card h-100 shadow-sm border-0">
-                                    <img
-                                        src={product.img}
-                                        alt={product.name}
-                                        className="card-img-top p-3"
-                                        style={{ height: 320, objectFit: 'contain' }}
-                                    />
-                                    <div className="card-body">
-                                        <h5 className="card-title fw-semibold">{product.name}</h5>
-                                        <p className="card-text mb-1 text-secondary">{product.color}</p>
-                                        <p className="card-text mb-1 text-secondary">{product.gender}</p>
-                                        <p className="card-text fw-bold text-black">{product.price}</p>
-                                        <Link to={`/product/${product.id}`} className="btn btn-outline-secondary w-100 mt-2">
-                                            View Details
-                                        </Link>
-                                        <button
-                                            className="btn btn-dark w-100 mt-2"
-                                            onClick={() => handleAddToCart(product)}
-                                        >
-                                            Add to Cart
-                                        </button>
-                                    </div>
+                <div className="row">
+                    {products.map((product) => (
+                        <div className="col-6 col-md-4 col-lg-3 mb-4" key={product.id}>
+                            <div className="card h-100 shadow-sm border-0">
+                                <img
+                                    src={product.img}
+                                    alt={product.name}
+                                    className="card-img-top p-3"
+                                    style={{ height: 320, objectFit: 'contain' }}
+                                />
+                                <div className="card-body">
+                                    <h5 className="card-title fw-semibold">{product.name}</h5>
+                                    <p className="card-text mb-1 text-secondary">{product.color}</p>
+                                    <p className="card-text mb-1 text-secondary">{product.gender}</p>
+                                    <p className="card-text fw-bold text-black">{product.price}</p>
+                                    <Link to={`/product/${product.id}`} className="btn btn-outline-secondary w-100 mt-2">
+                                        View Details
+                                    </Link>
+                                    <button
+                                        className="btn btn-dark w-100 mt-2"
+                                        onClick={() => handleAddToCart(product)}
+                                    >
+                                        Add to Cart
+                                    </button>
                                 </div>
                             </div>
-                        ))}
-                    </div>
-                )}
+                        </div>
+                    ))}
+                </div>
             </section>
 
             {/* About/Promo Section */}
