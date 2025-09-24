@@ -59,7 +59,6 @@ const Navbar = ({ cartCount = 0 }) => (
                         </Link>
                     </div>
 
-                    {/* Change this anchor tag to Link for User Profile */}
                     <Link to="/login" className="nav-link p-0" aria-label="User Profile">
                         <i className="ri-user-line fs-4"></i>
                     </Link>

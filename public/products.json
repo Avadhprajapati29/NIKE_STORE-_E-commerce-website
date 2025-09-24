@@ -24,7 +24,13 @@
             "category": "featured",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Mesh",
-            "desc": "Running shoes with responsive cushioning."
+            "desc": "Running shoes with responsive cushioning.",
+            "images": [
+                "../src/assets/women_shoes/lifestyle/wls1-1-front.png",
+                "../src/assets/women_shoes/lifestyle/wls1-2-front.png",
+                "../src/assets/women_shoes/lifestyle/wls1-3-front.png",
+                "../src/assets/women_shoes/lifestyle/wls1-4-front.png"
+            ]
         },
         {
             "id": "hp3",
