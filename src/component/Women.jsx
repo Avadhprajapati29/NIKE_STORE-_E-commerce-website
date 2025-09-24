@@ -17,6 +17,12 @@ const Women = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
+    // Load cart from localStorage
+    const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
+    setCart(savedCart);
+  }, []);
+
+  useEffect(() => {
     fetch('/products.json')
       .then(response => response.json())
       .then(data => {
@@ -34,9 +40,11 @@ const Women = () => {
     }
   }, [selectedCategory, allWomenProducts]);
 
-  const addToCart = (product) => {
-    setCart((prevCart) => [...prevCart, product]);
-    alert(`${product.name} has been added to your cart!`);
+  const handleAddToCart = (product) => {
+    const updatedCart = [...cart, product];
+    setCart(updatedCart);
+    localStorage.setItem('cart', JSON.stringify(updatedCart)); // Save to localStorage
+    alert(`₹{product.name} has been added to your cart!`);
   };
 
   return (
@@ -79,7 +87,7 @@ const Women = () => {
                   </Link>
                   <button
                     className="btn btn-primary mt-2 w-100"
-                    onClick={() => addToCart(product)}
+                    onClick={() => handleAddToCart(product)}
                   >
                     Add to Cart
                   </button>

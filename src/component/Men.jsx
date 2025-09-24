@@ -44,7 +44,7 @@ const Men = () => {
         const updatedCart = [...cart, product];
         setCart(updatedCart);
         localStorage.setItem('cart', JSON.stringify(updatedCart)); // Save to localStorage
-        alert(`${product.name} has been added to your cart!`);
+        alert(`₹{product.name} has been added to your cart!`);
     };
 
     return (

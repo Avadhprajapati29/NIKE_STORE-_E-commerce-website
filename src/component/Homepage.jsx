@@ -15,6 +15,12 @@ const Homepage = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
+        // Load cart from localStorage
+        const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
+        setCart(savedCart);
+    }, []);
+
+    useEffect(() => {
         fetch('/products.json')
             .then(response => response.json())
             .then(data => setProducts(data.homepageProducts))
