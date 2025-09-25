@@ -2,7 +2,7 @@
     "homepageProducts": [
         {
             "id": "hp1",
-            "img": "../src/assets/Men_shoes/men4.png",
+            "img": "../src/assets/home_page/h1-1.png",
             "model3d": "../src/models/nike_premier_iii.glb",
             "name": "Nike Premier III",
             "color": "Metallic Silver/Black",
@@ -11,11 +11,17 @@
             "category": "featured",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Leather",
-            "desc": "Premium football cleats with metallic finish."
+            "desc": "Premium football cleats with metallic finish.",
+            "images": [
+                "../src/assets/home_page/h1-1.png",
+                "../src/assets/home_page/h1-2.png",
+                "../src/assets/home_page/h1-3.png",
+                "../src/assets/home_page/h1-4.png"
+            ]
         },
         {
             "id": "hp2",
-            "img": "../src/assets/women_shoes/lifestyle/wls1.png",
+            "img": "../src/assets/women_shoes/lifestyle/wls1-1.png",
             "model3d": "../src/models/nike_zoom_vomero.glb",
             "name": "Nike Zoom Vomero 5",
             "color": "White/Pink/Silver",
@@ -26,15 +32,15 @@
             "material": "Mesh",
             "desc": "Running shoes with responsive cushioning.",
             "images": [
-                "../src/assets/women_shoes/lifestyle/wls1-1-front.png",
-                "../src/assets/women_shoes/lifestyle/wls1-2-front.png",
-                "../src/assets/women_shoes/lifestyle/wls1-3-front.png",
-                "../src/assets/women_shoes/lifestyle/wls1-4-front.png"
+                "../src/assets/women_shoes/lifestyle/wls1-1.png",
+                "../src/assets/women_shoes/lifestyle/wls1-2.png",
+                "../src/assets/women_shoes/lifestyle/wls1-3.png",
+                "../src/assets/women_shoes/lifestyle/wls1-4.png"
             ]
         },
         {
             "id": "hp3",
-            "img": "../src/assets/Men_shoes/men1.png",
+            "img": "../src/assets/home_page/h2-1.png",
             "model3d": "../src/models/nike_air_zoom_structure.glb",
             "name": "Nike Air Zoom Structure 25",
             "color": "Blue/White",
@@ -43,11 +49,17 @@
             "category": "featured",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Synthetic",
-            "desc": "Stability running shoes for all-day comfort."
+            "desc": "Stability running shoes for all-day comfort.",
+            "images": [
+                "../src/assets/home_page/h2-1.png",
+                "../src/assets/home_page/h2-2.png",
+                "../src/assets/home_page/h2-3.png",
+                "../src/assets/home_page/h2-4.png"
+            ]
         },
         {
             "id": "hp4",
-            "img": "../src/assets/Men_shoes/men7.png",
+            "img": "../src/assets/home_page/h3-1.png",
             "model3d": "../src/models/nike_air_max_plus.glb",
             "name": "Nike Air Max Plus",
             "color": "White/Purple/Black",
@@ -56,11 +68,17 @@
             "category": "featured",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Textile",
-            "desc": "Iconic design with legendary Air cushioning."
+            "desc": "Iconic design with legendary Air cushioning.",
+            "images": [
+                "../src/assets/home_page/h3-1.png",
+                "../src/assets/home_page/h3-2.png",
+                "../src/assets/home_page/h3-3.png",
+                "../src/assets/home_page/h3-4.png"
+            ]
         },
         {
             "id": "hp5",
-            "img": "../src/assets/women_shoes/Running/wrunning1.png",
+            "img": "../src/assets/home_page/h4-1.png",
             "model3d": "../src/models/nike_air_zoom_pegasus.glb",
             "name": "Nike Air Zoom Pegasus 40",
             "color": "Pink/Maroon/Green",
@@ -69,11 +87,18 @@
             "category": "featured",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Mesh",
-            "desc": "Versatile running shoes for everyday wear."
+            "desc": "Versatile running shoes for everyday wear.",
+            "images": [
+                "../src/assets/home_page/h4-1.png",
+                "../src/assets/home_page/h4-2.png",
+                "../src/assets/home_page/h4-3.png",
+                "../src/assets/home_page/h4-4.png",
+                "../src/assets/home_page/h4-5.png"
+            ]
         },
         {
             "id": "hp6",
-            "img": "../src/assets/women_shoes/Jordan/j3.png",
+            "img": "../src/assets/home_page/h5-1.png",
             "model3d": "../src/models/air_jordan_1_mid.glb",
             "name": "Air Jordan 1 Mid",
             "color": "Triple White",
@@ -82,7 +107,14 @@
             "category": "featured",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Leather",
-            "desc": "Classic silhouette with modern comfort."
+            "desc": "Classic silhouette with modern comfort.",
+            "images": [
+                "../src/assets/home_page/h5-1.png",
+                "../src/assets/home_page/h5-2.png",
+                "../src/assets/home_page/h5-3.png",
+                "../src/assets/home_page/h5-4.png",
+                "../src/assets/home_page/h5-5.png"
+            ]
         }
     ],
     "menProducts": [

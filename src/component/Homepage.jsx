@@ -34,8 +34,10 @@ const Homepage = () => {
     }, []);
 
     const handleAddToCart = (product) => {
-        setCart((prev) => [...prev, product]);
-        alert(`${product.name} has been added to your cart!`);
+        const updatedCart = [...cart, product];
+        setCart(updatedCart);
+        localStorage.setItem('cart', JSON.stringify(updatedCart)); // Save to localStorage
+        alert(`₹{product.name} has been added to your cart!`);
     };
 
     return (
