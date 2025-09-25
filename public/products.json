@@ -14,9 +14,10 @@
             "desc": "Premium football cleats with metallic finish.",
             "images": [
                 "../src/assets/home_page/h1-1.png",
-                "../src/assets/home_page/h1-2.png",
                 "../src/assets/home_page/h1-3.png",
-                "../src/assets/home_page/h1-4.png"
+                "../src/assets/home_page/h1-5.png",
+                "../src/assets/home_page/h1-4.png",
+                "../src/assets/home_page/h1-2.png"
             ]
         },
         {
@@ -90,10 +91,10 @@
             "desc": "Versatile running shoes for everyday wear.",
             "images": [
                 "../src/assets/home_page/h4-1.png",
-                "../src/assets/home_page/h4-2.png",
                 "../src/assets/home_page/h4-3.png",
+                "../src/assets/home_page/h4-5.png",
                 "../src/assets/home_page/h4-4.png",
-                "../src/assets/home_page/h4-5.png"
+                "../src/assets/home_page/h4-2.png"
             ]
         },
         {
