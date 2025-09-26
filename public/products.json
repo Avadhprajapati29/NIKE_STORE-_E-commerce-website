@@ -121,7 +121,7 @@
     "menProducts": [
         {
             "id": "m1",
-            "img": "../src/assets/men_shoes/Jordan/Jordan1.png",
+            "img": "../src/assets/men_shoes/Jordan/Jordan1-1.png",
             "model3d": "../src/models/jordan_1_low_g.glb",
             "name": "Jordan 1 Low G",
             "color": "White/Gum",
@@ -130,11 +130,18 @@
             "gender": "men",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Leather",
-            "desc": "Golf-inspired design with premium materials."
+            "desc": "Golf-inspired design with premium materials.",
+            "images": [
+                "../src/assets/men_shoes/Jordan/Jordan1-1.png",
+                "../src/assets/men_shoes/Jordan/Jordan1-2.png",
+                "../src/assets/men_shoes/Jordan/Jordan1-3.png",
+                "../src/assets/men_shoes/Jordan/Jordan1-4.png",
+                "../src/assets/men_shoes/Jordan/Jordan1-5.png"
+            ]
         },
         {
             "id": "m2",
-            "img": "../src/assets/men_shoes/Jordan/Jordan2.png",
+            "img": "../src/assets/men_shoes/Jordan/Jordan2-1.png",
             "model3d": "../src/models/air_jordan_1_low_og.glb",
             "name": "Air Jordan 1 Low OG",
             "color": "Black/Grey/White",
@@ -143,11 +150,18 @@
             "gender": "men",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Leather",
-            "desc": "Classic style with a modern twist."
+            "desc": "Classic style with a modern twist.",
+            "images": [
+                "../src/assets/men_shoes/Jordan/Jordan2-1.png",
+                "../src/assets/men_shoes/Jordan/Jordan2-2.png",
+                "../src/assets/men_shoes/Jordan/Jordan2-3.png",
+                "../src/assets/men_shoes/Jordan/Jordan2-4.png",
+                "../src/assets/men_shoes/Jordan/Jordan2-5.png"
+            ]
         },
         {
             "id": "m3",
-            "img": "../src/assets/men_shoes/Jordan/Jordan3.png",
+            "img": "../src/assets/men_shoes/Jordan/Jordan3-1.png",
             "model3d": "../src/models/air_jordan_1_high_og_unc.glb",
             "name": "Air Jordan 1 High OG UNC",
             "color": "University Blue/White/Navy",
@@ -156,11 +170,18 @@
             "gender": "men",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Leather",
-            "desc": "A tribute to the University of North Carolina."
+            "desc": "A tribute to the University of North Carolina.",
+            "images": [
+                "../src/assets/men_shoes/Jordan/Jordan3-1.png",
+                "../src/assets/men_shoes/Jordan/Jordan3-2.png",
+                "../src/assets/men_shoes/Jordan/Jordan3-3.png",
+                "../src/assets/men_shoes/Jordan/Jordan3-4.png",
+                "../src/assets/men_shoes/Jordan/Jordan3-5.png"
+            ]
         },
         {
             "id": "m4",
-            "img": "../src/assets/Men_shoes/lifestyle/ls1.png",
+            "img": "../src/assets/Men_shoes/lifestyle/ls1-1.png",
             "model3d": "../src/models/nike_air_max_excee.glb",
             "name": "Nike Air Max Excee",
             "color": "White/Black",
@@ -169,11 +190,18 @@
             "gender": "men",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Textile",
-            "desc": "Stylish and comfortable for everyday wear."
+            "desc": "Stylish and comfortable for everyday wear.",
+            "images": [
+                "../src/assets/Men_shoes/lifestyle/ls1-1.png",
+                "../src/assets/Men_shoes/lifestyle/ls1-2.png",
+                "../src/assets/Men_shoes/lifestyle/ls1-3.png",
+                "../src/assets/Men_shoes/lifestyle/ls1-4.png",
+                "../src/assets/Men_shoes/lifestyle/ls1-5.png"
+            ]
         },
         {
             "id": "m5",
-            "img": "../src/assets/Men_shoes/lifestyle/ls2.png",
+            "img": "../src/assets/Men_shoes/lifestyle/ls2-1.png",
             "model3d": "../src/models/jordan_max_aura_5.glb",
             "name": "Jordan Max Aura 5",
             "color": "White/Black",
@@ -182,11 +210,18 @@
             "gender": "men",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Synthetic",
-            "desc": "A modern take on a classic silhouette."
+            "desc": "A modern take on a classic silhouette.",
+            "images": [
+                "../src/assets/Men_shoes/lifestyle/ls2-1.png",
+                "../src/assets/Men_shoes/lifestyle/ls2-2.png",
+                "../src/assets/Men_shoes/lifestyle/ls2-3.png",
+                "../src/assets/Men_shoes/lifestyle/ls2-4.png",
+                "../src/assets/Men_shoes/lifestyle/ls2-5.png"
+            ]
         },
         {
             "id": "m6",
-            "img": "../src/assets/Men_shoes/lifestyle/ls3.png",
+            "img": "../src/assets/Men_shoes/lifestyle/ls3-1.png",
             "model3d": "../src/models/jordan_max_aura_5.glb",
             "name": "Nike shox TL",
             "color": "Black/orenge",
@@ -195,11 +230,18 @@
             "gender": "men",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Synthetic",
-            "desc": "A modern take on a classic silhouette."
+            "desc": "A modern take on a classic silhouette.",
+            "images": [
+                "../src/assets/Men_shoes/lifestyle/ls3-1.png",
+                "../src/assets/Men_shoes/lifestyle/ls3-2.png",
+                "../src/assets/Men_shoes/lifestyle/ls3-3.png",
+                "../src/assets/Men_shoes/lifestyle/ls3-4.png",
+                "../src/assets/Men_shoes/lifestyle/ls3-5.png"
+            ]
         },
         {
             "id": "m7",
-            "img": "../src/assets/Men_shoes/lifestyle/ls4.png",
+            "img": "../src/assets/Men_shoes/lifestyle/ls4-1.png",
             "model3d": "../src/models/jordan_max_aura_5.glb",
             "name": "nike Zoom Vomero Roam",
             "color": "Lightning/Saturn Gold/Flat Gold/Lightning",
@@ -208,11 +250,18 @@
             "gender": "men",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Synthetic",
-            "desc": "A modern take on a classic silhouette."
+            "desc": "A modern take on a classic silhouette.",
+            "images": [
+                "../src/assets/Men_shoes/lifestyle/ls4-1.png",
+                "../src/assets/Men_shoes/lifestyle/ls4-2.png",
+                "../src/assets/Men_shoes/lifestyle/ls4-3.png",
+                "../src/assets/Men_shoes/lifestyle/ls4-4.png",
+                "../src/assets/Men_shoes/lifestyle/ls4-5.png"
+            ]
         },
         {
             "id": "m8",
-            "img": "../src/assets/Men_shoes/lifestyle/ls5.png",
+            "img": "../src/assets/Men_shoes/lifestyle/ls5-1.png",
             "model3d": "../src/models/jordan_max_aura_5.glb",
             "name": "Nike Air Max Dn8",
             "color": "Sequoia/Bright Citron/Black",
@@ -221,11 +270,18 @@
             "gender": "men",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Synthetic",
-            "desc": "A modern take on a classic silhouette."
+            "desc": "A modern take on a classic silhouette.",
+            "images": [
+                "../src/assets/Men_shoes/lifestyle/ls5-1.png",
+                "../src/assets/Men_shoes/lifestyle/ls5-2.png",
+                "../src/assets/Men_shoes/lifestyle/ls5-3.png",
+                "../src/assets/Men_shoes/lifestyle/ls5-4.png",
+                "../src/assets/Men_shoes/lifestyle/ls5-5.png"
+            ]
         },
         {
             "id": "m9",
-            "img": "../src/assets/Men_shoes/Running/Mrunning1.png",
+            "img": "../src/assets/Men_shoes/Running/Mrunning1-1.png",
             "name": "Nike Pegasus 41",
             "color": "White/Barely Green/Bright Crimson/Metallic Silver",
             "price": "₹11 895",
@@ -233,11 +289,18 @@
             "gender": "men",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Synthetic",
-            "desc": "A modern take on a classic silhouette."
+            "desc": "A modern take on a classic silhouette.",
+            "images": [
+                "../src/assets/Men_shoes/Running/Mrunning1-1.png",
+                "../src/assets/Men_shoes/Running/Mrunning1-2.png",
+                "../src/assets/Men_shoes/Running/Mrunning1-3.png",
+                "../src/assets/Men_shoes/Running/Mrunning1-4.png",
+                "../src/assets/Men_shoes/Running/Mrunning1-5.png"
+            ]
         },
         {
             "id": "m10",
-            "img": "../src/assets/Men_shoes/Running/Mrunning2.png",
+            "img": "../src/assets/Men_shoes/Running/Mrunning2-1.png",
             "name": "Nike Pegasus 41",
             "color": "White/Barely Green/Bright Crimson/Metallic Silver",
             "price": "₹11 895",
@@ -245,7 +308,14 @@
             "gender": "men",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Synthetic",
-            "desc": "A modern take on a classic silhouette."
+            "desc": "A modern take on a classic silhouette.",
+            "images": [
+                "../src/assets/Men_shoes/Running/Mrunning2-1.png",
+                "../src/assets/Men_shoes/Running/Mrunning2-2.png",
+                "../src/assets/Men_shoes/Running/Mrunning2-3.png",
+                "../src/assets/Men_shoes/Running/Mrunning2-4.png",
+                "../src/assets/Men_shoes/Running/Mrunning2-5.png"
+            ]
         },
         {
             "id": "m11",
