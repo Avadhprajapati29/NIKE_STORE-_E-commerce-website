@@ -319,51 +319,79 @@
         },
         {
             "id": "m11",
-            "img": "../src/assets/Men_shoes/Running/Mrunning3.png",
-            "name": "Nike Pegasus 41",
-            "color": "White/Barely Green/Bright Crimson/Metallic Silver",
+            "img": "../src/assets/Men_shoes/Running/Mrunning3-1.png",
+            "name": "Nike Pegasus 41 SE",
+            "color": "Multi-Colour/Vivid Green/Dark Apple/Clear",
             "price": "₹11 895",
             "category": "running",
             "gender": "men",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Synthetic",
-            "desc": "A modern take on a classic silhouette."
+            "desc": "A modern take on a classic silhouette.",
+            "images": [
+                "../src/assets/Men_shoes/Running/Mrunning3-1.png",
+                "../src/assets/Men_shoes/Running/Mrunning3-2.png",
+                "../src/assets/Men_shoes/Running/Mrunning3-3.png",
+                "../src/assets/Men_shoes/Running/Mrunning3-4.png",
+                "../src/assets/Men_shoes/Running/Mrunning3-5.png"
+            ]
         },
         {
             "id": "m12",
-            "img": "../src/assets/Men_shoes/Training & Gym/Mgym1.png",
+            "img": "../src/assets/Men_shoes/Training & Gym/Mgym1-1.png",
             "name": "Nike Pegasus 41",
-            "color": "White/Barely Green/Bright Crimson/Metallic Silver",
+            "color": "Black/Metallic Gold",
             "price": "₹11 895",
             "category": "training",
             "gender": "men",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Synthetic",
-            "desc": "A modern take on a classic silhouette."
+            "desc": "A modern take on a classic silhouette.",
+            "images": [
+                "../src/assets/Men_shoes/Training & Gym/Mgym1-1.png",
+                "../src/assets/Men_shoes/Training & Gym/Mgym1-2.jpg",
+                "../src/assets/Men_shoes/Training & Gym/Mgym1-3.png",
+                "../src/assets/Men_shoes/Training & Gym/Mgym1-4.png",
+                "../src/assets/Men_shoes/Training & Gym/Mgym1-5.png"
+            ]
         },
         {
             "id": "m13",
-            "img": "../src/assets/Men_shoes/Training & Gym/Mgym2.png",
-            "name": "Nike Pegasus 41",
-            "color": "White/Barely Green/Bright Crimson/Metallic Silver",
+            "img": "../src/assets/Men_shoes/Training & Gym/Mgym2-1.png",
+            "name": "Nike MC Trainer 3",
+            "color": "Platinum Tint/Wolf Grey/White/Comet Blue",
             "price": "₹11 895",
             "category": "training",
             "gender": "men",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Synthetic",
-            "desc": "A modern take on a classic silhouette."
+            "desc": "A modern take on a classic silhouette.",
+            "images": [
+                "../src/assets/Men_shoes/Training & Gym/Mgym2-1.png",
+                "../src/assets/Men_shoes/Training & Gym/Mgym2-2.png",
+                "../src/assets/Men_shoes/Training & Gym/Mgym2-3.png",
+                "../src/assets/Men_shoes/Training & Gym/Mgym2-4.png",
+                "../src/assets/Men_shoes/Training & Gym/Mgym2-5.png"
+            ]
         },
         {
             "id": "m14",
-            "img": "../src/assets/Men_shoes/Training & Gym/Mgym3.png",
-            "name": "Nike Pegasus 41",
-            "color": "White/Barely Green/Bright Crimson/Metallic Silver",
+            "img": "../src/assets/Men_shoes/Training & Gym/Mgym3-1.png",
+            "name": "Nike Promina",
+            "color": "Black/White",
             "price": "₹11 895",
             "category": "training",
             "gender": "men",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Synthetic",
-            "desc": "A modern take on a classic silhouette."
+            "desc": "A modern take on a classic silhouette.",
+            "images": [
+                "../src/assets/Men_shoes/Training & Gym/Mgym3-1.png",
+                "../src/assets/Men_shoes/Training & Gym/Mgym3-1.png",
+                "../src/assets/Men_shoes/Training & Gym/Mgym3-1.png",
+                "../src/assets/Men_shoes/Training & Gym/Mgym3-1.png",
+                "../src/assets/Men_shoes/Training & Gym/Mgym3-1.png"
+            ]
         }
     ],
     "womenProducts": [
