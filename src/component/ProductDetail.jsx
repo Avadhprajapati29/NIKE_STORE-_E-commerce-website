@@ -1,14 +1,17 @@
 // ✅ ProductDetail.jsx
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const ProductDetail = ({ cart, setCart }) => {
     const { productId } = useParams();
+    const navigate = useNavigate();
+
     const [product, setProduct] = useState(null);
     const [selectedImage, setSelectedImage] = useState("");
     const [selectedSize, setSelectedSize] = useState("");
 
+    // ✅ Fetch product data
     useEffect(() => {
         fetch("/products.json")
             .then((res) => res.json())
@@ -27,15 +30,24 @@ const ProductDetail = ({ cart, setCart }) => {
             .catch((err) => console.error("Error loading product:", err));
     }, [productId]);
 
+    // ✅ Add to Cart with selected size
     const handleAddToCart = () => {
         if (!selectedSize) {
-            alert("Please select a size before adding to cart!");
+            alert("⚠️ Please select a size before adding to cart!");
             return;
         }
 
-        const productWithSize = { ...product, selectedSize };
+        const productWithSize = {
+            ...product,
+            selectedSize,
+            cartId: product.id + "-" + selectedSize, // unique cart item
+        };
+
         setCart((prev) => [...prev, productWithSize]);
-        alert(`${product.name} (Size: ${selectedSize}) has been added to your cart!`);
+
+        alert(
+            `✅ ${product.name} (Size: ${selectedSize}) has been added to your cart!`
+        );
     };
 
     if (!product) {
@@ -44,7 +56,7 @@ const ProductDetail = ({ cart, setCart }) => {
         );
     }
 
-    // ✅ Different size charts based on category/gender
+    // ✅ Different size charts
     let sizes = [];
     if (product.gender === "Men") {
         sizes = ["6", "7", "8", "9", "10", "11", "12"];
@@ -53,9 +65,16 @@ const ProductDetail = ({ cart, setCart }) => {
     } else if (product.category === "Kids") {
         sizes = ["1", "2", "3", "4", "5"];
     } else {
-        // Default / unisex / collections
         sizes = ["S", "M", "L", "XL"];
     }
+
+    // ✅ Dynamic Back Route (based on category/gender)
+    let backLink = "/";
+    if (product.gender === "Men") backLink = "/men";
+    else if (product.gender === "Women") backLink = "/women";
+    else if (product.category === "Kids") backLink = "/kids";
+    else if (product.category === "Running") backLink = "/running";
+    else if (product.category === "Collection") backLink = "/collection";
 
     return (
         <div style={{ minHeight: "100vh", position: "relative", overflow: "hidden" }}>
@@ -97,7 +116,7 @@ const ProductDetail = ({ cart, setCart }) => {
                         }}
                     >
                         <div className="row g-0">
-                            {/* Product Image + Thumbnails */}
+                            {/* ✅ Product Image + Thumbnails */}
                             <div className="col-md-6 d-flex flex-column align-items-center p-4">
                                 <img
                                     src={selectedImage || product.img}
@@ -118,7 +137,8 @@ const ProductDetail = ({ cart, setCart }) => {
                                                 key={index}
                                                 src={img}
                                                 alt={`view-${index}`}
-                                                className={`rounded shadow-sm ${img === selectedImage ? "border border-warning" : ""}`}
+                                                className={`rounded shadow-sm ${img === selectedImage ? "border border-warning" : ""
+                                                    }`}
                                                 style={{
                                                     width: "70px",
                                                     height: "70px",
@@ -132,7 +152,7 @@ const ProductDetail = ({ cart, setCart }) => {
                                 )}
                             </div>
 
-                            {/* Product Details */}
+                            {/* ✅ Product Details */}
                             <div className="col-md-6 p-4 d-flex flex-column justify-content-center">
                                 <h2 className="fw-bold mb-2">{product.name}</h2>
                                 <p className="text-light">{product.color}</p>
@@ -149,8 +169,8 @@ const ProductDetail = ({ cart, setCart }) => {
                                             <button
                                                 key={index}
                                                 className={`btn ${selectedSize === size
-                                                    ? "btn-warning text-dark fw-bold"
-                                                    : "btn-outline-light"
+                                                        ? "btn-warning text-dark fw-bold"
+                                                        : "btn-outline-light"
                                                     } rounded-pill px-3`}
                                                 onClick={() => setSelectedSize(size)}
                                             >
@@ -181,7 +201,8 @@ const ProductDetail = ({ cart, setCart }) => {
                                             <strong>Color:</strong> {product.color}
                                         </div>
                                         <div className="col-sm-6 mb-2">
-                                            <strong>Material:</strong> {product.material || "Not specified"}
+                                            <strong>Material:</strong>{" "}
+                                            {product.material || "Not specified"}
                                         </div>
                                         <div className="col-sm-6 mb-2">
                                             <strong>SKU:</strong> {product.sku || "Not available"}
@@ -189,6 +210,7 @@ const ProductDetail = ({ cart, setCart }) => {
                                     </div>
                                 </div>
 
+                                {/* ✅ Add to Cart */}
                                 <button
                                     className="btn btn-warning w-100 fw-bold py-2 mb-3"
                                     onClick={handleAddToCart}
@@ -197,15 +219,19 @@ const ProductDetail = ({ cart, setCart }) => {
                                     🛒 Add to Cart
                                 </button>
 
+                                {/* ✅ Navigation */}
                                 <div className="d-flex justify-content-between mt-2">
-                                    <Link to="/" className="btn btn-outline-light rounded-pill px-4">
-                                        ← Home
+                                    <Link
+                                        to={backLink}
+                                        className="btn btn-outline-light rounded-pill px-4"
+                                    >
+                                        ← Back
                                     </Link>
-                                    <Link to="/men" className="btn btn-outline-light rounded-pill px-4">
-                                        Men’s
-                                    </Link>
-                                    <Link to="/women" className="btn btn-outline-light rounded-pill px-4">
-                                        Women’s
+                                    <Link
+                                        to="/cart"
+                                        className="btn btn-outline-warning rounded-pill px-4"
+                                    >
+                                        🛍 Go to Cart
                                     </Link>
                                 </div>
                             </div>
