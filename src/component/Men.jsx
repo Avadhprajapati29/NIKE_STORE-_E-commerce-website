@@ -17,7 +17,6 @@ const Men = () => {
     const [filteredProducts, setFilteredProducts] = useState([]);
 
     useEffect(() => {
-        // Load cart from localStorage
         const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
         setCart(savedCart);
     }, []);
@@ -27,7 +26,7 @@ const Men = () => {
             .then(response => response.json())
             .then(data => {
                 setAllMenProducts(data.menProducts);
-                setFilteredProducts(data.menProducts); // Initially show all men's products
+                setFilteredProducts(data.menProducts);
             })
             .catch(error => console.error('Error fetching men products:', error));
     }, []);
@@ -40,13 +39,6 @@ const Men = () => {
         }
     }, [selectedCategory, allMenProducts]);
 
-    const handleAddToCart = (product) => {
-        const updatedCart = [...cart, product];
-        setCart(updatedCart);
-        localStorage.setItem('cart', JSON.stringify(updatedCart)); // Save to localStorage
-        alert(`₹{product.name} has been added to your cart!`);
-    };
-
     return (
         <div className="min-vh-100 bg-light" style={{ fontFamily: "'Garamond', serif" }}>
             <Navbar cartCount={cart.length} />
@@ -55,7 +47,8 @@ const Men = () => {
                 <p className="lead text-secondary">
                     Explore the latest Nike shoes and apparel for men. Comfort, performance, and style—just for you.
                 </p>
-                {/* Category Selection */}
+
+                {/* Category Filter */}
                 <div className="mb-4 d-flex gap-3 flex-wrap">
                     {categories.map((cat) => (
                         <button
@@ -67,7 +60,8 @@ const Men = () => {
                         </button>
                     ))}
                 </div>
-                {/* Product Grid */}
+
+                {/* Products Grid */}
                 <div className="row">
                     {filteredProducts.map((product) => (
                         <div className="col-md-4 col-lg-3 mb-4" key={product.id}>
@@ -85,16 +79,11 @@ const Men = () => {
                                     <Link to={`/product/${product.id}`} className="btn btn-primary w-100">
                                         View Details
                                     </Link>
-                                    <button
-                                        className="btn btn-primary mt-2 w-100"
-                                        onClick={() => handleAddToCart(product)}
-                                    >
-                                        Add to Cart
-                                    </button>
                                 </div>
                             </div>
                         </div>
                     ))}
+
                     {filteredProducts.length === 0 && (
                         <div className="col-12 text-center text-muted py-5">
                             No products found in this category.

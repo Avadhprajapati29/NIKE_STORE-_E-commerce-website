@@ -15,7 +15,6 @@ const Homepage = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
-        // Load cart from localStorage
         const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
         setCart(savedCart);
     }, []);
@@ -28,17 +27,10 @@ const Homepage = () => {
 
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 2000); // Carousel interval
+        }, 2000);
 
         return () => clearInterval(interval);
     }, []);
-
-    const handleAddToCart = (product) => {
-        const updatedCart = [...cart, product];
-        setCart(updatedCart);
-        localStorage.setItem('cart', JSON.stringify(updatedCart)); // Save to localStorage
-        alert(`₹{product.name} has been added to your cart!`);
-    };
 
     return (
         <div className="min-vh-100 bg-light" style={{ fontFamily: "'Garamond', serif" }}>
@@ -71,7 +63,7 @@ const Homepage = () => {
                 </div>
             </section>
 
-            {/* Product Cards Grid */}
+            {/* Featured Products */}
             <section className="container custom-container pb-5">
                 <h2 className="fw-bold mb-4 text-center text-uppercase">Featured Products</h2>
                 <div className="row">
@@ -92,12 +84,6 @@ const Homepage = () => {
                                     <Link to={`/product/${product.id}`} className="btn btn-outline-secondary w-100 mt-2">
                                         View Details
                                     </Link>
-                                    <button
-                                        className="btn btn-dark w-100 mt-2"
-                                        onClick={() => handleAddToCart(product)}
-                                    >
-                                        Add to Cart
-                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +91,7 @@ const Homepage = () => {
                 </div>
             </section>
 
-            {/* About/Promo Section */}
+            {/* Info Section */}
             <section className="container custom-container pb-5">
                 <div className="row align-items-center bg-light rounded-4 shadow-sm p-4">
                     <div className="col-md-8">
@@ -121,7 +107,7 @@ const Homepage = () => {
                     </div>
                 </div>
             </section>
-            {/* Footer Section */}
+
             <Footer />
         </div>
     );

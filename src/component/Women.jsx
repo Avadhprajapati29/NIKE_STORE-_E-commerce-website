@@ -17,7 +17,6 @@ const Women = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
-    // Load cart from localStorage
     const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
     setCart(savedCart);
   }, []);
@@ -27,7 +26,7 @@ const Women = () => {
       .then(response => response.json())
       .then(data => {
         setAllWomenProducts(data.womenProducts);
-        setFilteredProducts(data.womenProducts); // Initially show all women's products
+        setFilteredProducts(data.womenProducts);
       })
       .catch(error => console.error('Error fetching women products:', error));
   }, []);
@@ -40,13 +39,6 @@ const Women = () => {
     }
   }, [selectedCategory, allWomenProducts]);
 
-  const handleAddToCart = (product) => {
-    const updatedCart = [...cart, product];
-    setCart(updatedCart);
-    localStorage.setItem('cart', JSON.stringify(updatedCart)); // Save to localStorage
-    alert(`₹{product.name} has been added to your cart!`);
-  };
-
   return (
     <div className="min-vh-100 bg-light" style={{ fontFamily: "'Garamond', serif" }}>
       <Navbar cartCount={cart.length} />
@@ -55,7 +47,6 @@ const Women = () => {
         <p className="lead text-secondary">
           Discover the latest Nike shoes and apparel for women. Comfort, performance, and style—just for you.
         </p>
-        {/* Category Selection */}
         <div className="mb-4 d-flex gap-3 flex-wrap">
           {categories.map((cat) => (
             <button
@@ -67,7 +58,6 @@ const Women = () => {
             </button>
           ))}
         </div>
-        {/* Product Grid */}
         <div className="row">
           {filteredProducts.map((product) => (
             <div className="col-md-4 col-lg-3 mb-4" key={product.id}>
@@ -85,12 +75,6 @@ const Women = () => {
                   <Link to={`/product/${product.id}`} className="btn btn-primary w-100">
                     View Details
                   </Link>
-                  <button
-                    className="btn btn-primary mt-2 w-100"
-                    onClick={() => handleAddToCart(product)}
-                  >
-                    Add to Cart
-                  </button>
                 </div>
               </div>
             </div>
