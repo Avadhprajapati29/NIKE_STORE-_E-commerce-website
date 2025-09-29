@@ -397,7 +397,7 @@
     "womenProducts": [
         {
             "id": "w1",
-            "img": "../src/assets/women_shoes/Jordan/j1.png",
+            "img": "../src/assets/women_shoes/Jordan/j1-1.png",
             "model3d": "../src/models/nike_free_metcon_5.glb",
             "name": "Nike Dunk Low SE",
             "color": "Particle Pink/Coconut Milk/Sail/Midnight Navy",
@@ -406,11 +406,18 @@
             "gender": "women",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Synthetic",
-            "desc": "Versatile training shoes for all types of workouts. Nike Dunk Low SE"
+            "desc": "Versatile training shoes for all types of workouts. Nike Dunk Low SE",
+            "images": [
+                "../src/assets/women_shoes/Jordan/j1-1.png",
+                "../src/assets/women_shoes/Jordan/j1-2.png",
+                "../src/assets/women_shoes/Jordan/j1-3.png",
+                "../src/assets/women_shoes/Jordan/j1-4.png",
+                "../src/assets/women_shoes/Jordan/j1-5.png"
+            ]
         },
         {
             "id": "w2",
-            "img": "../src/assets/women_shoes/Jordan/j2.png",
+            "img": "../src/assets/women_shoes/Jordan/j2-1.png",
             "model3d": "../src/models/nike_free_metcon_5.glb",
             "name": "Nike Air Force 1 '07 Next Nature",
             "color": "White/White/Washed Coral",
@@ -419,11 +426,18 @@
             "gender": "women",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Synthetic",
-            "desc": "Versatile training shoes for all types of workouts. Nike Dunk Low SE"
+            "desc": "Versatile training shoes for all types of workouts. Nike Dunk Low SE",
+            "images": [
+                "../src/assets/women_shoes/Jordan/j2-1.png",
+                "../src/assets/women_shoes/Jordan/j2-2.png",
+                "../src/assets/women_shoes/Jordan/j2-3.png",
+                "../src/assets/women_shoes/Jordan/j2-4.png",
+                "../src/assets/women_shoes/Jordan/j2-5.png"
+            ]
         },
         {
             "id": "w3",
-            "img": "../src/assets/women_shoes/lifestyle/wls2.png",
+            "img": "../src/assets/women_shoes/lifestyle/wls2-1.png",
             "model3d": "../src/models/nike_court_vision_alta.glb",
             "name": "Nike Court Vision Alta",
             "color": "White/Gold",
@@ -432,37 +446,77 @@
             "gender": "women",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Synthetic",
-            "desc": "Classic style with a modern twist."
+            "desc": "Classic style with a modern twist.",
+            "images": [
+                "../src/assets/women_shoes/lifestyle/wls2-1.png",
+                "../src/assets/women_shoes/lifestyle/wls2-2.png",
+                "../src/assets/women_shoes/lifestyle/wls2-3.png",
+                "../src/assets/women_shoes/lifestyle/wls2-4.png",
+                "../src/assets/women_shoes/lifestyle/wls2-5.png"
+            ]
         },
         {
             "id": "w4",
-            "img": "../src/assets/women_shoes/Jordan/j3.png",
-            "model3d": "../src/models/nike_free_metcon_5.glb",
-            "name": "Air Jordan 1 Mid",
-            "color": "White/White/White",
-            "price": "₹10,795",
-            "category": "jordan",
-            "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
-            "material": "Synthetic",
-            "desc": "Versatile training shoes for all types of workouts. Nike Dunk Low SE"
-        },
-        {
-            "id": "w5",
-            "img": "../src/assets/women_shoes/Running/wrunning1.png",
-            "model3d": "../src/models/nike_air_zoom_pegasus_40.glb",
-            "name": "Nike Air Zoom Pegasus 40",
-            "color": "Black/White",
-            "price": "₹14,000",
-            "category": "running",
-            "gender": "women",
+            "img": "../src/assets/women_shoes/lifestyle/wls1-1.png",
+            "model3d": "../src/models/nike_zoom_vomero.glb",
+            "name": "Nike Zoom Vomero 5",
+            "color": "White/Pink/Silver",
+            "gender": "Womens Shoes",
+            "price": "₹13,000",
+            "category": "lifestyle",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Mesh",
-            "desc": "Responsive support for runners and everyday wear."
+            "desc": "Running shoes with responsive cushioning.",
+            "images": [
+                "../src/assets/women_shoes/lifestyle/wls1-1.png",
+                "../src/assets/women_shoes/lifestyle/wls1-2.png",
+                "../src/assets/women_shoes/lifestyle/wls1-3.png",
+                "../src/assets/women_shoes/lifestyle/wls1-4.png"
+            ]
+        },
+        {
+            "id": "hp5",
+            "img": "../src/assets/home_page/h4-1.png",
+            "model3d": "../src/models/nike_air_zoom_pegasus.glb",
+            "name": "Nike Air Zoom Pegasus 40",
+            "color": "Pink/Maroon/Green",
+            "price": "₹15,000",
+            "category": "running",
+            "gender": "Womens",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Mesh",
+            "desc": "Versatile running shoes for everyday wear.",
+            "images": [
+                "../src/assets/home_page/h4-1.png",
+                "../src/assets/home_page/h4-3.png",
+                "../src/assets/home_page/h4-5.png",
+                "../src/assets/home_page/h4-4.png",
+                "../src/assets/home_page/h4-2.png"
+            ]
+        },
+        {
+            "id": "hp6",
+            "img": "../src/assets/home_page/h5-1.png",
+            "model3d": "../src/models/air_jordan_1_mid.glb",
+            "name": "Air Jordan 1 Mid",
+            "color": "Triple White",
+            "gender": "Womens Shoes",
+            "price": "₹16,000",
+            "category": "jordan",
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "material": "Leather",
+            "desc": "Classic silhouette with modern comfort.",
+            "images": [
+                "../src/assets/home_page/h5-1.png",
+                "../src/assets/home_page/h5-2.png",
+                "../src/assets/home_page/h5-3.png",
+                "../src/assets/home_page/h5-4.png",
+                "../src/assets/home_page/h5-5.png"
+            ]
         },
         {
             "id": "w6",
-            "img": "../src/assets/women_shoes/Training & Gym/wgym1.png",
+            "img": "../src/assets/women_shoes/Training & Gym/wgym1-1.png",
             "model3d": "../src/models/nike_free_metcon_5.glb",
             "name": "Nike Free Metcon 5",
             "color": "Grey/Blue",
@@ -471,24 +525,38 @@
             "gender": "women",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Synthetic",
-            "desc": "Versatile training shoes for all types of workouts."
+            "desc": "Versatile training shoes for all types of workouts.",
+            "images": [
+                "../src/assets/women_shoes/Training & Gym/wgym1-1.png",
+                "../src/assets/women_shoes/Training & Gym/wgym1-2.png",
+                "../src/assets/women_shoes/Training & Gym/wgym1-3.png",
+                "../src/assets/women_shoes/Training & Gym/wgym1-4.png",
+                "../src/assets/women_shoes/Training & Gym/wgym1-5.png"
+            ]
         },
         {
             "id": "w7",
-            "img": "../src/assets/women_shoes/Jordan/j4.png",
+            "img": "../src/assets/women_shoes/Jordan/j4-1.png",
             "model3d": "../src/models/nike_free_metcon_5.glb",
-            "name": "Nike Field General",
-            "color": " Platinum Violet/Gum Dark Brown/Sail",
+            "name": "Air Jordan 1 Mid",
+            "color": " Indigo Haze/White/Doll",
             "price": "₹8695",
             "category": "jordan",
             "gender": "women",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Synthetic",
-            "desc": "Versatile training shoes for all types of workouts. Nike Dunk Low SE"
+            "desc": "The Air Jordan 1 Mid brings full-court style and premium comfort to an iconic look.",
+            "images": [
+                "../src/assets/women_shoes/Jordan/j4-1.png",
+                "../src/assets/women_shoes/Jordan/j4-2.png",
+                "../src/assets/women_shoes/Jordan/j4-3.png",
+                "../src/assets/women_shoes/Jordan/j4-4.png",
+                "../src/assets/women_shoes/Jordan/j4-5.png"
+            ]
         },
         {
             "id": "w8",
-            "img": "../src/assets/women_shoes/Training & Gym/wgym2.png",
+            "img": "../src/assets/women_shoes/Training & Gym/wgym2-1.png",
             "model3d": "../src/models/nike_free_metcon_5.glb",
             "name": "Nike Free Metcon 6",
             "color": "White/Playful Pink",
@@ -497,11 +565,18 @@
             "gender": "women",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Synthetic",
-            "desc": "Versatile training shoes for all types of workouts. "
+            "desc": "Versatile training shoes for all types of workouts. ",
+            "images": [
+                "../src/assets/women_shoes/Training & Gym/wgym2-1.png",
+                "../src/assets/women_shoes/Training & Gym/wgym2-2.png",
+                "../src/assets/women_shoes/Training & Gym/wgym2-3.png",
+                "../src/assets/women_shoes/Training & Gym/wgym2-4.png",
+                "../src/assets/women_shoes/Training & Gym/wgym2-5.png"
+            ]
         },
         {
             "id": "w9",
-            "img": "../src/assets/women_shoes/Training & Gym/wgym3.png",
+            "img": "../src/assets/women_shoes/Training & Gym/wgym3-1.png",
             "model3d": "../src/models/nike_air_max_verona.glb",
             "name": "Nike Zoom Bella 6",
             "color": "Black/Anthracite/White",
@@ -510,33 +585,34 @@
             "gender": "women",
             "size": "UK 5,UK 5.5,UK 6 (EU 39)",
             "material": "Mesh",
-            "desc": "Stylish and comfortable for everyday wear."
-        },
-        {
-            "id": "w21",
-            "img": "../src/assets/women_shoes/lifestyle/wls1.png",
-            "model3d": "../src/models/nike_air_max_verona.glb",
-            "name": "Nike Air Max Verona",
-            "color": "White/Pink",
-            "price": "₹13,000",
-            "category": "lifestyle",
-            "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
-            "material": "Mesh",
-            "desc": "Stylish and comfortable for everyday wear."
+            "desc": "Stylish and comfortable for everyday wear.",
+            "images": [
+                "../src/assets/women_shoes/Training & Gym/wgym3-1.png",
+                "../src/assets/women_shoes/Training & Gym/wgym3-2.png",
+                "../src/assets/women_shoes/Training & Gym/wgym3-3.png",
+                "../src/assets/women_shoes/Training & Gym/wgym3-4.png",
+                "../src/assets/women_shoes/Training & Gym/wgym3-5.png"
+            ]
         }
     ],
     "collectionProducts": [
         {
             "id": "c1",
-            "img": "../src/assets/collections_shoes/c1.png",
+            "img": "../src/assets/collections_shoes/c1-1.png",
             "model3d": "../src/models/nike_dunk_low.glb",
             "name": "Nike Dunk Low",
             "color": "White/Anthracite/Light Armoury Blue",
             "desc": "Classic style with modern comfort. The Nike Dunk Low is a timeless icon for every sneakerhead.",
             "price": "₹14,500",
             "category": "collection",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "images": [
+                "../src/assets/collections_shoes/c1-1.png",
+                "../src/assets/collections_shoes/c1-2.png",
+                "../src/assets/collections_shoes/c1-3.png",
+                "../src/assets/collections_shoes/c1-4.png",
+                "../src/assets/collections_shoes/c1-5.png"
+            ]
         },
         {
             "id": "c2",
