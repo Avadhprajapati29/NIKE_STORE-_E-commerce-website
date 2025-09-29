@@ -616,47 +616,75 @@
         },
         {
             "id": "c2",
-            "img": "../src/assets/collections_shoes/c2.png",
+            "img": "../src/assets/collections_shoes/c2-1.png",
             "model3d": "../src/models/nike_zoom_vomero_5.glb",
             "name": "Nike Zoom Vomero 5",
             "color": "Metallic Pewter/Parachute Beige/White/Medium Ash",
             "desc": "Experience plush cushioning and bold colorways with the Nike Zoom Vomero 5.",
             "price": "₹13,000",
             "category": "collection",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "images": [
+                "../src/assets/collections_shoes/c2-1.png",
+                "../src/assets/collections_shoes/c2-2.png",
+                "../src/assets/collections_shoes/c2-3.png",
+                "../src/assets/collections_shoes/c2-4.png",
+                "../src/assets/collections_shoes/c2-5.png"
+            ]
         },
         {
             "id": "c3",
-            "img": "../src/assets/collections_shoes/c3.png",
+            "img": "../src/assets/collections_shoes/c3-1.png",
             "model3d": "../src/models/nike_zoom_vomero_5.glb",
             "name": "Nike Pegasus 40",
             "color": "White/Light Orewood Brown/Phantom/Obsidian",
-            "desc": "Experience plush cushioning and bold colorways with the Nike Zoom Vomero 5.",
+            "desc": "It's super comfortable, and has amazing shock absorption and a great 'bounce' to keep you onto the next step",
             "price": "₹11,297",
             "category": "collection",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "images": [
+                "../src/assets/collections_shoes/c3-1.png",
+                "../src/assets/collections_shoes/c3-2.png",
+                "../src/assets/collections_shoes/c3-3.png",
+                "../src/assets/collections_shoes/c3-4.png",
+                "../src/assets/collections_shoes/c3-5.png"
+            ]
         },
         {
             "id": "c4",
-            "img": "../src/assets/collections_shoes/c4.png",
+            "img": "../src/assets/collections_shoes/c4-1.png",
             "model3d": "../src/models/nike_zoom_vomero_5.glb",
             "name": "Air Jordan 1 Low OG",
             "color": "Gym Red & Midnight Navy",
             "desc": "Experience plush cushioning and bold colorways with the Nike Zoom Vomero 5.",
             "price": "₹12,795",
             "category": "collection",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "images": [
+                "../src/assets/collections_shoes/c4-1.png",
+                "../src/assets/collections_shoes/c4-2.png",
+                "../src/assets/collections_shoes/c4-3.png",
+                "../src/assets/collections_shoes/c4-4.png",
+                "../src/assets/collections_shoes/c4-5.png"
+            ]
         },
         {
             "id": "c5",
-            "img": "../src/assets/collections_shoes/c5.png",
+            "img": "../src/assets/collections_shoes/c5-1.png",
             "model3d": "../src/models/nike_zoom_vomero_5.glb",
             "name": "Nike Structure 255",
             "color": "Light Iron Ore/Total Orange/Atmosphere Grey/Thunder Blue",
             "desc": "The supportive cushioning provides steadiness for everyday runs.",
             "price": "₹11,297",
             "category": "collection",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)"
+            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "images": [
+                "../src/assets/collections_shoes/c5-1.png",
+                "../src/assets/collections_shoes/c5-2.png",
+                "../src/assets/collections_shoes/c5-3.png",
+                "../src/assets/collections_shoes/c5-4.png",
+                "../src/assets/collections_shoes/c5-5.png"
+            ]
         },
         {
             "id": "c6",
