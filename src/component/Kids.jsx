@@ -10,10 +10,10 @@ const categories = [
     { label: 'Training & Gym', value: 'training' },
 ];
 
-const Men = () => {
+const Kids = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [cart, setCart] = useState([]);
-    const [allMenProducts, setAllMenProducts] = useState([]);
+    const [allKidsProducts, setAllKidsProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
     const navigate = useNavigate();
     const location = useLocation();
@@ -27,19 +27,19 @@ const Men = () => {
         fetch('/products.json')
             .then(response => response.json())
             .then(data => {
-                setAllMenProducts(data.menProducts);
-                setFilteredProducts(data.menProducts);
+                setAllKidsProducts(data.kidsProducts || []);
+                setFilteredProducts(data.kidsProducts || []);
             })
-            .catch(error => console.error('Error fetching men products:', error));
+            .catch(error => console.error('Error fetching kids products:', error));
     }, []);
 
     useEffect(() => {
         if (selectedCategory === 'all') {
-            setFilteredProducts(allMenProducts);
+            setFilteredProducts(allKidsProducts);
         } else {
-            setFilteredProducts(allMenProducts.filter((p) => p.category === selectedCategory));
+            setFilteredProducts(allKidsProducts.filter((p) => p.category === selectedCategory));
         }
-    }, [selectedCategory, allMenProducts]);
+    }, [selectedCategory, allKidsProducts]);
 
     // Image click handler with previous page info
     const handleImageClick = (productId) => {
@@ -50,9 +50,9 @@ const Men = () => {
         <div className="min-vh-100 bg-light" style={{ fontFamily: "'Garamond', serif" }}>
             <Navbar cartCount={cart.length} />
             <div className="container py-5">
-                <h1 className="display-4 fw-bold mb-4 text-primary">Men's Collection</h1>
+                <h1 className="display-4 fw-bold mb-4 text-primary">Kids' Collection</h1>
                 <p className="lead text-secondary">
-                    Explore the latest Nike shoes and apparel for men. Comfort, performance, and style—just for you.
+                    Discover the latest Nike shoes and apparel for kids. Comfort, performance, and style—just for your little ones.
                 </p>
                 <div className="mb-4 d-flex gap-3 flex-wrap">
                     {categories.map((cat) => (
@@ -80,11 +80,7 @@ const Men = () => {
                                     <h5 className="card-title fw-semibold">{product.name}</h5>
                                     <p className="card-text mb-1 text-secondary">{product.color}</p>
                                     <p className="card-text fw-bold text-black">{product.price}</p>
-                                    <Link
-                                        to={`/product/${product.id}`}
-                                        state={{ from: location.pathname }}
-                                        className="btn btn-primary w-100"
-                                    >
+                                    <Link to={`/product/${product.id}`} className="btn btn-primary w-100">
                                         View Details
                                     </Link>
                                 </div>
@@ -102,4 +98,4 @@ const Men = () => {
     );
 };
 
-export default Men;
+export default Kids;

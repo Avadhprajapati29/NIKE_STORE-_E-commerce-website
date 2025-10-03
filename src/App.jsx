@@ -9,6 +9,7 @@ import ProductDetail from './component/ProductDetail';
 import Cart from './component/Cart';
 import Login from './component/Login';
 import Register from './component/Register';
+import Kids from './component/Kids';
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/" element={<Homepage cart={cart} setCart={setCart} />} />
         <Route path="/men" element={<Men cart={cart} setCart={setCart} />} />
         <Route path="/women" element={<Women cart={cart} setCart={setCart} />} />
+        <Route path="/kids" element={<Kids cart={cart} setCart={setCart} />} />
         <Route path="/collection" element={<Collection />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />

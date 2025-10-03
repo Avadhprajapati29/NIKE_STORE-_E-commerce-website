@@ -9,7 +9,7 @@
             "gender": "Womens Shoes",
             "price": "₹13,500",
             "category": "featured",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+                        "size":["UK 5","UK 5.5","UK 6","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5"],
             "material": "Leather",
             "desc": "Premium football cleats with metallic finish.",
             "images": [
@@ -29,7 +29,7 @@
             "gender": "Womens Shoes",
             "price": "₹13,000",
             "category": "featured",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5.5","UK 6(EU 39)","UK 6(EU 40)","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5","UK 12"],
             "material": "Mesh",
             "desc": "Running shoes with responsive cushioning.",
             "images": [
@@ -48,7 +48,7 @@
             "gender": "Mens Shoes",
             "price": "₹15,500",
             "category": "featured",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5.5","UK 6(EU 39)","UK 6(EU 40)","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5","UK 12"],
             "material": "Synthetic",
             "desc": "Stability running shoes for all-day comfort.",
             "images": [
@@ -67,7 +67,7 @@
             "gender": "Mens Shoes",
             "price": "₹17,200",
             "category": "featured",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5.5","UK 6(EU 39)","UK 6(EU 40)","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5","UK 12"],
             "material": "Textile",
             "desc": "Iconic design with legendary Air cushioning.",
             "images": [
@@ -86,7 +86,7 @@
             "gender": "Womens Shoes",
             "price": "₹15,000",
             "category": "featured",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5.5","UK 6(EU 39)","UK 6(EU 40)","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5","UK 12"],
             "material": "Mesh",
             "desc": "Versatile running shoes for everyday wear.",
             "images": [
@@ -106,7 +106,7 @@
             "gender": "Womens Shoes",
             "price": "₹16,000",
             "category": "featured",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5.5","UK 6(EU 39)","UK 6(EU 40)","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5","UK 12"],
             "material": "Leather",
             "desc": "Classic silhouette with modern comfort.",
             "images": [
@@ -128,7 +128,7 @@
             "price": "₹16,000",
             "category": "jordan",
             "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5.5","UK 6(EU 39)","UK 6(EU 40)","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5","UK 12"],
             "material": "Leather",
             "desc": "Golf-inspired design with premium materials.",
             "images": [
@@ -148,7 +148,7 @@
             "price": "₹18,500",
             "category": "jordan",
             "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5.5","UK 6(EU 39)","UK 6(EU 40)","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5","UK 12"],
             "material": "Leather",
             "desc": "Classic style with a modern twist.",
             "images": [
@@ -168,7 +168,7 @@
             "price": "₹22,000",
             "category": "jordan",
             "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5.5","UK 6(EU 39)","UK 6(EU 40)","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5","UK 12"],
             "material": "Leather",
             "desc": "A tribute to the University of North Carolina.",
             "images": [
@@ -188,7 +188,7 @@
             "price": "₹14,000",
             "category": "lifestyle",
             "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5.5","UK 6(EU 39)","UK 6(EU 40)","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5","UK 12"],
             "material": "Textile",
             "desc": "Stylish and comfortable for everyday wear.",
             "images": [
@@ -208,7 +208,7 @@
             "price": "₹15,500",
             "category": "lifestyle",
             "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5.5","UK 6(EU 39)","UK 6(EU 40)","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5","UK 12"],
             "material": "Synthetic",
             "desc": "A modern take on a classic silhouette.",
             "images": [
@@ -228,7 +228,7 @@
             "price": "₹15,995",
             "category": "lifestyle",
             "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5.5","UK 6(EU 39)","UK 6(EU 40)","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5","UK 12"],
             "material": "Synthetic",
             "desc": "A modern take on a classic silhouette.",
             "images": [
@@ -248,7 +248,7 @@
             "price": "₹16,995",
             "category": "lifestyle",
             "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5.5","UK 6(EU 39)","UK 6(EU 40)","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5","UK 12"],
             "material": "Synthetic",
             "desc": "A modern take on a classic silhouette.",
             "images": [
@@ -268,7 +268,7 @@
             "price": "₹17 495",
             "category": "lifestyle",
             "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5.5","UK 6(EU 39)","UK 6(EU 40)","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5","UK 12"],
             "material": "Synthetic",
             "desc": "A modern take on a classic silhouette.",
             "images": [
@@ -287,7 +287,7 @@
             "price": "₹11 895",
             "category": "running",
             "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5.5","UK 6(EU 39)","UK 6(EU 40)","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5","UK 12"],
             "material": "Synthetic",
             "desc": "A modern take on a classic silhouette.",
             "images": [
@@ -306,7 +306,7 @@
             "price": "₹11 895",
             "category": "running",
             "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5.5","UK 6(EU 39)","UK 6(EU 40)","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5","UK 12"],
             "material": "Synthetic",
             "desc": "A modern take on a classic silhouette.",
             "images": [
@@ -325,7 +325,7 @@
             "price": "₹11 895",
             "category": "running",
             "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5.5","UK 6(EU 39)","UK 6(EU 40)","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5","UK 12"],
             "material": "Synthetic",
             "desc": "A modern take on a classic silhouette.",
             "images": [
@@ -344,7 +344,7 @@
             "price": "₹11 895",
             "category": "training",
             "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5.5","UK 6(EU 39)","UK 6(EU 40)","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5","UK 12"],
             "material": "Synthetic",
             "desc": "A modern take on a classic silhouette.",
             "images": [
@@ -363,7 +363,7 @@
             "price": "₹11 895",
             "category": "training",
             "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5.5","UK 6(EU 39)","UK 6(EU 40)","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5","UK 12"],
             "material": "Synthetic",
             "desc": "A modern take on a classic silhouette.",
             "images": [
@@ -382,7 +382,7 @@
             "price": "₹11 895",
             "category": "training",
             "gender": "men",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5.5","UK 6(EU 39)","UK 6(EU 40)","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5","UK 12"],
             "material": "Synthetic",
             "desc": "A modern take on a classic silhouette.",
             "images": [
@@ -404,7 +404,7 @@
             "price": "₹10,795",
             "category": "jordan",
             "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5","UK 5.5","UK 6","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5"],
             "material": "Synthetic",
             "desc": "Versatile training shoes for all types of workouts. Nike Dunk Low SE",
             "images": [
@@ -424,7 +424,7 @@
             "price": "₹9695",
             "category": "jordan",
             "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+                        "size":["UK 5","UK 5.5","UK 6","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5"],
             "material": "Synthetic",
             "desc": "Versatile training shoes for all types of workouts. Nike Dunk Low SE",
             "images": [
@@ -444,7 +444,7 @@
             "price": "₹12,500",
             "category": "lifestyle",
             "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+                        "size":["UK 5","UK 5.5","UK 6","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5"],
             "material": "Synthetic",
             "desc": "Classic style with a modern twist.",
             "images": [
@@ -464,7 +464,7 @@
             "gender": "Womens Shoes",
             "price": "₹13,000",
             "category": "lifestyle",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+            "size":["UK 5","UK 5.5","UK 6","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5"],
             "material": "Mesh",
             "desc": "Running shoes with responsive cushioning.",
             "images": [
@@ -483,7 +483,7 @@
             "price": "₹15,000",
             "category": "running",
             "gender": "Womens",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+                        "size":["UK 5","UK 5.5","UK 6","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5"],
             "material": "Mesh",
             "desc": "Versatile running shoes for everyday wear.",
             "images": [
@@ -503,7 +503,7 @@
             "gender": "Womens Shoes",
             "price": "₹16,000",
             "category": "jordan",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+                        "size":["UK 5","UK 5.5","UK 6","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5"],
             "material": "Leather",
             "desc": "Classic silhouette with modern comfort.",
             "images": [
@@ -523,7 +523,7 @@
             "price": "₹13,800",
             "category": "training",
             "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+                        "size":["UK 5","UK 5.5","UK 6","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5"],
             "material": "Synthetic",
             "desc": "Versatile training shoes for all types of workouts.",
             "images": [
@@ -543,7 +543,7 @@
             "price": "₹8695",
             "category": "jordan",
             "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+                        "size":["UK 5","UK 5.5","UK 6","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5"],
             "material": "Synthetic",
             "desc": "The Air Jordan 1 Mid brings full-court style and premium comfort to an iconic look.",
             "images": [
@@ -563,7 +563,7 @@
             "price": "₹10,795",
             "category": "training",
             "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+                        "size":["UK 5","UK 5.5","UK 6","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5"],
             "material": "Synthetic",
             "desc": "Versatile training shoes for all types of workouts. ",
             "images": [
@@ -583,7 +583,7 @@
             "price": "₹7117",
             "category": "training",
             "gender": "women",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+                        "size":["UK 5","UK 5.5","UK 6","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5"],
             "material": "Mesh",
             "desc": "Stylish and comfortable for everyday wear.",
             "images": [
@@ -592,6 +592,46 @@
                 "../src/assets/women_shoes/Training & Gym/wgym3-3.png",
                 "../src/assets/women_shoes/Training & Gym/wgym3-4.png",
                 "../src/assets/women_shoes/Training & Gym/wgym3-5.png"
+            ]
+        }
+    ],
+    "kidsProducts": [
+        {
+            "id": "k1",
+            "img": "../src/assets/kids/Jordan/kj1-1.png",
+            "model3d": "../src/models/nike_dunk_low.glb",
+            "name": "Jordan 4 Retro",
+            "color": "Cave Stone/Phantom/Black",
+            "desc": "This mini takedown of the AJ4 is all about luxury.",
+            "price": "₹6695",
+            "category": "jordan",
+            "gender": "men",
+            "size":["UK 11.5", "UK 12.5", "UK 13.5", "UK 1", "UK 1.5", "UK 2.5"],
+            "images": [
+                "../src/assets/kids/Jordan/kj1-1.png",
+                "../src/assets/kids/Jordan/kj1-2.png",
+                "../src/assets/kids/Jordan/kj1-3.png",
+                "../src/assets/kids/Jordan/kj1-4.png",
+                "../src/assets/kids/Jordan/kj1-5.png"
+            ]
+        },
+        {
+            "id": "k2",
+            "img": "../src/assets/kids/Jordan/kj2-1.png",
+            "model3d": "../src/models/nike_dunk_low.glb",
+            "name": "Jordan 4 Retro",
+            "color": "Cave Stone/Phantom/Black",
+            "desc": "This mini takedown of the AJ4 is all about luxury.",
+            "price": "₹6695",
+            "category": "jordan",
+            "gender": "men",
+            "size":["UK 2.5","UK 3","UK 3.5","UK 4","UK 4.5","UK 5","UK 5.5","UK 6","UK 6.5","UK 7","UK 7.5"],
+            "images": [
+                "../src/assets/kids/Jordan/kj2-1.png",
+                "../src/assets/kids/Jordan/kj2-2.png",
+                "../src/assets/kids/Jordan/kj2-3.png",
+                "../src/assets/kids/Jordan/kj2-4.png",
+                "../src/assets/kids/Jordan/kj2-5.png"
             ]
         }
     ],
@@ -605,7 +645,7 @@
             "desc": "Classic style with modern comfort. The Nike Dunk Low is a timeless icon for every sneakerhead.",
             "price": "₹14,500",
             "category": "collection",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+                        "size":["UK 5","UK 5.5","UK 6","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5"],
             "images": [
                 "../src/assets/collections_shoes/c1-1.png",
                 "../src/assets/collections_shoes/c1-2.png",
@@ -623,7 +663,7 @@
             "desc": "Experience plush cushioning and bold colorways with the Nike Zoom Vomero 5.",
             "price": "₹13,000",
             "category": "collection",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+                        "size":["UK 5","UK 5.5","UK 6","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5"],
             "images": [
                 "../src/assets/collections_shoes/c2-1.png",
                 "../src/assets/collections_shoes/c2-2.png",
@@ -641,7 +681,7 @@
             "desc": "It's super comfortable, and has amazing shock absorption and a great 'bounce' to keep you onto the next step",
             "price": "₹11,297",
             "category": "collection",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+                        "size":["UK 5","UK 5.5","UK 6","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5"],
             "images": [
                 "../src/assets/collections_shoes/c3-1.png",
                 "../src/assets/collections_shoes/c3-2.png",
@@ -659,7 +699,7 @@
             "desc": "Experience plush cushioning and bold colorways with the Nike Zoom Vomero 5.",
             "price": "₹12,795",
             "category": "collection",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+                        "size":["UK 5","UK 5.5","UK 6","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5"],
             "images": [
                 "../src/assets/collections_shoes/c4-1.png",
                 "../src/assets/collections_shoes/c4-2.png",
@@ -677,7 +717,7 @@
             "desc": "The supportive cushioning provides steadiness for everyday runs.",
             "price": "₹11,297",
             "category": "collection",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+                        "size":["UK 5","UK 5.5","UK 6","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5"],
             "images": [
                 "../src/assets/collections_shoes/c5-1.png",
                 "../src/assets/collections_shoes/c5-2.png",
@@ -695,7 +735,7 @@
             "desc": "Experience plush cushioning and bold colorways with the Nike Zoom Vomero 5.",
             "price": "₹13,767",
             "category": "collection",
-            "size": "UK 5,UK 5.5,UK 6 (EU 39)",
+                        "size":["UK 5","UK 5.5","UK 6","UK 6.5","UK 7","UK 7.5","UK 8","UK 8.5","UK 9","UK 9.5","UK 10","UK 10.5"],
             "images": [
                 "../src/assets/collections_shoes/c6-1.png",
                 "../src/assets/collections_shoes/c6-2.png",

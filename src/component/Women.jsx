@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 
 const categories = [
@@ -15,6 +15,8 @@ const Women = () => {
   const [cart, setCart] = useState([]);
   const [allWomenProducts, setAllWomenProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -38,6 +40,11 @@ const Women = () => {
       setFilteredProducts(allWomenProducts.filter((p) => p.category === selectedCategory));
     }
   }, [selectedCategory, allWomenProducts]);
+
+  // Image click handler with previous page info
+  const handleImageClick = (productId) => {
+    navigate(`/product/${productId}`, { state: { from: location.pathname } });
+  };
 
   return (
     <div className="min-vh-100 bg-light" style={{ fontFamily: "'Garamond', serif" }}>
@@ -66,7 +73,8 @@ const Women = () => {
                   src={product.img}
                   alt={product.name}
                   className="card-img-top p-3"
-                  style={{ height: 320, objectFit: 'contain' }}
+                  style={{ height: 320, objectFit: 'contain', cursor: 'pointer' }}
+                  onClick={() => handleImageClick(product.id)}
                 />
                 <div className="card-body">
                   <h5 className="card-title fw-semibold">{product.name}</h5>

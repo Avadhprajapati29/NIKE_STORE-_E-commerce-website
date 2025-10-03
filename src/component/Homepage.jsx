@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import nikeImage1 from '../assets/nike-image1.jpg';
 import nikeImage2 from '../assets/nike-image2.jpg';
@@ -13,6 +13,7 @@ const Homepage = () => {
     const [cart, setCart] = useState([]);
     const [products, setProducts] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -31,6 +32,11 @@ const Homepage = () => {
 
         return () => clearInterval(interval);
     }, []);
+
+    // Image click handler to open product detail page
+    const handleImageClick = (productId) => {
+        navigate(`/product/${productId}`);
+    };
 
     return (
         <div className="min-vh-100 bg-light" style={{ fontFamily: "'Garamond', serif" }}>
@@ -70,12 +76,17 @@ const Homepage = () => {
                     {products.map((product) => (
                         <div className="col-6 col-md-4 col-lg-3 mb-4" key={product.id}>
                             <div className="card h-100 shadow-sm border-0">
-                                <img
-                                    src={product.img}
-                                    alt={product.name}
-                                    className="card-img-top p-3"
-                                    style={{ height: 320, objectFit: 'contain' }}
-                                />
+                                <div
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={() => handleImageClick(product.id)}
+                                >
+                                    <img
+                                        src={product.img}
+                                        alt={product.name}
+                                        className="card-img-top p-3"
+                                        style={{ height: 320, objectFit: 'contain' }}
+                                    />
+                                </div>
                                 <div className="card-body">
                                     <h5 className="card-title fw-semibold">{product.name}</h5>
                                     <p className="card-text mb-1 text-secondary">{product.color}</p>
