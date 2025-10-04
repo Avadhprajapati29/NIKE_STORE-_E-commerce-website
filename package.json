@@ -16,6 +16,8 @@
     "@gsap/react": "^2.1.2",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.7",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "gsap": "^3.13.0",
     "motion": "^12.23.18",
     "react": "^19.1.0",
@@ -37,5 +39,18 @@
     "globals": "^16.2.0",
     "tailwindcss": "^4.1.11",
     "vite": "^7.0.0"
+  },
+  "name": "nike",
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Avadhprajapati29/NIKE_STORE-_E-commerce-website-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Avadhprajapati29/NIKE_STORE-_E-commerce-website-/issues"
   }
 }
