@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './Navbar';
 import nikeImage1 from '../assets/nike-image1.jpg';
 import nikeImage2 from '../assets/nike-image2.jpg';
@@ -22,18 +23,19 @@ const Homepage = () => {
 
     useEffect(() => {
         fetch('/products.json')
-            .then(response => response.json())
+            .then(res => res.json())
             .then(data => setProducts(data.homepageProducts))
-            .catch(error => console.error('Error fetching homepage products:', error));
+            .catch(err => console.error('Error fetching products:', err));
+    }, []);
 
+    // Auto change image every 3 seconds
+    useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 2000);
-
+            setCurrentIndex(prev => (prev + 1) % images.length);
+        }, 3000);
         return () => clearInterval(interval);
     }, []);
 
-    // Image click handler to open product detail page
     const handleImageClick = (productId) => {
         navigate(`/product/${productId}`);
     };
@@ -43,28 +45,63 @@ const Homepage = () => {
             <Navbar cartCount={cart.length} />
 
             {/* Hero Section */}
-            <section className="container custom-container py-5 bg-beige text-dark rounded-3">
+            <section className="container custom-container py-5">
                 <div className="row align-items-center">
+                    {/* Left Text */}
                     <div className="col-lg-6 mb-5 mb-lg-0 text-center text-lg-start">
-                        <h1 className="display-5 fw-bold mb-4" style={{ fontStyle: 'italic' }}>
-                            Discover Timeless <span className="text-danger">Nike</span> Elegance
-                        </h1>
-                        <p className="lead mb-4 fs-5">
-                            Experience superior craftsmanship and classic styles of our exclusive Nike collection.
-                        </p>
-                        <Link to="/men" className="btn btn-dark btn-lg rounded-pill px-5 shadow">
-                            Shop Now
-                        </Link>
+                        <motion.h1
+                            initial={{ opacity: 0, x: -50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="display-4 fw-bold mb-4"
+                        >
+                            Step Into <span className="text-danger">Nike</span> Luxury
+                        </motion.h1>
+                        <motion.p
+                            initial={{ opacity: 0, x: -30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 1, delay: 0.3 }}
+                            className="lead mb-4 fs-5 text-secondary"
+                        >
+                            Redefine your sneaker game with unmatched comfort, iconic style, and cutting-edge performance.
+                        </motion.p>
+                        <motion.div
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            <Link to="/men" className="btn btn-dark btn-lg rounded-pill px-5 shadow">
+                                Shop Collection
+                            </Link>
+                        </motion.div>
                     </div>
-                    <div className="col-lg-6 text-center">
-                        <div className="hero-img-wrapper overflow-hidden">
-                            <img
+
+                    {/* Right Sliding Image */}
+                    <div className="col-lg-6 text-center position-relative">
+                        <AnimatePresence mode="wait">
+                            <motion.img
+                                key={currentIndex}
                                 src={images[currentIndex]}
-                                alt={`Slide ${currentIndex + 1}`}
-                                className="img-fluid rounded-3"
+                                alt="Nike Hero"
+                                className="img-fluid rounded-4 shadow-lg"
                                 style={{ maxHeight: 400, objectFit: 'cover' }}
+                                initial={{ x: 100, opacity: 0, scale: 0.9 }}
+                                animate={{ x: 0, opacity: 1, scale: 1 }}
+                                exit={{ x: -100, opacity: 0, scale: 0.9 }}
+                                transition={{ type: 'spring', stiffness: 120, damping: 20, duration: 0.8 }}
                             />
-                        </div>
+                        </AnimatePresence>
+                        {/* Background Glow */}
+                        <motion.div
+                            className="position-absolute top-50 start-50 translate-middle rounded-circle"
+                            style={{
+                                width: 300,
+                                height: 300,
+                                background: "radial-gradient(circle, rgba(13,110,253,0.2) 0%, transparent 70%)",
+                                zIndex: -1
+                            }}
+                            animate={{ scale: [1, 1.1, 1] }}
+                            transition={{ repeat: Infinity, duration: 3 }}
+                        />
                     </div>
                 </div>
             </section>
@@ -73,49 +110,20 @@ const Homepage = () => {
             <section className="container custom-container pb-5">
                 <h2 className="fw-bold mb-4 text-center text-uppercase">Featured Products</h2>
                 <div className="row">
-                    {products.map((product) => (
+                    {products.map(product => (
                         <div className="col-6 col-md-4 col-lg-3 mb-4" key={product.id}>
-                            <div className="card h-100 shadow-sm border-0">
-                                <div
-                                    style={{ cursor: 'pointer' }}
-                                    onClick={() => handleImageClick(product.id)}
-                                >
-                                    <img
-                                        src={product.img}
-                                        alt={product.name}
-                                        className="card-img-top p-3"
-                                        style={{ height: 320, objectFit: 'contain' }}
-                                    />
-                                </div>
+                            <div className="card h-100 shadow-sm border-0" style={{ cursor: 'pointer' }} onClick={() => handleImageClick(product.id)}>
+                                <img src={product.img} alt={product.name} className="card-img-top p-3" style={{ height: 320, objectFit: 'contain' }} />
                                 <div className="card-body">
                                     <h5 className="card-title fw-semibold">{product.name}</h5>
                                     <p className="card-text mb-1 text-secondary">{product.color}</p>
                                     <p className="card-text mb-1 text-secondary">{product.gender}</p>
                                     <p className="card-text fw-bold text-black">{product.price}</p>
-                                    <Link to={`/product/${product.id}`} className="btn btn-outline-secondary w-100 mt-2">
-                                        View Details
-                                    </Link>
+                                    <Link to={`/product/${product.id}`} className="btn btn-outline-secondary w-100 mt-2">View Details</Link>
                                 </div>
                             </div>
                         </div>
                     ))}
-                </div>
-            </section>
-
-            {/* Info Section */}
-            <section className="container custom-container pb-5">
-                <div className="row align-items-center bg-light rounded-4 shadow-sm p-4">
-                    <div className="col-md-8">
-                        <h3 className="fw-bold mb-2">Why Shop at Nike Online Store?</h3>
-                        <p className="mb-0 text-secondary">
-                            Enjoy the best collection of Nike footwear, with swift delivery and exclusive online offers. Stand out with the latest designs and unparalleled comfort.
-                        </p>
-                    </div>
-                    <div className="col-md-4 text-md-end text-center mt-3 mt-md-0">
-                        <a href="#" className="btn btn-dark rounded-pill px-4">
-                            Learn More
-                        </a>
-                    </div>
                 </div>
             </section>
 

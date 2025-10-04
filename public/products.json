@@ -633,6 +633,158 @@
                 "../src/assets/kids/Jordan/kj2-4.png",
                 "../src/assets/kids/Jordan/kj2-5.png"
             ]
+        }, 
+        {
+            "id": "k3",
+            "img": "../src/assets/kids/lifestyle/kj4-1.png",
+            "model3d": "../src/models/nike_dunk_low.glb",
+            "name": "Nike Shox R4",
+            "color": "White/White/Bright Crimson/Metallic Silver",
+            "desc": "Have you got five seconds? Then you've got time to get your kid into these Jordans. ",
+            "price": "₹9595",
+            "category": "lifestyle",
+            "gender": "Older Kids' Shoes",
+            "size":["UK 3","UK 3.5","UK 4","UK 4.5","UK 5","UK 5.5","UK 6","UK 6.5"],
+            "images": [
+                "../src/assets/kids/lifestyle/kj4-1.png",
+                "../src/assets/kids/lifestyle/kj4-2.png",
+                "../src/assets/kids/lifestyle/kj4-3.png",
+                "../src/assets/kids/lifestyle/kj4-4.png",
+                "../src/assets/kids/lifestyle/kj4-5.png"
+            ]
+        },
+        {
+            "id": "k4",
+            "img": "../src/assets/kids/Jordan/kj3-1.png",
+            "model3d": "../src/models/nike_dunk_low.glb",
+            "name": "Jordan 1 Low Alt",
+            "color": "Medium Soft Pink/White/Pearl Pink",
+            "desc": "Have you got five seconds? Then you've got time to get your kid into these Jordans. ",
+            "price": "₹4395",
+            "category": "jordan",
+            "gender": "Baby/Toddler Shoes",
+            "size":["UK 2.5","UK 3","UK 3.5","UK 4","UK 4.5","UK 5","UK 5.5","UK 6","UK 6.5","UK 7","UK 7.5"],
+            "images": [
+                "../src/assets/kids/Jordan/kj3-1.png",
+                "../src/assets/kids/Jordan/kj3-2.png",
+                "../src/assets/kids/Jordan/kj3-3.png",
+                "../src/assets/kids/Jordan/kj3-4.png",
+                "../src/assets/kids/Jordan/kj3-5.png"
+            ]
+        }, 
+        {
+            "id": "k5",
+            "img": "../src/assets/kids/lifestyle/kj5-1.png",
+            "model3d": "../src/models/nike_dunk_low.glb",
+            "name": "Nike Air Max Dn8",
+            "color": "Cool Grey/Cannon/Light Smoke Grey/Black",
+            "desc": "More Air, less bulk. The Dn8 takes our Dynamic Air system and puts it into a sleek, low-profile package. ",
+            "price": "₹ 13,495",
+            "category": "lifestyle",
+            "gender": "Older Kids' Shoes",
+            "size":["UK 3","UK 3.5","UK 4","UK 4.5","UK 5","UK 5.5","UK 6","UK 6.5"],
+            "images": [
+                "../src/assets/kids/lifestyle/kj5-1.png",
+                "../src/assets/kids/lifestyle/kj5-2.png",
+                "../src/assets/kids/lifestyle/kj5-3.png",
+                "../src/assets/kids/lifestyle/kj5-4.png",
+                "../src/assets/kids/lifestyle/kj5-5.png"
+            ]
+        },
+        {
+            "id": "k6",
+            "img": "../src/assets/kids/lifestyle/kj6-1.png",
+            "model3d": "../src/models/nike_dunk_low.glb",
+            "name": "Nike Vomero 5",
+            "color": "Sail/Vast Grey/College Grey/Metallic Silver",
+            "desc": "Lace up and step into a new lane with the Vomero 5, your go-to for comfortable cushioning and bold style. ",
+            "price": "₹ 8195",
+            "category": "lifestyle",
+            "gender": "Older Kids' Shoes",
+            "size":["UK 3","UK 3.5","UK 4","UK 4.5","UK 5","UK 5.5","UK 6","UK 6.5"],
+            "images": [
+                "../src/assets/kids/lifestyle/kj6-1.png",
+                "../src/assets/kids/lifestyle/kj6-2.png",
+                "../src/assets/kids/lifestyle/kj6-3.png",
+                "../src/assets/kids/lifestyle/kj6-4.png",
+                "../src/assets/kids/lifestyle/kj6-5.png"
+            ]
+        },
+        {
+            "id": "k7",
+            "img": "../src/assets/kids/Running/kj7-1.png",
+            "model3d": "../src/models/nike_dunk_low.glb",
+            "name": "Nike Vomero 18",
+            "color": "White/Football Grey/Royal Pulse",
+            "desc": "With springy ReactX foam, the Vomero 18 gives you a comfortable, responsive ride for your daily runs. ",
+            "price": "₹ 9995",
+            "category": "running",
+            "gender": "Older Kids' Road Running Shoes",
+            "size":["UK 13.5","UK 1","UK 1.5","UK 2","UK 2.5","UK 3","UK 3.5","UK 4","UK 4.5","UK 5","UK 5.5","UK 6","UK 6.5"],
+            "images": [
+                "../src/assets/kids/Running/kj7-1.png",
+                "../src/assets/kids/Running/kj7-2.png",
+                "../src/assets/kids/Running/kj7-3.png",
+                "../src/assets/kids/Running/kj7-4.png",
+                "../src/assets/kids/Running/kj7-5.png"
+            ]
+        },
+        {
+            "id": "k8",
+            "img": "../src/assets/kids/Running/kj8-1.png",
+            "model3d": "../src/models/nike_dunk_low.glb",
+            "name": "Nike Cosmic Runner",
+            "color": "Violet Star/Barely Grape/White/Apricot Agate",
+            "desc": "The world is your racetrack and slowing down isn't in your vocabulary.",
+            "price": "₹ 3887",
+            "category": "running",
+            "gender": "Older Kids' Road Running Shoes",
+            "size":["UK 3","UK 3.5","UK 4","UK 4.5","UK 5","UK 5.5","UK 6","UK 6.5"],
+            "images": [
+                "../src/assets/kids/Running/kj8-1.png",
+                "../src/assets/kids/Running/kj8-2.png",
+                "../src/assets/kids/Running/kj8-3.png",
+                "../src/assets/kids/Running/kj8-4.png",
+                "../src/assets/kids/Running/kj8-5.png"
+            ]
+        },
+        {
+            "id": "k9",
+            "img": "../src/assets/kids/Training & Gym/kt9-1.png",
+            "model3d": "../src/models/nike_dunk_low.glb",
+            "name": "Nike Star Runner 5",
+            "color": "Black/White/Summit White/White",
+            "desc": "Breathable and lightweight, the Nike Star Runner 5 will have you dreaming about your next run.",
+            "price": "₹  4695",
+            "category": "training",
+            "gender": "Older Kids' Road Running Shoes",
+            "size":["UK 3","UK 3.5","UK 4","UK 4.5","UK 5","UK 5.5","UK 6","UK 6.5"],
+            "images": [
+                "../src/assets/kids/Training & Gym/kt9-1.png",
+                "../src/assets/kids/Training & Gym/kt9-2.png",
+                "../src/assets/kids/Training & Gym/kt9-3.png",
+                "../src/assets/kids/Training & Gym/kt9-4.png",
+                "../src/assets/kids/Training & Gym/kt9-5.png"
+            ]
+        },
+        {
+            "id": "k10",
+            "img": "../src/assets/kids/Training & Gym/kt10-1.png",
+            "model3d": "../src/models/nike_dunk_low.glb",
+            "name": "Nike Cosmic Runner",
+            "color": "Blue Void/Barely Volt/University Blue",
+            "desc": "The world is your racetrack and slowing down isn't in your vocabulary.",
+            "price": "₹  3887",
+            "category": "training",
+            "gender": "Older Kids' Road Running Shoes",
+            "size":["UK 3","UK 3.5","UK 4","UK 4.5","UK 5","UK 5.5","UK 6","UK 6.5"],
+            "images": [
+                "../src/assets/kids/Training & Gym/kt10-1.png",
+                "../src/assets/kids/Training & Gym/kt10-2.png",
+                "../src/assets/kids/Training & Gym/kt10-3.png",
+                "../src/assets/kids/Training & Gym/kt10-4.png",
+                "../src/assets/kids/Training & Gym/kt10-5.png"
+            ]
         }
     ],
     "collectionProducts": [
