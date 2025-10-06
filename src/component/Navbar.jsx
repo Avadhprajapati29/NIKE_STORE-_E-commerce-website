@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Heart } from 'lucide-react'; // ❤️ import added
 
 const Navbar = ({ cartCount = 0 }) => {
     const navigate = useNavigate();
-    const location = useLocation(); // ✅ current route track karne ke liye
+    const location = useLocation();
     const [searchTerm, setSearchTerm] = useState('');
     const [allProducts, setAllProducts] = useState([]);
     const [searchResults, setSearchResults] = useState([]);
+    const [wishlistCount, setWishlistCount] = useState(0); // ❤️ wishlist count
 
-    // Load all products
+    // 🧾 Load all products
     useEffect(() => {
         fetch('/products.json')
             .then(res => res.json())
@@ -24,7 +26,19 @@ const Navbar = ({ cartCount = 0 }) => {
             });
     }, []);
 
-    // Filter search results
+    // ❤️ Load wishlist count
+    useEffect(() => {
+        const savedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        setWishlistCount(savedWishlist.length);
+        const handleStorage = () => {
+            const updatedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+            setWishlistCount(updatedWishlist.length);
+        };
+        window.addEventListener('storage', handleStorage);
+        return () => window.removeEventListener('storage', handleStorage);
+    }, []);
+
+    // 🔍 Filter search results
     useEffect(() => {
         if (!searchTerm) {
             setSearchResults([]);
@@ -51,7 +65,7 @@ const Navbar = ({ cartCount = 0 }) => {
             style={{ fontFamily: "'Inter', sans-serif" }}
         >
             <div className="container">
-                {/* Logo with gradient shine animation */}
+                {/* 🏷️ Logo with gradient animation */}
                 <motion.div
                     animate={{ backgroundPosition: ["0% 50%", "100% 50%"] }}
                     transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
@@ -68,6 +82,7 @@ const Navbar = ({ cartCount = 0 }) => {
                     </Link>
                 </motion.div>
 
+                {/* Toggler */}
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -80,11 +95,12 @@ const Navbar = ({ cartCount = 0 }) => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
+                {/* Navigation Links */}
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav mx-auto gap-3">
                         {["Home", "Men", "Women", "Kids", "Collection", "Contact"].map((item, index) => {
                             const path = item.toLowerCase() === "home" ? "/" : `/${item.toLowerCase()}`;
-                            const isActive = location.pathname === path; // ✅ active page check
+                            const isActive = location.pathname === path;
 
                             return (
                                 <motion.li
@@ -99,8 +115,6 @@ const Navbar = ({ cartCount = 0 }) => {
                                         style={{ color: isActive ? "#0d6efd" : "#212529", textDecoration: "none" }}
                                     >
                                         {item}
-
-                                        {/* ✅ Active underline effect */}
                                         <AnimatePresence>
                                             {isActive && (
                                                 <motion.div
@@ -126,6 +140,7 @@ const Navbar = ({ cartCount = 0 }) => {
                         })}
                     </ul>
 
+                    {/* 🔍 Search + Icons */}
                     <div className="d-flex align-items-center gap-3 ms-lg-3 mt-3 mt-lg-0 position-relative">
                         {/* Search Input */}
                         <motion.input
@@ -138,7 +153,7 @@ const Navbar = ({ cartCount = 0 }) => {
                             style={{ width: '200px' }}
                         />
 
-                        {/* Search Results with animation */}
+                        {/* Search Results */}
                         <AnimatePresence>
                             {searchResults.length > 0 && (
                                 <motion.ul
@@ -164,7 +179,19 @@ const Navbar = ({ cartCount = 0 }) => {
                             )}
                         </AnimatePresence>
 
-                        {/* Cart Icon */}
+                        {/* ❤️ Wishlist Icon */}
+                        <motion.div whileHover={{ scale: 1.2 }}>
+                            <Link to="/wishlist" className="nav-link p-0 position-relative" aria-label="Wishlist">
+                                <Heart className="fs-4" color="red" />
+                                {wishlistCount > 0 && (
+                                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        {wishlistCount}
+                                    </span>
+                                )}
+                            </Link>
+                        </motion.div>
+
+                        {/* 🛒 Cart Icon */}
                         <motion.div whileHover={{ scale: 1.2 }}>
                             <Link to="/cart" className="nav-link p-0 position-relative" aria-label="Shopping Cart">
                                 <i className="ri-shopping-cart-2-line fs-4"></i>
@@ -176,7 +203,7 @@ const Navbar = ({ cartCount = 0 }) => {
                             </Link>
                         </motion.div>
 
-                        {/* User Icon */}
+                        {/* 👤 User Icon */}
                         <motion.div whileHover={{ scale: 1.2 }}>
                             <Link to="/login" className="nav-link p-0" aria-label="User Profile">
                                 <i className="ri-user-line fs-4"></i>
