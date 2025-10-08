@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Heart } from 'lucide-react'; // ❤️ Import heart icon
+import { Heart } from 'lucide-react';
 import Navbar from './Navbar';
 import nikeImage1 from '../assets/nike-image1.jpg';
 import nikeImage2 from '../assets/nike-image2.jpg';
@@ -13,7 +13,7 @@ const images = [nikeImage1, nikeImage2, nikeImage3, nikeImage4];
 
 const Homepage = () => {
     const [cart, setCart] = useState([]);
-    const [wishlist, setWishlist] = useState([]); // ❤️ Wishlist state
+    const [wishlist, setWishlist] = useState([]);
     const [products, setProducts] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const navigate = useNavigate();
@@ -34,7 +34,7 @@ const Homepage = () => {
             .catch(err => console.error('Error fetching products:', err));
     }, []);
 
-    // Auto change image every 3 seconds
+    // Auto change hero image every 3 seconds
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex(prev => (prev + 1) % images.length);
@@ -46,13 +46,19 @@ const Homepage = () => {
         navigate(`/product/${productId}`);
     };
 
-    // ❤️ Toggle Wishlist
+    // Toggle wishlist
     const toggleWishlist = (product) => {
         const updatedWishlist = wishlist.some(item => item.id === product.id)
             ? wishlist.filter(item => item.id !== product.id)
             : [...wishlist, product];
         setWishlist(updatedWishlist);
         localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
+    };
+
+    // Scroll animation variant
+    const productVariants = {
+        hidden: { opacity: 0, y: 50, scale: 0.95 },
+        visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: 'easeOut' } },
     };
 
     return (
@@ -62,7 +68,6 @@ const Homepage = () => {
             {/* Hero Section */}
             <section className="container custom-container py-5">
                 <div className="row align-items-center">
-                    {/* Left Text */}
                     <div className="col-lg-6 mb-5 mb-lg-0 text-center text-lg-start">
                         <motion.h1
                             initial={{ opacity: 0, x: -50 }}
@@ -87,7 +92,6 @@ const Homepage = () => {
                         </motion.div>
                     </div>
 
-                    {/* Right Sliding Image */}
                     <div className="col-lg-6 text-center position-relative">
                         <AnimatePresence mode="wait">
                             <motion.img
@@ -103,7 +107,6 @@ const Homepage = () => {
                             />
                         </AnimatePresence>
 
-                        {/* Background Glow */}
                         <motion.div
                             className="position-absolute top-50 start-50 translate-middle rounded-circle"
                             style={{
@@ -127,21 +130,20 @@ const Homepage = () => {
                         <motion.div
                             key={product.id}
                             className="col-6 col-md-4 col-lg-3 mb-4"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.4 }}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                            variants={productVariants}
                         >
                             <div
                                 className="card h-100 shadow-sm border-0 position-relative overflow-hidden"
                                 style={{ cursor: 'pointer' }}
                                 onClick={() => handleImageClick(product.id)}
                             >
-                                {/* ❤️ Wishlist Button */}
                                 <button
                                     className="btn position-absolute top-0 end-0 m-3 p-2 bg-white rounded-circle shadow-sm"
                                     onClick={(e) => {
-                                        e.stopPropagation(); // prevent triggering image click
+                                        e.stopPropagation();
                                         toggleWishlist(product);
                                     }}
                                 >

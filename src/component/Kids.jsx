@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Heart } from "lucide-react";
 
 const categories = [
@@ -20,10 +20,11 @@ const Kids = () => {
   const [allKidsProducts, setAllKidsProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+
   const navigate = useNavigate();
   const location = useLocation();
 
-  // 🛒 Load cart and wishlist from localStorage
+  // Load cart & wishlist
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
     const savedWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
@@ -31,19 +32,19 @@ const Kids = () => {
     setWishlist(savedWishlist);
   }, []);
 
-  // 📦 Fetch kids products
+  // Fetch products
   useEffect(() => {
     fetch("/products.json")
-      .then((response) => response.json())
+      .then((res) => res.json())
       .then((data) => {
         setAllKidsProducts(data.kidsProducts || []);
         setFilteredProducts(data.kidsProducts || []);
       })
-      .catch((error) => console.error("Error fetching kids products:", error))
+      .catch(console.error)
       .finally(() => setLoading(false));
   }, []);
 
-  // 🔍 Filter products by category + search
+  // Filter products
   useEffect(() => {
     let products = allKidsProducts;
     if (selectedCategory !== "all") {
@@ -61,13 +62,18 @@ const Kids = () => {
     navigate(`/product/${productId}`, { state: { from: location.pathname } });
   };
 
-  // ❤️ Wishlist toggle
   const toggleWishlist = (product) => {
     const updatedWishlist = wishlist.some((item) => item.id === product.id)
       ? wishlist.filter((item) => item.id !== product.id)
       : [...wishlist, product];
     setWishlist(updatedWishlist);
     localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
+  };
+
+  // Scroll animation variant
+  const productVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: "easeOut" } },
   };
 
   return (
@@ -79,7 +85,7 @@ const Kids = () => {
           Discover the latest Nike shoes and apparel for kids. Comfort, performance, and style — just for your little ones.
         </p>
 
-        {/* 🔍 Search + Category Filter */}
+        {/* Search & Category */}
         <div className="d-flex flex-wrap align-items-center gap-3 mb-4">
           <input
             type="text"
@@ -102,7 +108,6 @@ const Kids = () => {
           </div>
         </div>
 
-        {/* 🌀 Loading Spinner */}
         {loading ? (
           <div className="text-center py-5">
             <div className="spinner-border text-primary" style={{ width: "4rem", height: "4rem" }}></div>
@@ -110,60 +115,57 @@ const Kids = () => {
           </div>
         ) : (
           <div className="row">
-            <AnimatePresence>
-              {filteredProducts.map((product) => (
+            {filteredProducts.map((product) => (
+              <motion.div
+                key={product.id}
+                className="col-md-4 col-lg-3 mb-4"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={productVariants}
+              >
                 <motion.div
-                  key={product.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="col-md-4 col-lg-3 mb-4"
+                  whileHover={{ y: -5, scale: 1.03 }}
+                  className="card h-100 shadow-sm border-0 position-relative"
                 >
-                  <motion.div
-                    whileHover={{ y: -5, scale: 1.02 }}
-                    className="card h-100 shadow-sm border-0 position-relative"
+                  {/* Wishlist */}
+                  <button
+                    className="btn position-absolute top-0 end-0 m-3 p-2 bg-white rounded-circle shadow-sm"
+                    onClick={() => toggleWishlist(product)}
                   >
-                    {/* ❤️ Wishlist Button */}
-                    <button
-                      className="btn position-absolute top-0 end-0 m-3 p-2 bg-white rounded-circle shadow-sm"
-                      onClick={() => toggleWishlist(product)}
-                    >
-                      <Heart
-                        size={20}
-                        fill={wishlist.some((item) => item.id === product.id) ? "red" : "white"}
-                        color={wishlist.some((item) => item.id === product.id) ? "red" : "gray"}
-                      />
-                    </button>
-
-                    {/* 🖼️ Product Image */}
-                    <img
-                      src={product.img}
-                      alt={product.name}
-                      className="card-img-top p-3"
-                      style={{ height: 300, objectFit: "contain", cursor: "pointer" }}
-                      onClick={() => handleImageClick(product.id)}
+                    <Heart
+                      size={20}
+                      fill={wishlist.some((item) => item.id === product.id) ? "red" : "white"}
+                      color={wishlist.some((item) => item.id === product.id) ? "red" : "gray"}
                     />
+                  </button>
 
-                    <div className="card-body">
-                      <h5 className="card-title fw-semibold">{product.name}</h5>
-                      <p className="card-text mb-1 text-secondary">{product.color}</p>
-                      <p className="card-text fw-bold text-black">{product.price}</p>
-                      <Link
-                        to={`/product/${product.id}`}
-                        state={{ from: location.pathname }}
-                        className="btn btn-primary w-100"
-                      >
-                        View Details
-                      </Link>
-                    </div>
-                  </motion.div>
+                  {/* Product Image */}
+                  <img
+                    src={product.img}
+                    alt={product.name}
+                    className="card-img-top p-3"
+                    style={{ height: 300, objectFit: "contain", cursor: "pointer" }}
+                    onClick={() => handleImageClick(product.id)}
+                  />
+
+                  {/* Info */}
+                  <div className="card-body">
+                    <h5 className="card-title fw-semibold">{product.name}</h5>
+                    <p className="card-text mb-1 text-secondary">{product.color}</p>
+                    <p className="card-text fw-bold text-black">{product.price}</p>
+                    <Link
+                      to={`/product/${product.id}`}
+                      state={{ from: location.pathname }}
+                      className="btn btn-primary w-100"
+                    >
+                      View Details
+                    </Link>
+                  </div>
                 </motion.div>
-              ))}
-            </AnimatePresence>
+              </motion.div>
+            ))}
 
-            {/* 🚫 Empty State */}
             {filteredProducts.length === 0 && (
               <div className="col-12 text-center text-muted py-5">
                 No products found in this category.

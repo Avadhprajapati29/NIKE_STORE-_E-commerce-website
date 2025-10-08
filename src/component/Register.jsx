@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Login.css'; // Import the CSS file for animations
+import './Login.css'; // ✅ using same CSS for consistent design
 
 const Register = () => {
     const [name, setName] = useState('');
@@ -11,49 +11,61 @@ const Register = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         alert('Registered successfully!');
-        navigate('/login'); // Redirect to login page after registration
+        navigate('/login'); // Redirect to login after register
     };
 
     return (
-        <div className="auth-container">
-            <div className="auth-image">
-                <h2>Welcome Back!</h2>
-                <p>To keep connected with us please login with your personal info</p>
-                <button onClick={() => navigate('/login')} className="signin-btn">Sign In</button>
-            </div>
-            <div className="auth-form">
-                <h2>Create Account</h2>
-                <form onSubmit={handleSubmit}>
-                    <div>
+        <div className="login-wrapper">
+            <div className="login-box">
+                <h2 className="login-title">Create Account</h2>
+                <form onSubmit={handleSubmit} className="login-form">
+                    <div className="input-group">
                         <label>Name</label>
                         <input
                             type="text"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             required
+                            placeholder="Enter your name"
                         />
                     </div>
-                    <div>
+                    <div className="input-group">
                         <label>Email</label>
                         <input
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
+                            placeholder="Enter your email"
                         />
                     </div>
-                    <div>
+                    <div className="input-group">
                         <label>Password</label>
                         <input
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             required
+                            placeholder="Enter your password"
                         />
                     </div>
-                    <button type="submit">Sign Up</button>
+                    <button type="submit" className="btn-login">Sign Up</button>
                 </form>
-                <button onClick={() => navigate('/')} className="home-btn">Return Home</button>
+
+                {/* 👇 Login redirect */}
+                <div className="register-prompt">
+                    <span>Already have an account?</span>
+                    <button
+                        onClick={() => navigate('/login')}
+                        className="btn-link"
+                    >
+                        Sign In
+                    </button>
+                </div>
+
+                <button onClick={() => navigate('/')} className="btn-home">
+                    ← Return Home
+                </button>
             </div>
         </div>
     );
