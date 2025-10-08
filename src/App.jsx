@@ -10,6 +10,7 @@ import Cart from './component/Cart';
 import Login from './component/Login';
 import Register from './component/Register';
 import Kids from './component/Kids';
+import Wishlist from "./component/Wishlist";
 
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/product/:productId" element={<ProductDetail cart={cart} setCart={setCart} />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Register" element={<Register />} />
+        <Route path="/wishlist" element={<Wishlist />} />
 
       </Routes>
     </Router>

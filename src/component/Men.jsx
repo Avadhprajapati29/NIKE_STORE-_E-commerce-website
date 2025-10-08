@@ -66,6 +66,17 @@ const Men = () => {
         localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
     };
 
+    // Animation variants for alternating scroll-in effects
+    const leftVariant = {
+        hidden: { opacity: 0, x: -80 },
+        visible: { opacity: 1, x: 0 },
+    };
+
+    const rightVariant = {
+        hidden: { opacity: 0, x: 80 },
+        visible: { opacity: 1, x: 0 },
+    };
+
     return (
         <div className="min-vh-100 bg-light" style={{ fontFamily: "'Garamond', serif" }}>
             <Navbar cartCount={cart.length} />
@@ -101,20 +112,23 @@ const Men = () => {
                 {/* 🌀 Loading State */}
                 {loading ? (
                     <div className="text-center py-5">
-                        <div className="spinner-border text-primary" style={{ width: "4rem", height: "4rem" }}></div>
+                        <div
+                            className="spinner-border text-primary"
+                            style={{ width: "4rem", height: "4rem" }}
+                        ></div>
                         <p className="mt-3 text-muted">Loading products...</p>
                     </div>
                 ) : (
                     <div className="row">
                         <AnimatePresence>
-                            {filteredProducts.map((product) => (
+                            {filteredProducts.map((product, index) => (
                                 <motion.div
                                     key={product.id}
-                                    layout
-                                    initial={{ opacity: 0, scale: 0.95 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0 }}
-                                    transition={{ duration: 0.3 }}
+                                    variants={index % 4 < 2 ? leftVariant : rightVariant} // 👈 2 from left, 2 from right
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true, amount: 0.3 }}
+                                    transition={{ duration: 0.6, ease: "easeOut" }}
                                     className="col-md-4 col-lg-3 mb-4"
                                 >
                                     <motion.div
@@ -128,8 +142,16 @@ const Men = () => {
                                         >
                                             <Heart
                                                 size={20}
-                                                fill={wishlist.some((item) => item.id === product.id) ? "red" : "white"}
-                                                color={wishlist.some((item) => item.id === product.id) ? "red" : "gray"}
+                                                fill={
+                                                    wishlist.some((item) => item.id === product.id)
+                                                        ? "red"
+                                                        : "white"
+                                                }
+                                                color={
+                                                    wishlist.some((item) => item.id === product.id)
+                                                        ? "red"
+                                                        : "gray"
+                                                }
                                             />
                                         </button>
 
@@ -138,14 +160,22 @@ const Men = () => {
                                             src={product.img}
                                             alt={product.name}
                                             className="card-img-top p-3"
-                                            style={{ height: 300, objectFit: "contain", cursor: "pointer" }}
+                                            style={{
+                                                height: 300,
+                                                objectFit: "contain",
+                                                cursor: "pointer",
+                                            }}
                                             onClick={() => handleImageClick(product.id)}
                                         />
 
                                         <div className="card-body">
                                             <h5 className="card-title fw-semibold">{product.name}</h5>
-                                            <p className="card-text mb-1 text-secondary">{product.color}</p>
-                                            <p className="card-text fw-bold text-black">{product.price}</p>
+                                            <p className="card-text mb-1 text-secondary">
+                                                {product.color}
+                                            </p>
+                                            <p className="card-text fw-bold text-black">
+                                                {product.price}
+                                            </p>
                                             <Link
                                                 to={`/product/${product.id}`}
                                                 state={{ from: location.pathname }}

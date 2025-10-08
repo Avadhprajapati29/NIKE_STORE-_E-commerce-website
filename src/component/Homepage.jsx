@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Heart } from 'lucide-react'; // ❤️ Import heart icon
 import Navbar from './Navbar';
 import nikeImage1 from '../assets/nike-image1.jpg';
 import nikeImage2 from '../assets/nike-image2.jpg';
@@ -12,15 +13,20 @@ const images = [nikeImage1, nikeImage2, nikeImage3, nikeImage4];
 
 const Homepage = () => {
     const [cart, setCart] = useState([]);
+    const [wishlist, setWishlist] = useState([]); // ❤️ Wishlist state
     const [products, setProducts] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const navigate = useNavigate();
 
+    // Load cart + wishlist
     useEffect(() => {
         const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
+        const savedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
         setCart(savedCart);
+        setWishlist(savedWishlist);
     }, []);
 
+    // Fetch homepage products
     useEffect(() => {
         fetch('/products.json')
             .then(res => res.json())
@@ -38,6 +44,15 @@ const Homepage = () => {
 
     const handleImageClick = (productId) => {
         navigate(`/product/${productId}`);
+    };
+
+    // ❤️ Toggle Wishlist
+    const toggleWishlist = (product) => {
+        const updatedWishlist = wishlist.some(item => item.id === product.id)
+            ? wishlist.filter(item => item.id !== product.id)
+            : [...wishlist, product];
+        setWishlist(updatedWishlist);
+        localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
     };
 
     return (
@@ -65,10 +80,7 @@ const Homepage = () => {
                         >
                             Redefine your sneaker game with unmatched comfort, iconic style, and cutting-edge performance.
                         </motion.p>
-                        <motion.div
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
+                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                             <Link to="/men" className="btn btn-dark btn-lg rounded-pill px-5 shadow">
                                 Shop Collection
                             </Link>
@@ -90,6 +102,7 @@ const Homepage = () => {
                                 transition={{ type: 'spring', stiffness: 120, damping: 20, duration: 0.8 }}
                             />
                         </AnimatePresence>
+
                         {/* Background Glow */}
                         <motion.div
                             className="position-absolute top-50 start-50 translate-middle rounded-circle"
@@ -111,18 +124,55 @@ const Homepage = () => {
                 <h2 className="fw-bold mb-4 text-center text-uppercase">Featured Products</h2>
                 <div className="row">
                     {products.map(product => (
-                        <div className="col-6 col-md-4 col-lg-3 mb-4" key={product.id}>
-                            <div className="card h-100 shadow-sm border-0" style={{ cursor: 'pointer' }} onClick={() => handleImageClick(product.id)}>
-                                <img src={product.img} alt={product.name} className="card-img-top p-3" style={{ height: 320, objectFit: 'contain' }} />
+                        <motion.div
+                            key={product.id}
+                            className="col-6 col-md-4 col-lg-3 mb-4"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.4 }}
+                        >
+                            <div
+                                className="card h-100 shadow-sm border-0 position-relative overflow-hidden"
+                                style={{ cursor: 'pointer' }}
+                                onClick={() => handleImageClick(product.id)}
+                            >
+                                {/* ❤️ Wishlist Button */}
+                                <button
+                                    className="btn position-absolute top-0 end-0 m-3 p-2 bg-white rounded-circle shadow-sm"
+                                    onClick={(e) => {
+                                        e.stopPropagation(); // prevent triggering image click
+                                        toggleWishlist(product);
+                                    }}
+                                >
+                                    <Heart
+                                        size={20}
+                                        fill={wishlist.some(item => item.id === product.id) ? 'red' : 'white'}
+                                        color={wishlist.some(item => item.id === product.id) ? 'red' : 'gray'}
+                                    />
+                                </button>
+
+                                <img
+                                    src={product.img}
+                                    alt={product.name}
+                                    className="card-img-top p-3"
+                                    style={{ height: 320, objectFit: 'contain' }}
+                                />
                                 <div className="card-body">
                                     <h5 className="card-title fw-semibold">{product.name}</h5>
                                     <p className="card-text mb-1 text-secondary">{product.color}</p>
                                     <p className="card-text mb-1 text-secondary">{product.gender}</p>
                                     <p className="card-text fw-bold text-black">{product.price}</p>
-                                    <Link to={`/product/${product.id}`} className="btn btn-outline-secondary w-100 mt-2">View Details</Link>
+                                    <Link
+                                        to={`/product/${product.id}`}
+                                        className="btn btn-outline-secondary w-100 mt-2"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        View Details
+                                    </Link>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </section>
